@@ -60,46 +60,46 @@ export default function New(props){
             <div className="modal-title">New Booking</div>
 
             <div className="mt-15">
-                <label htmlFor="Title_n">Exam Hall</label> <br/>
-                <input type="text" className="mt-5" id="Title_n" maxLength={50} name="examHall" onChange={newApp}/>
+                <label htmlFor="Hall_n">Exam Hall</label> <br/>
+                <input type="text" className="mt-5" id="Hall_n" maxLength={50} name="examHall" onChange={newApp}/>
                
             </div>
 
             <div className="mt-15">
-                <label htmlFor="Description_n">Lecture Name</label> <br/>
-                <textarea id="Description_n" maxLength={50} className="mt-5" name="lectureName" onChange={newApp} cols={25} rows={1}></textarea> <br />
+                <label htmlFor="LectureName_n">Lecture Name</label> <br/>
+                <textarea id="LectureName_n" maxLength={50} className="mt-5" name="lectureName" onChange={newApp} cols={25} rows={1}></textarea> <br />
                
             </div>
 
             <div className="row mt-25">
                 <div>
-                    <label htmlFor="Address_n">Academic Staff Member</label>
-                    <input type="text" id="Address_n" name="academicStaff" onChange={newApp} maxLength={50} />
+                    <label htmlFor="AcademicStaff_n">Academic Staff Member</label>
+                    <input type="text" id="AcademicStaff_n" name="academicStaff" onChange={newApp} maxLength={50} />
                 </div>
 
                 <br></br>
                 <div className="mt-15">
-                    <label htmlFor="Title_n">Number Of Students</label> <br />
-                    <input type="text" className="mt-5" id="Title_n" maxLength={5} name="numOfStudent" onChange={newApp} />
+                    <label htmlFor="Num_of_Student">Number Of Students</label> <br />
+                    <input type="text" className="mt-5" id="Num_of_Student" maxLength={5} name="numOfStudent" onChange={newApp} />
 
                 </div>
                 <br></br>
                 <div className="mt-15">
-                    <label htmlFor="Title_n">Year</label> <br />
-                    <input type="text" className="mt-5" id="Title_n" maxLength={5} name="year" onChange={newApp} />
+                    <label htmlFor="Year_n">Year</label> <br />
+                    <input type="text" className="mt-5" id="Year_n" maxLength={5} name="year" onChange={newApp} />
 
                 </div>
                 <br></br>
                 <div className="mt-15">
-                    <label htmlFor="Title_n">Semester</label> <br />
-                    <input type="text" className="mt-5" id="Title_n" maxLength={5} name="semester" onChange={newApp} />
+                    <label htmlFor="Semester_n">Semester</label> <br />
+                    <input type="text" className="mt-5" id="Semester_n" maxLength={5} name="semester" onChange={newApp} />
 
                 </div>
                 <br></br>
 
                 <div className="mt-15">
-                    <label htmlFor="Title_n">Subject</label> <br />
-                    <input type="text" className="mt-5" id="Title_n" maxLength={5} name="subject" onChange={newApp} />
+                    <label htmlFor="Subject_n">Subject</label> <br />
+                    <input type="text" className="mt-5" id="Subject_n" maxLength={5} name="subject" onChange={newApp} />
 
                 </div>
 
