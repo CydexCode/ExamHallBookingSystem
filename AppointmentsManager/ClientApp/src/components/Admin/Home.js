@@ -158,21 +158,24 @@ export default function Home(props) {
         </div>
       </section>
 
-      <div className="row underline hdr">
-        <div className="column id">#</div>
-        <div className="column examHall">Exam Hall</div>
-              <div className="column lectureName">Lecture Name</div>
-              <div className="column numOfStudent">Number Of Student</div>
-              <div className="column year">Year</div>
-              <div className="column semester">Semester</div>
-              <div className="column subject">Subject</div>
-        <div className="column importance">Exam Type</div>
-        <div className="column date">Date</div>
-        <div className="column time">Time</div>
-          <div className="column academicStaff">Academic Staff Member</div>
-        <div className="column edit">Edit</div>
-        <div className="column delete">Delete</div>
-      </div>
+          <div className="userPage">
+              <div className="row underline hdr">
+                  <div className="column id">#</div>
+                  <div className="column examHall">Exam Hall</div>
+                  <div className="column lectureName">Lecture Name</div>
+                  <div className="column numOfStudent">Number Of Student</div>
+                  <div className="column year">Year</div>
+                  <div className="column semester">Semester</div>
+                  <div className="column subject">Subject</div>
+                  <div className="column importance">Exam Type</div>
+                  <div className="column date">Date</div>
+                  <div className="column time">Start Time </div>
+                  <div className="column ">-</div>
+                  <div className="column endTime">End Time</div>
+                  <div className="column academicStaff">Academic Staff Member</div>
+
+              </div>
+              </div>
 
       {
         dataList.length === 0 ?

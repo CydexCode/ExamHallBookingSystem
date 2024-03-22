@@ -1,9 +1,9 @@
 
 export const testData = [
-    { ID: 1, ExamHall: "Hall one", LectureName: "Description one", LevelOfImportance: 3, Date: "14-04-2023", Time: "17:32", AcademicStaff: "Be 8500", NumOfStudent: 50, Year: 1,Semester: 1,Subject: "EC1020" },
-    { ID: 2, ExamHall: "Hall two", LectureName: "Description two", LevelOfImportance: 4, Date: "13-04-2023", Time: "13:32", AcademicStaff: "Be 9000", NumOfStudent: 30, Year: 2, Semester: 3, Subject: "EC1020" },
-    { ID: 3, ExamHall: "Hall three", LectureName: "Description three", LevelOfImportance: 5, Date: "12-04-2023", Time: "10:32", AcademicStaff: "Be 2000", NumOfStudent: 20, Year: 3, Semester: 6, Subject: "EC1020" },
-    { ID: 4, ExamHall: "Hall four", LectureName: "Description four", LevelOfImportance: 0, Date: "10-04-2023", Time: "19:09", AcademicStaff: "Be 1000", NumOfStudent: 10, Year: 4, Semester: 8, Subject: "EC1020" },
+    { ID: 1, ExamHall: "Hall one", LectureName: "Description one", LevelOfImportance: 3, Date: "14-04-2023", Time: "17:32", AcademicStaff: "Be 8500", NumOfStudent: 50, Year: 1, Semester: 1, Subject: "EC1020", EndTime: "18:32" },
+    { ID: 2, ExamHall: "Hall two", LectureName: "Description two", LevelOfImportance: 4, Date: "13-04-2023", Time: "13:32", AcademicStaff: "Be 9000", NumOfStudent: 30, Year: 2, Semester: 3, Subject: "EC1020", EndTime: "19:32" },
+    { ID: 3, ExamHall: "Hall three", LectureName: "Description three", LevelOfImportance: 5, Date: "12-04-2023", Time: "10:32", AcademicStaff: "Be 2000", NumOfStudent: 20, Year: 3, Semester: 6, Subject: "EC1020", EndTime: "20:32" },
+    { ID: 4, ExamHall: "Hall four", LectureName: "Description four", LevelOfImportance: 0, Date: "10-04-2023", Time: "19:09", AcademicStaff: "Be 1000", NumOfStudent: 10, Year: 4, Semester: 8, Subject: "EC1020", EndTime: "12:32" },
 ]
 
 
@@ -14,10 +14,11 @@ export const entry = {
     numOfStudent: 5,
     year: 1,
     semester: 2,
-    subject:"EC1020",
+    subject: "EC1020",
     academicStaff: "Test address",
     date: new Date(),
     time: formatedTimeToStr(),
+    endTime: formatedTimeToStr(),
     done: false,
     deleted: false,
     levelOfImportance: 2,

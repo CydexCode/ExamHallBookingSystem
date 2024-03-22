@@ -123,8 +123,12 @@ export default function New(props){
                 </div>
 
                 <div className="ms-10">
-                    <label htmlFor="Time_n">Time</label>
-                    <input type="time" id="Time_n" name="time" defaultValue={formatedTimeToStr()} onChange={newApp}/>
+                    <label htmlFor="Time_n">Start Time</label>
+                    <input type="time" id="Time_n" name="time" defaultValue={formatedTimeToStr()} onChange={newApp} />
+                </div>
+                <div className="ms-10">
+                    <label htmlFor="Time_n">End Time</label>
+                    <input type="time" id="Time_n" name="endTime" defaultValue={formatedTimeToStr()} onChange={newApp} />
                 </div>
             </div>
 

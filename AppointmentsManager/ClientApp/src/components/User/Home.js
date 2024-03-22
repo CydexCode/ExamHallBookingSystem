@@ -6,7 +6,7 @@ import New from "./New"
 import Appointment from "./Appointment"
 
 import "../../NavBar.css"; // Import the CSS file for styling (create this file)
-import "../../custom.css";
+import "../../customUser.css";
 import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib"
 
 export default function Home(props) {
@@ -158,6 +158,7 @@ export default function Home(props) {
         </div>
       </section>
 
+      <div className="userPage">
       <div className="row underline hdr">
         <div className="column id">#</div>
         <div className="column examHall">Exam Hall</div>
@@ -168,11 +169,13 @@ export default function Home(props) {
               <div className="column subject">Subject</div>
         <div className="column importance">Exam Type</div>
         <div className="column date">Date</div>
-        <div className="column time">Time</div>
+                  <div className="column time">Start Time</div>
+                  <div className="column ">-</div>
+                  <div className="column endTime">End Time</div>
           <div className="column academicStaff">Academic Staff Member</div>
    
       </div>
-
+          </div>
       {
         dataList.length === 0 ?
           <div className="row mt-15 waiting">Loading <div className="loading">...</div></div> :

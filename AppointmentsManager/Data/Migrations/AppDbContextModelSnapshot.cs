@@ -47,6 +47,10 @@ namespace AppointmentsManager.Data.Migrations
                     b.Property<bool>("Done")
                         .HasColumnType("bit");
 
+                    b.Property<string>("EndTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ExamHall")
                         .IsRequired()
                         .HasMaxLength(150)

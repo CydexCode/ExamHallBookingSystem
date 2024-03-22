@@ -8,10 +8,6 @@ const root = createRoot(rootElement);
 const Navbar = ({ onMainClick, onAdminClick, onUserClick }) => {
     return (
 
-
-
-
-
         <nav className="navbar">
             <ul>
                 <li onClick={onMainClick}>

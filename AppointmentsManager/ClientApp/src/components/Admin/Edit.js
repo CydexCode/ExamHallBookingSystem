@@ -117,8 +117,13 @@ export default function Edit(props){
                 </div>
 
                 <div className="ms-10">
-                    <label htmlFor="Time_e">Time</label>
-                    <input type="time" id="Time_e" name="time" onChange={editApp} defaultValue={data.time}/>
+                    <label htmlFor="Time_e">Start Time</label>
+                    <input type="time" id="Time_e" name="time" onChange={editApp} defaultValue={data.time} />
+                </div>
+
+                <div className="ms-10">
+                    <label htmlFor="Time_e">End Time</label>
+                    <input type="time" id="Time_e" name="endTime" onChange={editApp} defaultValue={data.endTime} />
                 </div>
 
                 <div className="ms-10 row items-center">
