@@ -164,6 +164,11 @@ namespace AppointmentsManager.Controllers
                     entry_.Time = appointment.Time;
                 }
 
+                if (entry_.EndTime != appointment.EndTime)
+                {
+                    entry_.EndTime = appointment.EndTime;
+                }
+
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -223,6 +228,50 @@ namespace AppointmentsManager.Controllers
             await _context.SaveChangesAsync();
 
             return Ok("Appointment deleted successfully.");
+        }
+
+
+        [HttpPost]
+        public async Task<ActionResult<Appointment>> PostAppointment(Appointment appointment)
+        {
+            if (_context.Appointments == null)
+            {
+                return Problem("Entity set 'Appointments'  is null.");
+            }
+
+            // Check for overlapping appointments
+            bool isOverlap = await CheckForAppointmentOverlap(appointment);
+            if (isOverlap)
+            {
+                return BadRequest("Cannot create appointment. Overlapping time slot.");
+            }
+
+            try
+            {
+                _context.Appointments.Add(appointment);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException e)
+            {
+                return BadRequest("Could not create the new Appointment: " + e.Message);
+            }
+
+            return CreatedAtAction("GetAppointment", new { id = appointment.ID }, appointment);
+        }
+
+        private async Task<bool> CheckForAppointmentOverlap(Appointment newAppointment)
+        {
+            // Get existing appointments that overlap with the new appointment
+            var overlappingAppointments = await _context.Appointments
+                .Where(a =>
+                    a.Date.Date == newAppointment.Date.Date && // Same date
+                    a.ExamHall == newAppointment.ExamHall &&  // Same exam hall
+                    ((a.Time >= newAppointment.Time && a.Time < newAppointment.EndTime) || // Existing appointment starts during new appointment
+                    (a.EndTime > newAppointment.Time && a.EndTime <= newAppointment.EndTime) || // Existing appointment ends during new appointment
+                    (a.Time <= newAppointment.Time && a.EndTime >= newAppointment.EndTime))) // Existing appointment overlaps new appointment
+                .ToListAsync();
+
+            return overlappingAppointments.Any();
         }
 
         private bool AppointmentExists(int id)

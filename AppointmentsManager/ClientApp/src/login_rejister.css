@@ -1,0 +1,56 @@
+﻿
+body {
+    background-color: #f8f9fc;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 50px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.btn-user {
+    background-color: #4e73df;
+    color: #fff;
+}
+
+    .btn-user:hover {
+        background-color: #2e59d9;
+    }
+
+/*.bg-register-image {
+    background: url('path/to/register-image.jpg') center / cover;
+}*/
+
+.form-control-user {
+    border-radius: 25px;
+}
+
+/* Common Styles */
+.text-center {
+    text-align: center;
+}
+
+.small {
+    font-size: 14px;
+}
+
+.link {
+    color: #4e73df;
+}
+
+    .link:hover {
+        color: #2e59d9;
+    }

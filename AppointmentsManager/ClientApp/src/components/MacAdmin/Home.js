@@ -90,7 +90,7 @@ export default function Home(props) {
           <br></br>
           <br></br>
           <div className="centered-heading">
-              <h1>Exam Hall Booking System -Com Admin</h1>
+              <h1>Exam Hall Booking System -Mac Admin</h1>
           </div>
 
           <br></br>

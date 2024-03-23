@@ -7,6 +7,7 @@ export const testData = [
 ]
 
 
+
 export const entry = {
     examHall: "Test hall",
     lectureName: "Test Lecture Name",
@@ -22,7 +23,6 @@ export const entry = {
     deleted: false,
     levelOfImportance: 2,
 }
-
 
 export const filter = {
     LevelOfImportance: null,

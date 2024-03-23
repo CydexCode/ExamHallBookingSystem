@@ -88,8 +88,12 @@ h1 {
   vertical-align: middle;
 }
 
+.userPage{
+    
+}
+
 .column.id {
-  width: 5px;
+    width: 5px;
 }
 
 .column.examHall {
@@ -120,11 +124,15 @@ h1 {
     }
 
 .column.date {
-  width: 110px;
+  width: 100px;
 }
 
 .column.time {
-  width: 40px;
+  width: 30px;
+}
+
+.column.endTime {
+    width: 30px;
 }
 
     .column.academicStaff {

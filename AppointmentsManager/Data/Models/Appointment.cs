@@ -32,6 +32,8 @@ namespace AppointmentsManager.Data.Models
         [MaxLength(10), Column(TypeName ="nvarchar(10)")]
         public string Time { get; set; } = "12:30";
 
+        public string EndTime { get; set; } = "01:30";
+
         public bool Done { get; set; } = false;
         public bool Deleted { get; set; } = false;
 
