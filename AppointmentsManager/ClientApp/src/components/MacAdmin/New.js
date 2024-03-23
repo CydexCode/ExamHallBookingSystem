@@ -105,11 +105,11 @@ export default function New(props){
                 <br></br>
                 <div className="mt-15">
                     <label htmlFor="Semester_n">Semester</label> <br />
-                    <select className="mt-5" id="Semester_n" maxLength={5} name="semester" onChange={newApp} >
+                    <select className="mt-5" id="Semester_n" maxLength={5} name="semester" onChange={newApp} defaultValue={0} >
                         <option value={8}>8th  Semester</option>
-                        <option value={7}>7rd  Semesterr</option>
-                        <option value={6}>6nd  Semester</option>
-                        <option value={5}>5st Semester</option>
+                        <option value={7}>7th  Semesterr</option>
+                        <option value={6}>6th  Semester</option>
+                        <option value={5}>5th Semester</option>
                         <option value={4}>4th  Semester</option>
                         <option value={3}>3rd  Semesterr</option>
                         <option value={2}>2nd  Semester</option>

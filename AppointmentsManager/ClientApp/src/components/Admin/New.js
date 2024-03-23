@@ -93,7 +93,6 @@ export default function New(props){
                 <div className="mt-15">
                     <label htmlFor="Year_n">Year</label> <br />
                     <select className="mt-5" id="Year_n" maxLength={5} name="year" onChange={newApp} defaultValue={0}>
-
                         <option value={4}>4th Year</option>
                         <option value={3}>3rd Year</option>
                         <option value={2}>2nd Year</option>
@@ -107,9 +106,9 @@ export default function New(props){
                     <label htmlFor="Semester_n">Semester</label> <br />
                     <select className="mt-5" id="Semester_n" maxLength={5} name="semester" onChange={newApp} defaultValue={0}>
                         <option value={8}>8th  Semester</option>
-                        <option value={7}>7rd  Semesterr</option>
-                        <option value={6}>6nd  Semester</option>
-                        <option value={5}>5st Semester</option>
+                        <option value={7}>7th  Semesterr</option>
+                        <option value={6}>6th  Semester</option>
+                        <option value={5}>5th Semester</option>
                         <option value={4}>4th  Semester</option>
                         <option value={3}>3rd  Semesterr</option>
                         <option value={2}>2nd  Semester</option>
@@ -122,14 +121,12 @@ export default function New(props){
                 <div className="mt-15">
                     <label htmlFor="Subject_n">Subject</label> <br />
                     <input type="text" className="mt-5" id="Subject_n" maxLength={5} name="subject" onChange={newApp} />
-
                 </div>
 
 
                 <div className="ms-10">
                     <label htmlFor="LevelOfImportance_n">Exam Type</label>
-                    <select name="levelOfImportance" id="LevelOfImportance_n" onChange={newApp} defaultValue={0}>
-                      
+                    <select name="levelOfImportance" id="LevelOfImportance_n" onChange={newApp} defaultValue={0}>                    
                         <option value={3}>Assignment</option>
                         <option value={2}>Quiz</option>
                         <option value={1}>Mid Exam</option>
