@@ -57,11 +57,17 @@ export default function New(props){
 
     return (
         <div className="modal-container">
-            <div className="modal-title">New Booking</div>
+            <div className="modal-title">Add New Booking</div>
 
             <div className="mt-15">
-                <label htmlFor="Hall_n">Exam Hall</label> <br />
-                <input type="text" className="mt-5" id="Hall_n" maxLength={50} name="examHall" onChange={newApp} />
+                <label htmlFor="Hall_n">Exam Hall</label>
+                <select className="mt-5" id="Hall_n" name="examHall" onChange={newApp} defaultValue={0} >
+
+                    <option value={2}>Hall 02 (Computer)</option>
+                    <option value={1}>Hall 01 (Admin)</option>
+                    <option value={0}>Select Exam Hall</option>
+
+                </select>
 
             </div>
 
@@ -86,14 +92,30 @@ export default function New(props){
                 <br></br>
                 <div className="mt-15">
                     <label htmlFor="Year_n">Year</label> <br />
-                    <input type="text" className="mt-5" id="Year_n" maxLength={5} name="year" onChange={newApp} />
+                    <select className="mt-5" id="Year_n" maxLength={5} name="year" onChange={newApp} defaultValue={0}>
+
+                        <option value={4}>4th Year</option>
+                        <option value={3}>3rd Year</option>
+                        <option value={2}>2nd Year</option>
+                        <option value={1}>1st Year</option>
+                        <option value={0}>Select Year</option>
+                    </select>
 
                 </div>
                 <br></br>
                 <div className="mt-15">
                     <label htmlFor="Semester_n">Semester</label> <br />
-                    <input type="text" className="mt-5" id="Semester_n" maxLength={5} name="semester" onChange={newApp} />
-
+                    <select className="mt-5" id="Semester_n" maxLength={5} name="semester" onChange={newApp} >
+                        <option value={8}>8th  Semester</option>
+                        <option value={7}>7rd  Semesterr</option>
+                        <option value={6}>6nd  Semester</option>
+                        <option value={5}>5st Semester</option>
+                        <option value={4}>4th  Semester</option>
+                        <option value={3}>3rd  Semesterr</option>
+                        <option value={2}>2nd  Semester</option>
+                        <option value={1}>1st Semester</option>
+                        <option value={0}>Select Semester</option>
+                    </select>
                 </div>
                 <br></br>
 
