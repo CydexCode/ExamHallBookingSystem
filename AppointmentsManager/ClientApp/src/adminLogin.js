@@ -8,16 +8,18 @@ function Login() {
     const navigate = useNavigate();
 
     function GetLoginDetails() {
-        // Hardcoded admin credentials
-        const adminCredentials = {
-            loginName: 'admin',
-            password: 'admin123'
-        };
+        // Define admin credentials
+        const adminCredentials = [
+            { loginName: 'com admin', password: 'comAdmin123', route: '/admin' },
+            { loginName: 'mac admin', password: 'macAdmin123', route: '/macAdmin' }
+        ];
 
-        // Check if entered credentials match admin credentials
-        if (loginName === adminCredentials.loginName && password === adminCredentials.password) {
-            // Navigate to user page if credentials match
-            navigate("/admin");
+        // Check if entered credentials match any admin credentials
+        const matchedAdmin = adminCredentials.find(cred => cred.loginName === loginName && cred.password === password);
+
+        if (matchedAdmin) {
+            // Navigate to respective admin page if credentials match
+            navigate(matchedAdmin.route);
         } else {
             // Display error message or handle invalid credentials
             console.log("Invalid credentials");
@@ -53,11 +55,11 @@ function Login() {
                                                     Login
                                                 </button>
                                                 <hr />
-                                              
+
                                             </div>
                                             <hr />
-                                          
-                                            
+
+
                                         </div>
                                     </div>
                                 </div>
