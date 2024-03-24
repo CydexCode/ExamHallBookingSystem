@@ -105,12 +105,12 @@ export default function New(props){
 
                 <div className="ms-10">
                     <label htmlFor="LevelOfImportance_n">Exam Type</label>
-                    <select name="levelOfImportance" id="LevelOfImportance_n" onChange={newApp} defaultValue={0}>
+                    <select name="levelOfImportance" id="LevelOfImportance_n" onChange={newApp} defaultValue={1}>
              
                         <option value={3}>Assignment</option>
                         <option value={2}>Quiz</option>
                         <option value={1}>Mid Exam</option>
-                        <option value={0}>End Exam</option>
+                    {/*    <option value={0}>End Exam</option>*/}
                     </select>
                 </div>
             </div>
@@ -122,8 +122,12 @@ export default function New(props){
                 </div>
 
                 <div className="ms-10">
-                    <label htmlFor="Time_n">Time</label>
-                    <input type="time" id="Time_n" name="time" defaultValue={formatedTimeToStr()} onChange={newApp}/>
+                    <label htmlFor="Time_n">Start Time</label>
+                    <input type="time" id="Time_n" name="time" defaultValue={formatedTimeToStr()} onChange={newApp} />
+                </div>
+                <div className="ms-10">
+                    <label htmlFor="Time_n">End Time</label>
+                    <input type="time" id="Time_n" name="endTime" defaultValue={formatedTimeToStr()} onChange={newApp} />
                 </div>
             </div>
 

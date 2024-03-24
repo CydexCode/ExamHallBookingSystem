@@ -125,6 +125,7 @@ export default function Edit(props){
                     <label htmlFor="Time_e">End Time</label>
                     <input type="time" id="Time_e" name="endTime" onChange={editApp} defaultValue={data.endTime} />
                 </div>
+
                 <div className="ms-10 row items-center">
                     <label htmlFor="Done_e">Done</label>
                     <input type="checkbox" id="Done_e"  name="done" checked={done_} onChange={editApp}/>

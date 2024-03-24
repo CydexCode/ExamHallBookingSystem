@@ -8,14 +8,13 @@ export const testData = [
 
 
 
-
 export const entry = {
     examHall: "Test hall",
     lectureName: "Test Lecture Name",
     numOfStudent: 5,
     year: 1,
     semester: 2,
-    subject:"EC1020",
+    subject: "EC1020",
     academicStaff: "Test address",
     date: new Date(),
     time: formatedTimeToStr(),

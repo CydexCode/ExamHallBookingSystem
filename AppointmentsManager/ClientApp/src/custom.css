@@ -36,6 +36,11 @@ h1 {
     left: 50px;
 }
 
+.add-btn {
+    position: fixed;
+    top: 250px;
+    left: 150px;
+}
 .btn {
   width: 50px;
   background: rgb(219, 214, 214);
@@ -57,6 +62,9 @@ h1 {
         font-family: Tahoma;
         width: 100px;
     }
+
+
+
 .spacer-20 {
   padding-top: 40px;
 }
@@ -88,8 +96,12 @@ h1 {
   vertical-align: middle;
 }
 
+.userPage{
+    
+}
+
 .column.id {
-  width: 5px;
+    width: 5px;
 }
 
 .column.examHall {

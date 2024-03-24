@@ -163,6 +163,10 @@ namespace AppointmentsManager.Controllers
                 {
                     entry_.Time = appointment.Time;
                 }
+                if (entry_.EndTime != appointment.EndTime)
+                {
+                    entry_.EndTime = appointment.EndTime;
+                }
 
                 await _context.SaveChangesAsync();
             }

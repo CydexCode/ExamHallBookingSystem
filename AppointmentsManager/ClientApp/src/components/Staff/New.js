@@ -106,10 +106,10 @@ export default function New(props){
                 <div className="ms-10">
                     <label htmlFor="LevelOfImportance_n">Exam Type</label>
                     <select name="levelOfImportance" id="LevelOfImportance_n" onChange={newApp} defaultValue={0}>
-                      
-                        <option value={3}>Assignment</option>
+             
+                      {/*  <option value={3}>Assignment</option>
                         <option value={2}>Quiz</option>
-                        <option value={1}>Mid Exam</option>
+                        <option value={1}>Mid Exam</option>*/}
                         <option value={0}>End Exam</option>
                     </select>
                 </div>

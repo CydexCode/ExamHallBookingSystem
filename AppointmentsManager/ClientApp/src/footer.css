@@ -1,0 +1,34 @@
+.footer{
+    margin-top: -40px;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background-color: #002a4f;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width:99%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-left: 50px;
+    cursor: pointer;
+    color: #fff;
+    text-align: end;
+    padding: 0 10px;
+}
+
+    li:hover {
+        color: #acd8ff;
+    }

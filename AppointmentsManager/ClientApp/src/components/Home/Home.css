@@ -1,0 +1,57 @@
+﻿﻿.homepage {
+   
+    font-family: Helvetica, sans-serif;
+    color: azure;
+    text-align: right;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    width: 100%;
+    
+}
+.content01{
+    margin-right: 150px;
+}
+.LMbtn {
+    font-size: 20px;
+    border: 2px solid white;
+    height: 40px;
+    width: 180px;
+    display: flex;
+    margin-left: 1563px;
+    margin-top: 100px;
+}
+
+    .LMbtn span {
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .LMbtn:hover {
+        color: #92cbfc;
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+.srcBox {
+    width: 300px;
+    height: 35px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+    .srcBox:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+.hero {
+    font-size: 20px;
+}
+
+.ehb {
+    -webkit-text-stroke: 1px #608fb5;
+}

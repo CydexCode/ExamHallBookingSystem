@@ -90,7 +90,7 @@ export default function Home(props) {
           <br></br>
           <br></br>
           <div className="centered-heading">
-              <h1>Exam Hall Booking System - Admin</h1>
+              <h1>Exam Hall Booking System -Mac Admin</h1>
           </div>
 
           <br></br>
@@ -98,9 +98,10 @@ export default function Home(props) {
           <br></br>
           <br></br>
    
-      <div className="add-btn row items-center content-center">
-        <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
-      </div>
+          <div className="add-btn row items-center content-center">
+              <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
+          </div>
+
 
       <div className="notifications spacer-20"></div>
 
@@ -158,23 +159,24 @@ export default function Home(props) {
         </div>
       </section>
 
-      <div className="row underline hdr">
-        <div className="column id">#</div>
-        <div className="column examHall">Exam Hall</div>
-              <div className="column lectureName">Lecture Name</div>
-              <div className="column numOfStudent">Number Of Student</div>
-              <div className="column year">Year</div>
-              <div className="column semester">Semester</div>
-              <div className="column subject">Subject</div>
-        <div className="column importance">Exam Type</div>
-        <div className="column date">Date</div>
-              <div className="column time">Time</div>
-              <div className="column ">-</div>
-              <div className="column endTime">End Time</div>          
-          <div className="column academicStaff">Academic Staff Member</div>
-        <div className="column edit">Edit</div>
-        <div className="column delete">Delete</div>
-      </div>
+          <div className="userPage">
+              <div className="row underline hdr">
+                  <div className="column id">#</div>
+                  <div className="column examHall">Exam Hall</div>
+                  <div className="column lectureName">Lecture Name</div>
+                  <div className="column numOfStudent">Number Of Student</div>
+                  <div className="column year">Year</div>
+                  <div className="column semester">Semester</div>
+                  <div className="column subject">Subject</div>
+                  <div className="column importance">Exam Type</div>
+                  <div className="column date">Date</div>
+                  <div className="column time">Start Time </div>
+                  <div className="column ">-</div>
+                  <div className="column endTime">End Time</div>
+                  <div className="column academicStaff">Academic Staff Member</div>
+
+              </div>
+              </div>
 
       {
         dataList.length === 0 ?
