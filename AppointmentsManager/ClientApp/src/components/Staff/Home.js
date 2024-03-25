@@ -175,7 +175,7 @@ export default function Home(props) {
                   <div className="column time">Time</div>
                   <div className="column ">-</div>
                   <div className="column endTime">End Time</div>
-          <div className="column academicStaff">Academic Staff Memberxxxx</div>
+          <div className="column academicStaff">Academic Staff Memberxxxxx</div>
    
       </div>
           </div>*/}
