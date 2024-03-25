@@ -97,8 +97,7 @@ export default function Home(props) {
           <br></br>
           <br></br>
           <br></br>
-     
- 
+
 
           <div className="add-btn row items-center content-center">
               <div className="btn add" onClick={() => openModal("new-modal")}>Mid/Quiz exam Booking</div>
@@ -107,7 +106,7 @@ export default function Home(props) {
 
       <div className="notifications spacer-20"></div>
 
-      <section className="row justify-btw items-center filter">
+{/*      <section className="row justify-btw items-center filter">
         <div className="modal-title">Filter</div>
         <div className="row items-center filter-items">
           <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
@@ -159,8 +158,8 @@ export default function Home(props) {
             </select>
           </div>
         </div>
-      </section>
-
+      </section>*/}
+{/*
       <div className="userPage">
       <div className="row underline hdr">
         <div className="column id">#</div>
@@ -178,13 +177,13 @@ export default function Home(props) {
           <div className="column academicStaff">Academic Staff Member</div>
    
       </div>
-          </div>
-      {
+          </div>*/}
+     {/* {
         dataList.length === 0 ?
           <div className="row mt-15 waiting">Loading <div className="loading">...</div></div> :
           dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
       }
-
+*/}
 
       <section>
         <section className="modal new-modal hidden">

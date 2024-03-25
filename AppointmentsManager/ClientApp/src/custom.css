@@ -36,11 +36,7 @@ h1 {
     left: 50px;
 }
 
-.add-btn {
-    position: fixed;
-    top: 250px;
-    left: 150px;
-}
+
 .btn {
   width: 50px;
   background: rgb(219, 214, 214);

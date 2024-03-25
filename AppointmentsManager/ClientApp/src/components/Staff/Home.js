@@ -105,9 +105,9 @@ export default function Home(props) {
           </div>
  
 
-      <div className="notifications spacer-20"></div>
+        <div className="notifications spacer-20"></div>
 
-      <section className="row justify-btw items-center filter">
+{/*    <section className="row justify-btw items-center filter">
         <div className="modal-title">Filter</div>
         <div className="row items-center filter-items">
           <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
@@ -159,9 +159,9 @@ export default function Home(props) {
             </select>
           </div>
         </div>
-      </section>
+      </section>*/}
 
-      <div className="userPage">
+{/*      <div className="userPage">
       <div className="row underline hdr">
         <div className="column id">#</div>
         <div className="column examHall">Exam Hall</div>
@@ -178,12 +178,12 @@ export default function Home(props) {
           <div className="column academicStaff">Academic Staff Member</div>
    
       </div>
-          </div>
-      {
+          </div>*/}
+ {/*     {
         dataList.length === 0 ?
           <div className="row mt-15 waiting">Loading <div className="loading">...</div></div> :
           dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
-      }
+      }*/}
 
 
       <section>
