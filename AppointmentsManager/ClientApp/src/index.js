@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import './App.css';
+// import './App.css';
+import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AdminHome from './components/Admin/Home';
 import MacAdminHome from './components/MacAdmin/Home';
@@ -34,27 +35,26 @@ const App = () => {
     return (
         <Router>
             <div>
-            <div>
-                <NavBar
-                    onMainClick={handleMainClick}
-                    onAllClick={handleAllClick}
-                    onAdminClick={handleAdminClick}
-                />
-                <Routes>
-                    <Route path="/main" element={<MainHome />} />
-                    <Route path="/admin" element={<AdminHome />} />
-                    <Route path="/macAdmin" element={<MacAdminHome />} />
-                    <Route path="/user" element={<UserHome />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/staff" element={<Staff />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/adminLogin" element={<AdminLogin />} />
-                    <Route path="/allBooking" element={<AllBooking />} />
-                    <Route path="/staffLogin" element={<StaffLogin />} />
-                </Routes>
-                </div>
-               <Footer/>
+                    <NavBar
+                        onMainClick={handleMainClick}
+                        onAllClick={handleAllClick}
+                        onAdminClick={handleAdminClick}
+                    />
+                    <Routes>
+                        <Route path="/main" element={<MainHome />} />
+                        <Route path="/admin" element={<AdminHome />} />
+                        <Route path="/macAdmin" element={<MacAdminHome />} />
+                        <Route path="/user" element={<UserHome />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/staff" element={<Staff />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/adminLogin" element={<AdminLogin />} />
+                        <Route path="/allBooking" element={<AllBooking />} />
+                        <Route path="/staffLogin" element={<StaffLogin />} />
+                    </Routes>
+                    <Footer/>
             </div>
+
         </Router>
     );
 };

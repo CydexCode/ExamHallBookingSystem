@@ -1,21 +1,21 @@
 ﻿.navbar {
     font-family: Helvetica, sans-serif;
-    width: 100%;
     background-color: #002a4f;
-    padding: 20px 0;
+    padding: 15px;
     top: 0;
     left: 0;
-    display: fixed;
+    right: 0;
     display: flex;
-    align-items: center;
+    position: fixed;
+    align-items: top;
     justify-content: center;
     z-index: 10;
-    position: relative;
     font-size: 20px;
 }
 
 ul {
     list-style-type: none;
+    top: 0;
     margin: 0;
     padding: 0;
     display: flex;
@@ -23,6 +23,7 @@ ul {
 
 li {
     margin-left: 70px;
+    margin-right: 70px;
     cursor: pointer;
     color: #fff;
     text-align: end;
@@ -51,6 +52,7 @@ li {
     width: 25px;
     height: 25px;
     margin-right: 100px;
+    margin-top: 20px;
     cursor: pointer;
 }
 

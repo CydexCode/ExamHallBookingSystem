@@ -4,7 +4,7 @@ import './footer.css';
 const Footer = () => {
     return (
         <div className='footer'>
-            <ul>
+            <ul className='fotterUL'>
                 <li>Instagram</li>
                 <li>Youtube</li>
                 <li>LinkedIn</li>
