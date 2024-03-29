@@ -30,34 +30,28 @@ h1 {
 
 
 
-.add-btn {
-    position: fixed;
-    top: 250px;
-    left: 50px;
-}
-
-
 .btn {
-  width: 50px;
-  background: rgb(219, 214, 214);
+  padding:4px 13px;
+  width: 150px;
+  font-size: 15px;
+  
   box-shadow: 0 0 1px 2px rgb(218, 215, 215);
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   text-align: center;
-  color: #000;
+
+  font-family: sans-serif;
+  background: #007fff;
+        
+  font-weight: bold;
+  box-shadow: 0 0 2px 2px rgb(65, 106, 195);
+  padding: 5px 13px;
+  color: #fff;
+
 }
 
 
-    .btn.add {
-        background: rgb(16, 122, 67);
-        font-size: 15px;
-        font-weight: bold;
-        box-shadow: 0 0 2px 2px rgb(39, 153, 39);
-        padding: 5px 13px;
-        color: #fff;
-        font-family: Tahoma;
-        width: 100px;
-    }
+
 
 
 
@@ -101,27 +95,27 @@ h1 {
 }
 
 .column.examHall {
-  width: 6%;
+  width: 50%;
 }
 
 .column.lectureName {
-  width: 10%;
+  width: 50%;
 }
    
 
     .column.numOfStudent{
-        width:8%;
+        width:25%;
     }
 
     .column.year {
-        width: 8%;
+        width: 25%;
     }
 
     .column.semester {
-        width: 10%;
+        width: 25%;
     }
     .column.subject {
-        width: 10%;
+        width: 25%;
     }
     .column.importance {
         width: 10%;
@@ -164,15 +158,13 @@ h1 {
   margin-right: 10px;
 }
 
-.ms-10 {
-  margin-left: 10px;
+.ms-20{
+  margin-left: 35px;
 }
 
-.mt-15 {
-  margin-top: 15px;
-}
 
 .mt-25 {
+  margin-left: 35px;
   margin-top: 25px;
 }
 
@@ -221,17 +213,34 @@ h1 {
   float: right;
 }
 
+.ms-20 input{
+  width:380px;
+}
+
+.ms-10 select{
+width:120px;
+}
+.mt-15{
+  margin-left: 35px;
+}
+.mt-15 select{
+  width:112px;
+}
+
 input,
 select {
-    margin-left: 10px;
-    border: none;
+    margin-left: 30px;
+    border-width: 3px;
+    border-color: #000;
+    border-radius: 5px;
     outline: 1px rgb(34, 146, 239) solid;
     padding: 2px 4px;
+    width:100px;
 }
 
 input:focus,
 select:focus {
-    outline: 1px solid gold;
+    outline: 3px solid #00ccff;
 }
 
 input[name="address"] {
@@ -243,7 +252,11 @@ input[name="title"] {
     margin-left: 0;
 }
 
+
+
 label {
+  font-family: sans-serif; 
+  font-size:15px;
   font-weight: bold;
 }
 
@@ -283,19 +296,17 @@ input[type="checkbox"] {
 
 .modal-container {
   background: #fff;
-  border-radius: 9px;
-  padding: 8px;
-  min-width: 520px;
-  max-width: 85vw;
+  border-radius: 10px;
+  padding: 6px;
+  max-width: 79vw;
 }
 
 .modal-title {
+  text-align: center;
   font-size: 20px;
+  font-family: Helvetica, sans-serif;
   font-weight: bold;
-}
-
-.modal-action-container {
-  padding: 10px 20px;
+  color: #1c05B3;
 }
 
 
@@ -320,6 +331,70 @@ input[type="checkbox"] {
 .hidden {
   display: none;
 }
+
+
+/* Positioning the Exam Type div to the right corner of the modal-container */
+.ms-10 {
+  position: absolute;
+  
+  z-index: 1; /* Ensure it's on top of other elements */
+  background-color: white; /* Background color to ensure visibility */
+  
+  margin-left:340px;
+}
+
+/* Styling the form container */
+.form-container {
+  margin-left: 35px;
+  position: relative; /* Establishing a positioning context for the absolute positioning of .ms-10 */
+  padding-right: 50px; /* Adjust the right padding to make space for .ms-10 */
+}
+
+/* Ensure that form fields within the same row are aligned */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap:4px;
+  
+}
+
+
+.form-field {
+  flex-basis: calc(25% - 20px); 
+  margin-bottom: 15px; 
+}
+
+
+.form-field label
+
+ {
+  display: block; 
+  width:136px;
+}
+.form-field input{
+  width:80px;
+}
+.form-field select{
+  width: 80px;
+}
+
+.modal-action-container {
+  
+  padding: 10px 4px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+
+.modal-action-container .btn:last-child {
+  margin-left: 30px;
+  margin-right: 65px;
+}
+
+
+
+
 
 @keyframes notification {
   0% {

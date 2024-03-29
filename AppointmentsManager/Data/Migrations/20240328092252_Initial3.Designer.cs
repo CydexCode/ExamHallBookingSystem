@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace AppointmentsManager.Data.Migrations
+namespace ExamHallBooking.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240314044220_Initial3")]
+    [Migration("20240328092252_Initial3")]
     partial class Initial3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,6 +48,10 @@ namespace AppointmentsManager.Data.Migrations
 
                     b.Property<bool>("Done")
                         .HasColumnType("bit");
+
+                    b.Property<string>("EndTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ExamHall")
                         .IsRequired()
