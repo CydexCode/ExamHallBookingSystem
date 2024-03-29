@@ -90,28 +90,28 @@ h1 {
 }
 
 .column.examHall {
-    width: 50%;
+    width: 6%;
 }
 
 .column.lectureName {
-    width: 50%;
+    width: 10%;
 }
 
 
 .column.numOfStudent {
-    width: 25%;
+    width: 8%;
 }
 
 .column.year {
-    width: 25%;
+    width: 8%;
 }
 
 .column.semester {
-    width: 25%;
+    width: 10%;
 }
 
 .column.subject {
-    width: 25%;
+    width: 10%;
 }
 
 .column.importance {
@@ -138,6 +138,7 @@ h1 {
     width: 50px;
     color: red;
 }
+
 
 .underline {
     border-bottom: 2px solid rgb(203, 197, 197);

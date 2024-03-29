@@ -138,7 +138,7 @@ export default function New(props) {
 
                 <div className="form-field">
                     <label for="Subject_n">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subject :</label>
-                    <input type="text" id="Subject_n" maxLength="2" name="subject" onChange={newApp} />
+                    <input type="text" id="Subject_n" maxLength="6" name="subject" onChange={newApp} />
 
                 </div>
 
