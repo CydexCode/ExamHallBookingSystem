@@ -1,4 +1,4 @@
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) [year] [fullname] jkb
 
