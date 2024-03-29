@@ -7,6 +7,7 @@ import Appointment from "./Appointment"
 
 import "../../NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
+import "./AR.css"
 import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib"
 
 export default function Home(props) {
@@ -171,9 +172,8 @@ export default function Home(props) {
               <div className="column time">Time</div>
               <div className="column ">-</div>
               <div className="column endTime">End Time</div>          
-          <div className="column academicStaff">Academic Staff Member</div>
-        <div className="column edit">Edit</div>
-        <div className="column delete">Delete</div>
+          <div className="column academicStaff">Non Academic Staff Member</div>
+       
       </div>
 
       {

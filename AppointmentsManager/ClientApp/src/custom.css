@@ -48,8 +48,30 @@ h1 {
 
 
 
-
-
+.btn2.edit{
+    width: 50px;
+    background: rgb(219, 214, 214);
+    box-shadow: 0 0 1px 2px rgb(218, 215, 215);
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    padding: 5px 8px;
+    background: #007fff;
+}
+.btn2.delete{
+    width: 50px;
+    background: rgb(219, 214, 214);
+    box-shadow: 0 0 1px 2px rgb(218, 215, 215);
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    padding: 5px 8px;
+    background: #007fff;
+}
 
 .spacer-20 {
     padding-top: 40px;
@@ -103,11 +125,11 @@ h1 {
 }
 
 .column.year {
-    width: 8%;
+    width: 5%;
 }
 
 .column.semester {
-    width: 10%;
+    width: 5%;
 }
 
 .column.subject {
@@ -119,15 +141,18 @@ h1 {
 }
 
 .column.date {
-    width: 110px;
+    width: 130px;
 }
 
+.column.endTime {
+    width: 40px;
+}
 .column.time {
     width: 40px;
 }
 
 .column.academicStaff {
-    width: 10%;
+    width: 15%;
 }
 
 .column.edit {
@@ -341,6 +366,14 @@ input[type="checkbox"] {
 
     margin-left: 340px;
 }
+.ms-30 {
+    position: absolute;
+    z-index: 1; /* Ensure it's on top of other elements */
+    background-color: white; /* Background color to ensure visibility */
+
+    margin-left: 340px;
+}
+
 
 /* Styling the form container */
 .form-container {

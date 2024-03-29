@@ -97,9 +97,7 @@ export default function Home(props) {
 
           <br></br>
           <br></br>
-          <br></br>
-          <br></br>
-
+         
           <div>
            
               <Link to="/staffLogin">End Exam Booking</Link>

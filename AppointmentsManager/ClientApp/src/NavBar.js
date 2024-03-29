@@ -28,20 +28,22 @@ const Navbar = ({ onMainClick, onAdminClick, onAllClick }) => {
                     </span>{" "}
                     All Booking
                 </li>
+                <div className="admin">
                 <li onClick={onAdminClick}>
                     <span role="img" aria-label="Admin Icon">
                         👑
                     </span>{" "}
                     Admin
                 </li>
-                <li className="log">
+            </div>
+              {/*  <li className="log">
                     LOGIN
                 </li>
                 <div className="vl"></div>
                 <div className="vl" style={{ marginLeft: '2px' }}></div>
                 <li className="reg">
                     REGISTER
-                </li>
+                </li>*/}
             </ul>
         </nav>
     );

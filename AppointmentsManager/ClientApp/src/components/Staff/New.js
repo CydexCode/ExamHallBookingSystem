@@ -53,6 +53,7 @@ export default function New(props) {
         }).catch(e => console.log("Error happened at posting new app: ", e))
 
         closeModal("new-modal")
+        window.location.reload();
     }
 
     return (

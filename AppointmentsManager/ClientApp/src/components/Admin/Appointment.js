@@ -37,10 +37,10 @@ export default function Appointment(props) {
             <div className="column endTime">{props.item.endTime}</div>
             <div className="column academicStaff">{props.item.academicStaff}</div>
             <div className="column edit">
-                <div className="btn edit" onClick={()=> handlingEdit(props.item)}>Edit</div>
+                <div className="btn2 edit" onClick={()=> handlingEdit(props.item)}>Edit</div>
             </div>
             <div className={`column delete  ${props.item.deleted ? ' not-allowed' : ''}`}>
-                <div className={`btn delete ${props.item.deleted ? ' no-event' : ''}`} onClick={()=> handlingDelete(props.item.id)}>Delete</div>
+                <div className={`btn2 delete ${props.item.deleted ? ' no-event' : ''}`} onClick={()=> handlingDelete(props.item.id)}>Delete</div>
             </div>
         </div>
     )

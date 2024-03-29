@@ -27,21 +27,17 @@
     font-size: 20px;
     margin-right: 10px;
     cursor: pointer;
-    background-color: #265aa4;
-    color: #ffffff;
+    background-color: #4CAF50; /* Green */
+    color: white;
     padding: 15px 30px;
     border-radius: 10px;
-    border: 1px;
+    border: 1px solid #4CAF50; /* Green border */
 }
 
-    .loginBtn:hover {
-        color: #92cbfc;
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-    }
-
+    .loginBtn:hover,
     .RegisterBTn:hover {
-        color: #92cbfc;
+        background-color: #45a049; /* Darker green */
+        border-color: #45a049; /* Darker green border */
         transform: scale(1.1);
         transition: transform 0.3s ease;
     }
@@ -79,6 +75,7 @@
     border: none;
     border-radius: 5px;
     margin-top: 30px;
+    margin-left: 800px;
 }
 
     .srcBox:hover {
@@ -105,3 +102,4 @@
     margin-right: 10px; /* Adds space between the logo and the search box */
     position: relative;
 }
+

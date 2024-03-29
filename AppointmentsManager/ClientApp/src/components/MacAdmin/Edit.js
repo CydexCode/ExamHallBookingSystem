@@ -41,6 +41,7 @@ export default function Edit(props){
         })
         .catch(e=>console.log("Could not update the appointment: ", e))
         closeModal("edit-modal")
+        window.location.reload();
     }
 
     const defaultDate = typeof(entry.date) === "string" ? entry.date.split("T")[0] : ""
@@ -53,92 +54,99 @@ export default function Edit(props){
     }, [props.stateListener])
     return (
         <div className="modal-container">
-            <div className="modal-title">Edit Appointment</div>
-
+            <div className="modal-title">Edit Booking</div>
+            <br></br>
             <div className="mt-15">
-                <label htmlFor="Title_e">Exam Hall</label> <br/>
-                <input type="text" className="mt-5" id="Title_e" maxLength={50} name="examHall" defaultValue={data.examHall} onChange={editApp}/>
-               
-            </div>
+                <label htmlFor="Title_e">Exam Hall  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;    :</label>
+                <input type="text" className="mt-5" id="Title_e" maxLength={50} name="examHall" defaultValue={data.examHall} onChange={editApp} />
 
+            </div>
+            <br></br>
             <div className="mt-15">
-                <label htmlFor="Description_e">Lecture Name</label> <br/>
-                <textarea id="Description_e" maxLength={50} className="mt-5" name="lectureName" defaultValue={data.lectureName} cols={25} rows={1} onChange={editApp}></textarea> <br />
-              
+                <label htmlFor="Description_e">Lecturer Name&nbsp; :</label>
+                <input id="Description_e" maxLength={50} className="mt-5" name="lectureName" defaultValue={data.lectureName} onChange={editApp}></input> <br />
+
             </div>
 
-            <div className="row mt-15">
+            <div className="row mt-25">
                 <div>
-                    <label htmlFor="Address_e">Academic Staff Member</label>
-                    <input type="text" id="Address_e" name="academicStaff" maxLength={50} defaultValue={data.academicStaff} onChange={editApp}/>
+                    <label htmlFor="Address_e"> Non Academic   &nbsp;:</label>
+                    <input type="text" id="Address_e" name="academicStaff" maxLength={50} defaultValue={data.academicStaff} onChange={editApp} /><br></br>
+                    <label>Staff Member</label>
                 </div>
-                <br></br>
-                <div className="mt-15">
-                    <label htmlFor="Title_e">Number Of Student</label> <br />
-                    <input type="text" className="mt-5" id="Title_e" maxLength={5} name="numOfStudent" defaultValue={data.numOfStudent} onChange={editApp} />
+            </div>
+            <br></br>
+            <div className="ms-10">
+                <label htmlFor="LevelOfImportance_e">Exam Type</label>
+                <select name="levelOfImportance" id="LevelOfImportance_e" value={importance} onChange={editApp}>
 
-                </div>
-                <br></br>
-                <div className="mt-15">
-                    <label htmlFor="Title_e">Year</label> <br />
-                    <input type="text" className="mt-5" id="Title_e" maxLength={5} name="year" defaultValue={data.year} onChange={editApp} />
 
-                </div>
-                <br></br>
-                <div className="mt-15">
-                    <label htmlFor="Title_e">Semester</label> <br />
-                    <input type="text" className="mt-5" id="Title_e" maxLength={5} name="semester" defaultValue={data.semester} onChange={editApp} />
+                    <option value={3}>Assignment</option>
+                    <option value={2}>Quiz</option>
+                    <option value={1}>Mid Exam</option>
+                    <option value={0}>End Exam</option>
+                </select>
+            </div>
+            <br></br>
+            <br></br>
+            <div className="form-container">
+                <div className="form-row">
+                    <div className="form-field">
+                        <label htmlFor="Title_e">Number Of Student :</label> <br />
+                        <input type="text" className="mt-5" id="Title_e" maxLength="2" name="numOfStudent" defaultValue={data.numOfStudent} onChange={editApp} />
 
-                </div>
-                <br></br>
-                <div className="mt-15">
-                    <label htmlFor="Title_e">Subject</label> <br />
-                    <input type="text" className="mt-5" id="Title_e" maxLength={5} name="subject" defaultValue={data.subject} onChange={editApp} />
+                    </div>
 
-                </div>
+                    <div className="form-field">
+                        <label htmlFor="Title_e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year :</label> <br />
+                        <input type="text" className="mt-5" id="Title_e" name="year" defaultValue={data.year} onChange={editApp} />
 
-                <div className="ms-10">
-                    <label htmlFor="LevelOfImportance_e">Importance</label>
-                    <select name="levelOfImportance" id="LevelOfImportance_e" value={importance} onChange={editApp}>
-                        <option value={5}>Very High</option>
-                        <option value={4}>High</option>
-                        <option value={3}>Assignment</option>
-                        <option value={2}>Quiz</option>
-                        <option value={1}>Mid Exam</option>
-                        <option value={0}>End Exam</option>
-                    </select>
+                    </div>
+
+                    <div className="form-field">
+                        <label htmlFor="Title_e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semester :</label> <br />
+                        <input type="text" className="mt-5" id="Title_e" name="semester" defaultValue={data.semester} onChange={editApp} />
+
+                    </div>
+                    <br></br>
+                    <div className="form-field">
+                        <label htmlFor="Title_e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subject :</label> <br />
+                        <input type="text" className="mt-5" id="Title_e" maxLength={6} name="subject" defaultValue={data.subject} onChange={editApp} />
+
+                    </div>
+
                 </div>
             </div>
 
-            <div className="row mt-15 items-center">
+            <div className="ms-20">
                 <div>
-                    <label htmlFor="Date_e">Date</label>
-                    <input type="date" id="Date_e" name="date" onChange={editApp} defaultValue={defaultDate}/>
+                    <label htmlFor="Date_e">Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                    <input type="date" id="Date_e" name="date" onChange={editApp} defaultValue={defaultDate} />
                 </div>
-
-                <div className="ms-10">
-                    <label htmlFor="Time_e">Start Time</label>
+                <br></br>
+                <div className="ms-20">
+                    <label htmlFor="Time_e">Start Time &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
                     <input type="time" id="Time_e" name="time" onChange={editApp} defaultValue={data.time} />
                 </div>
-
-                <div className="ms-10">
-                    <label htmlFor="Time_e">End Time</label>
+                <br></br>
+                <div className="ms-20">
+                    <label htmlFor="Time_e">End Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
                     <input type="time" id="Time_e" name="endTime" onChange={editApp} defaultValue={data.endTime} />
                 </div>
-
-                <div className="ms-10 row items-center">
+                <br></br>
+                <div className="ms-20 row items-center">
                     <label htmlFor="Done_e">Done</label>
-                    <input type="checkbox" id="Done_e"  name="done" checked={done_} onChange={editApp}/>
+                    <input type="checkbox" id="Done_e" name="done" checked={done_} onChange={editApp} />
                 </div>
 
-                <div className="ms-10 row items-center">
+                <div className="ms-20 row items-center">
                     <label htmlFor="Deleted_e">Deleted</label>
-                    <input type="checkbox" id="Deleted_e" name="deleted" checked={deleted_} onChange={editApp}/>
+                    <input type="checkbox" id="Deleted_e" name="deleted" checked={deleted_} onChange={editApp} />
                 </div>
             </div>
 
             <div className="row justify-btw modal-action-container mt-15">
-                <div className="btn" onClick={()=> closeModal("edit-modal")}>Cancel</div>
+                <div className="btn" onClick={() => closeModal("edit-modal")}>Cancel</div>
                 <div className="btn" onClick={updateApp}>Update</div>
             </div>
         </div>

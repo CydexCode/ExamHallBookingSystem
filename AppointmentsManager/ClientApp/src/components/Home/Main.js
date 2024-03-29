@@ -14,12 +14,18 @@ const HomePage = () => {
                 <header>
                     <div className="login-register-container">
                         <div className="loginBtn">
-                            <span>LOGIN</span>
+                            <span><Link to="/login">Login</Link></span>
                         </div>
                         <div className="RegisterBTn">
-                            <span>REGISTER</span>
+                            <span><Link to="/register">Register</Link></span>
                         </div>
                     </div>
+
+                    
+                    <br></br>
+                    <br></br>
+                    
+
                     <div className="search-container">
                         <img src={uniLogo} alt="University Logo" className="uniLogo" />
                         <input type="text" placeholder="Search..." className='srcBox' />

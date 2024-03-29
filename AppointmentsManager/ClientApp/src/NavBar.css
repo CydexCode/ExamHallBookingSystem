@@ -63,3 +63,8 @@ li {
     border-left: 1px solid rgb(255, 255, 255);
     height: 20px;
 }
+
+.admin{
+    align-items:end;
+        margin-left:20px;
+}
