@@ -21,6 +21,7 @@ export default function Appointment(props) {
 
     const levelOfImportance = ["End Exam", "Mid Exam", "Quiz", "Assignmnet", "", ""];
     return (
+        <div className="Booking_table">
         <div className={`row py-5 underline  ${props.item.deleted ? ' bc-red' : props.item.done ? ' bc-green' : ''}`} key={props.item.id}>
             <div className="column id">{props.item.id}</div>
             <div className="column examHall">{props.item.examHall}</div>
@@ -38,6 +39,8 @@ export default function Appointment(props) {
             <div className="column endTime">{props.item.endTime}</div>
             <div className="column academicStaff">{props.item.academicStaff}</div>
            
+            </div>
+
         </div>
     )
 }

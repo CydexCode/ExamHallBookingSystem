@@ -92,9 +92,9 @@ export default function New(props) {
                 <label htmlFor="LevelOfImportance_n">Exam Type</label>
                 <select name="levelOfImportance" id="LevelOfImportance_n" onChange={newApp} defaultValue={0}>
 
-                    <option value={3}>Assignment</option>
+                  {/*  <option value={3}>Assignment</option>
                     <option value={2}>Quiz</option>
-                    <option value={1}>Mid Exam</option>
+                    <option value={1}>Mid Exam</option>*/}
                     <option value={0}>End Exam</option>
                 </select>
 
@@ -169,7 +169,7 @@ export default function New(props) {
 
             <div className="row justify-btw modal-action-container mt-15">
                 <div className="btn" onClick={() => closeModal("new-modal")}>Cancel</div>
-                <div className="btn" onClick={postApp}>Add</div>
+                <div className="btn" onClick={postApp}>Request</div>
             </div>
         </div>
     )

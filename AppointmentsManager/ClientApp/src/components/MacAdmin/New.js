@@ -169,7 +169,7 @@ export default function New(props){
 
             <div className="row justify-btw modal-action-container mt-15">
                 <div className="btn" onClick={()=> closeModal("new-modal")}>Cancel</div>
-                <div className="btn" onClick={postApp}>Add</div>
+                <div className="btn" onClick={postApp}>Request</div>
             </div>
         </div>
     )

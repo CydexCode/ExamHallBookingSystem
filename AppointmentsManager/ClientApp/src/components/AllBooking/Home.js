@@ -123,17 +123,18 @@ export default function Home(props) {
         <div className="row items-center filter-items">
           <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
           <div>
-            <label htmlFor="All_f">All</label> <br />
+                      <label htmlFor="All_f">All Requests</label> <br />
             <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
           </div>
 
-          <div>
-            <label htmlFor="Done_f">Done</label> <br />
-            <input type="checkbox" id="Done_f" name="Done" onChange={filterApp} />
-          </div>
+                  <div>
+                      <label htmlFor="Done_f">Requests accepted</label> <br />
+                      <input type="checkbox" id="Done_f" name="Done" onChange={filterApp}  />
+                  </div>
+
 
           <div>
-            <label htmlFor="Deleted_f">Deleted</label> <br />
+                      <label htmlFor="Deleted_f">Rejected</label> <br />
             <input type="checkbox" id="Deleted_f" name="Deleted" onChange={filterApp} />
           </div>
           <div>
@@ -183,7 +184,7 @@ export default function Home(props) {
               <div className="column subject">Subject</div>
         <div className="column importance">Exam Type</div>
         <div className="column date">Date</div>
-                  <div className="column time">Time</div>
+                  <div className="column time">Start Time</div>
                   <div className="column ">-</div>
                   <div className="column endTime">End Time</div>
           <div className="column academicStaff">Academic Staff Member</div>

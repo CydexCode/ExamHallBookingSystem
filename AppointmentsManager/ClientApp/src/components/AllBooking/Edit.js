@@ -126,12 +126,12 @@ export default function Edit(props){
                     <input type="time" id="Time_e" name="endTime" onChange={editApp} defaultValue={data.endTime} />
                 </div>
                 <div className="ms-10 row items-center">
-                    <label htmlFor="Done_e">Done</label>
+                    <label htmlFor="Done_e">accept</label>
                     <input type="checkbox" id="Done_e"  name="done" checked={done_} onChange={editApp}/>
                 </div>
 
                 <div className="ms-10 row items-center">
-                    <label htmlFor="Deleted_e">Deleted</label>
+                    <label htmlFor="Deleted_e">Reject</label>
                     <input type="checkbox" id="Deleted_e" name="deleted" checked={deleted_} onChange={editApp}/>
                 </div>
             </div>

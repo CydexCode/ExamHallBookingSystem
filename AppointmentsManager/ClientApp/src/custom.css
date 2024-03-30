@@ -453,3 +453,8 @@ input[type="checkbox"] {
         width: 15px;
     }
 }
+
+
+.Booking_table{
+    max-height:300px;
+}
