@@ -26,7 +26,7 @@ const Navbar = ({ onMainClick, onAdminClick, onAllClick }) => {
                     <span role="img" aria-label="User Icon">
                         👤
                     </span>{" "}
-                    All Booking
+                    User
                 </li>
                 <li onClick={onAdminClick}>
                     <span role="img" aria-label="Admin Icon">

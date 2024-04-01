@@ -1,0 +1,100 @@
+
+body {
+    display: flex;
+    background-color:white;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 420px;
+    background-color: #002a4f; 
+    color: black;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 135px;
+    margin-bottom: 80px;
+    height:500px ;
+    border-radius: 30px;
+}
+
+.container h1{
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+   
+}
+
+.form-control-user {
+    position: relative;
+    border-radius: 4px;
+    height: 30px;
+    width: 295px;  
+
+}
+.text-center {
+    text-align: center;
+    font-size: 30px;
+   
+}
+
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: -15px 0 15px;
+    color: white;
+    
+    
+
+} 
+.remember-forgot a{
+    color: white;
+    text-decoration: none;
+    padding:8px;
+    
+
+}
+
+.remember-forgot a:hover{
+    text-decoration:underline;
+}
+
+
+.btn-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 100px;
+    width: 120px;
+    height: 30px;
+    background-color: #030d2c;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+   
+}
+.btn-user:hover {
+    background-color: #084d6f;
+}
+.register-link {
+    color:white;
+    text-align: center;
+   margin-top: 10px;
+   font-weight: 400;
+}
+.register-link p a{
+    color: white;
+    text-decoration: none;
+    
+}
+.register-link p a:hover{
+    text-decoration:underline;
+}

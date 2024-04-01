@@ -1,6 +1,6 @@
 ﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './login_rejister.css'; // Import the CSS file
+import './adminLogin.css'; // Import the CSS file
 
 function Login() {
     const [loginName, setLoginName] = useState('');
@@ -44,17 +44,28 @@ function Login() {
                                                 <div className="form-group">
                                                     <input type="text" className="form-control form-control-user"
                                                         value={loginName} onChange={(e) => { setLoginName(e.target.value) }}
-                                                        placeholder="Login Name" />
+                                                        placeholder="Email" />
                                                 </div>
                                                 <div className="form-group">
                                                     <input type="password" className="form-control form-control-user"
                                                         value={password} onChange={(e) => { setPassword(e.target.value) }}
                                                         placeholder="Password" />
                                                 </div>
+
+                                                 <div className="remember-forgot">
+                                                    <label><input type = "checkbox"/>Remember Me</label>
+                                                        <a href = "#">Forgot password?</a>
+                                                </div>
+
                                                 <button className="btn btn-primary btn-user btn-block" onClick={GetLoginDetails}>
-                                                    Login
+                                                    LOGIN
                                                 </button>
-                                                <hr />
+                                               
+                                                <div className="register-link">
+                                                    <p>Don't have an account? <a href = "#">Sign Up</a></p>
+                                                       
+                                                </div>
+                                            <hr />
 
                                             </div>
                                             <hr />
