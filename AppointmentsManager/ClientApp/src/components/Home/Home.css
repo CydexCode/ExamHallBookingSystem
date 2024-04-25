@@ -32,12 +32,12 @@
 }
 .loginBtn:hover {
     color: #92cbfc;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 .RegisterBTn:hover {
     color: #92cbfc;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
@@ -66,7 +66,7 @@
     height: 40px;
     width: 180px;
     display: flex;
-    margin-left: 1190px;
+    margin-left: 1230px;
     margin-top: 10px;
 }
 
@@ -77,7 +77,7 @@
 
     .LMbtn:hover {
         color: #92cbfc;
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: transform 0.3s ease;
     }
 
