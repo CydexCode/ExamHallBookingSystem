@@ -1,0 +1,35 @@
+.footer {
+    font-family: Helvetica, sans-serif;
+    background-color: #002a4f;
+    width: 100%;
+    padding: 5px;
+    font-size: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.fotterUL {
+    font-size: 15px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-left: 50px;
+    cursor: pointer;
+    color: #fff;
+    text-align: end;
+    padding: 0 10px;
+}
+
+    li:hover {
+        color: #acd8ff;
+    }
