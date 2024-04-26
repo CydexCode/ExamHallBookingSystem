@@ -33,6 +33,7 @@ export default function Appointment(props) {
             props.item.levelOfImportance === 2 ? ' bc-gold' : props.item.levelOfImportance === 0 ? ' bc-red' : props.item.levelOfImportance === 3 ? ' bc-blue': ''}`}>
                 {levelOfImportance[props.item.levelOfImportance]}</div>
             <div className="column date">{props.item.date.split("T")[0]}</div>
+          
             <div className="column time">{props.item.time}</div>-
             <div className="column endTime">{props.item.endTime}</div>
             <div className="column academicStaff">{props.item.academicStaff}</div>

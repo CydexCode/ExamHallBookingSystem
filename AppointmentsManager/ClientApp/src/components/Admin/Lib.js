@@ -7,13 +7,15 @@ export const testData = [
 ]
 
 
+
+
 export const entry = {
     examHall: "Test hall",
     lectureName: "Test Lecture Name",
     numOfStudent: 5,
     year: 1,
     semester: 2,
-    subject: "EC1020",
+    subject:"EC1020",
     academicStaff: "Test address",
     date: new Date(),
     time: formatedTimeToStr(),
@@ -22,7 +24,6 @@ export const entry = {
     deleted: false,
     levelOfImportance: 2,
 }
-
 
 export const filter = {
     LevelOfImportance: null,
@@ -38,6 +39,8 @@ export const filter = {
 export const activeId = {
     id: 0
 }
+
+
 
 const url = "api/appointment"
 
@@ -121,6 +124,22 @@ export async function deleteAppointment(id){
 
     return res
 }
+
+
+export async function deleteAppointmentP(id) {
+    const res = await fetch(url + "/" + id, {
+        method: "DELETE"
+    })
+
+    if (!res.ok) {
+        console.log("It sucked at deleting appointment: ", res)
+        notifyUser("Something went wrong, please refresh the page.")
+        return { msg: res }
+    }
+
+    return res
+}
+
 
 export function notifyUser(msg){
     const notificationEl = document.querySelector(".notifications")

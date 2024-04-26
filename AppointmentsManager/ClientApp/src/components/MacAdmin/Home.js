@@ -7,7 +7,7 @@ import Appointment from "./Appointment"
 
 import "../../NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
-import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib"
+import { getDefault, openModal, filter, getAppointmentsDrawingHall, notifyUser } from "./Lib"
 
 export default function Home(props) {
 
@@ -20,10 +20,55 @@ export default function Home(props) {
     let name_ = e.target.name;
     let v_ = e.target.value;
 
-    if (name_ === "All" || name_ === "Done" || name_ === "Deleted") {
-      v_ = e.target.checked;
-      filter[name_] = v_;
-    }
+      if (name_ === "All" || name_ === "Done" || name_ === "Deleted") {
+          v_ = e.target.checked;
+          filter[name_] = v_;
+
+          if (name_ === "SpecifiedDate") {
+              filter.SpecifiedDate = new Date(v_);
+              filter.StartDate = null
+              filter.EndDate = null
+          }
+
+          if (name_ === "SpecifiedTime") {
+              filter.SpecifiedTime = v_;
+          }
+
+          if (name_ === "LevelOfImportance") {
+              filter.LevelOfImportance = Number(v_) === 9 ? null : Number(v_);
+          }
+
+          if (name_ === "period") {
+              // 1 = today, 2 = this week, 3 = last week
+              let sd_ = new Date(), ed_ = new Date();
+              const dayNum = sd_.getDay();
+
+              if (v_ === "1") {
+                  sd_.setDate(dayNum - 1)
+              }
+
+              if (v_ === "2") {
+                  let startDaysInSec = (dayNum - 1) * 24 * 60 * 60 * 1000;
+                  let endDaysInSec = (7 - dayNum) * 24 * 60 * 60 * 1000;
+
+                  sd_ = new Date(Date.now() - startDaysInSec);
+                  ed_ = new Date(Date.now() + endDaysInSec);
+              }
+
+              if (v_ === "3") {
+                  let startDaysInSec = dayNum * 24 * 60 * 60 * 1000;
+                  let endDaysInSec = (6 + dayNum) * 24 * 60 * 60 * 1000;
+
+                  ed_ = new Date(Date.now() - startDaysInSec);
+                  sd_ = new Date(Date.now() - endDaysInSec);
+              }
+
+              filter.StartDate = v_ === '4' ? null : sd_;
+              filter.EndDate = v_ === '4' ? null : ed_;
+              filter.SpecifiedDate = null
+          }
+
+      }
 
     if (name_ === "period") {
       // 1 = today, 2 = this week, 3 = last week
@@ -70,7 +115,7 @@ export default function Home(props) {
     }
 
     // fetch data with filter
-    getAppointments(filter).then(r => {
+      getAppointmentsDrawingHall(filter).then(r => {
       if (r.length < 1) {
         notifyUser("Filter result is empty!")
       }
@@ -98,9 +143,10 @@ export default function Home(props) {
           <br></br>
           <br></br>
    
-      <div className="add-btn row items-center content-center">
-        <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
-      </div>
+          <div className="add-btn row items-center content-center">
+              <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
+          </div>
+
 
       <div className="notifications spacer-20"></div>
 
@@ -109,17 +155,17 @@ export default function Home(props) {
         <div className="row items-center filter-items">
           <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
           <div>
-            <label htmlFor="All_f">All</label> <br />
+                      <label htmlFor="All_f">All Requests</label> <br />
             <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
           </div>
 
           <div>
-            <label htmlFor="Done_f">Done</label> <br />
+                      <label htmlFor="Done_f">Requests accepted</label> <br />
             <input type="checkbox" id="Done_f" name="Done" onChange={filterApp} />
           </div>
 
           <div>
-            <label htmlFor="Deleted_f">Deleted</label> <br />
+            <label htmlFor="Deleted_f">Rejected</label> <br />
             <input type="checkbox" id="Deleted_f" name="Deleted" onChange={filterApp} />
           </div>
           <div>
@@ -172,7 +218,7 @@ export default function Home(props) {
                   <div className="column time">Start Time </div>
                   <div className="column ">-</div>
                   <div className="column endTime">End Time</div>
-                  <div className="column academicStaff">Academic Staff Member</div>
+                  <div className="column academicStaff">Non Academic Staff Member</div>
 
               </div>
               </div>
@@ -188,14 +234,15 @@ export default function Home(props) {
         <section className="modal new-modal hidden">
           <New refreshApp={setRefreshData} />
         </section>
-
+             
         <section className="modal edit-modal hidden">
           <Edit stateListener={stateListener} refreshApp={setRefreshData} />
         </section>
 
         <section className="modal delete-modal hidden">
           <Delete stateListener={stateListener} refreshApp={setRefreshData} />
-        </section>
+                  </section>
+    
       </section>
     </main>
   )

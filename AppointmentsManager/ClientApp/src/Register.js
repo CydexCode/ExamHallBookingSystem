@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login_rejister.css'; // Import the CSS file
-
+import backgroundImage from './assest/Background1.png'; // Import your background image
 function Register() {
     const [id, setId] = useState('0');
     const [loginName, setLoginName] = useState('');
@@ -32,20 +32,21 @@ function Register() {
             })
     }
     return (
+        <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="bg-gradient-primary">
 
-            <div className="container">
+            <div className="container3">
                 <div><input type='hidden' value={id} onChange={(e) => { setId(e.target.value) }}></input> </div>
                 <div><input type='hidden' value={status} onChange={(e) => { setStatus(e.target.value) }}></input> </div>
 
                 <div className="card o-hidden border-0 shadow-lg my-5">
                     <div className="card-body p-0">
                         {/*  <!-- Nested Row within Card Body --> */}
-                        <div className="row">
+                        <div className="row2 justify-content-center">
                             <div className="col-lg-5 d-none d-lg-block bg-register-image"></div>
                             <div className="col-lg-7">
                                 <div className="p-5">
-                                    <div className="text-center">
+                                    <div className="text-center2">
                                         <h1 className="h4 text-gray-900 mb-4">Create an Account!</h1>
                                     </div>
                                     <div className="user">
@@ -59,7 +60,7 @@ function Register() {
                                         <div className="form-group row">
                                                 <input type="text" className="form-control form-control-user"
                                                     value={name} onChange={(e) => { setName(e.target.value) }}
-                                                    placeholder="Name" />
+                                                    placeholder="Email" />
                                         </div>
                                         <div className="form-group row">
                                           
@@ -81,20 +82,21 @@ function Register() {
                                             Register Account
                                         </button>
                                         <hr />
-                                        <a href="index.html" className="btn btn-google btn-user btn-block">
+                                        {/* <a href="index.html" className="btn btn-google btn-user btn-block">
                                             <i className="fab fa-google fa-fw"></i> Register with Google
                                         </a>
                                         <a href="index.html" className="btn btn-facebook btn-user btn-block">
                                             <i className="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                        </a>
+                                        </a> */}
                                     </div>
                                     <hr />
-                                    <div className="text-center">
-                                        <a className="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div className="text-center">
-                                        <a className="small" href="login">Already have an account? Login!</a>
-                                    </div>
+                                    <div className="text-center2" style={{ color: 'white' }}>
+    <a className="small" href="forgot-password.html">Forgot Password?</a>
+</div>
+<div className="text-center2" style={{ color: 'white' }}>
+    <a className="small2" href="login">Already have an account? Login!</a>
+</div>
+
                                 </div>
                             </div>
                         </div>
@@ -109,7 +111,7 @@ function Register() {
 
            
             <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
+            </div>
         </div>
     )
 

@@ -1,10 +1,10 @@
 
 import { useEffect } from "react"
-import { activeId, closeModal, deleteAppointment } from "./Lib"
+import { activeId, closeModal, deleteAppointmentDrawingHall } from "./Lib"
 export default function Delete(props){
 
     const deleteApp = () => {
-        deleteAppointment(activeId.id).then(r=> {
+        deleteAppointmentDrawingHall(activeId.id).then(r=> {
             props.refreshApp(Math.random() * 248 * Math.random())
         })
         .catch(e=>console.log("Could not delete the appointment: ", e))

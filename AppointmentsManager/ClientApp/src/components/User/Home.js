@@ -6,7 +6,7 @@ import New from "./New"
 import Appointment from "./Appointment"
 
 import "../../NavBar.css"; // Import the CSS file for styling (create this file)
-import "../../customUser.css";
+import "../../custom.css";
 import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib"
 
 export default function Home(props) {
@@ -90,21 +90,23 @@ export default function Home(props) {
           <br></br>
           <br></br>
           <div className="centered-heading">
-              <h1>Exam Hall Booking System - User</h1>
+              <h1>Mid / Quiz Exam Booking</h1>
           </div>
 
           <br></br>
           <br></br>
           <br></br>
           <br></br>
-     
-      <div className="add-btn row items-center content-center">
-        <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
-      </div>
+
+
+          <div className="add-btn row items-center content-center">
+              <div className="btn add" onClick={() => openModal("new-modal")}>Mid/Quiz exam Booking</div>
+          </div>
+ 
 
       <div className="notifications spacer-20"></div>
 
-      <section className="row justify-btw items-center filter">
+{/*      <section className="row justify-btw items-center filter">
         <div className="modal-title">Filter</div>
         <div className="row items-center filter-items">
           <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
@@ -139,7 +141,7 @@ export default function Home(props) {
           </div>
 
           <div>
-            <label htmlFor="SpecifiedTime">Specified Date</label> <br />
+            <label htmlFor="SpecifiedTime">Specified Start Time</label> <br />
             <input type="time" id="SpecifiedTime" name="SpecifiedTime" onChange={filterApp} />
           </div>
 
@@ -156,8 +158,8 @@ export default function Home(props) {
             </select>
           </div>
         </div>
-      </section>
-
+      </section>*/}
+{/*
       <div className="userPage">
       <div className="row underline hdr">
         <div className="column id">#</div>
@@ -169,19 +171,19 @@ export default function Home(props) {
               <div className="column subject">Subject</div>
         <div className="column importance">Exam Type</div>
         <div className="column date">Date</div>
-                  <div className="column time">Start Time</div>
+                  <div className="column time">Time</div>
                   <div className="column ">-</div>
                   <div className="column endTime">End Time</div>
           <div className="column academicStaff">Academic Staff Member</div>
    
       </div>
-          </div>
-      {
+          </div>*/}
+     {/* {
         dataList.length === 0 ?
           <div className="row mt-15 waiting">Loading <div className="loading">...</div></div> :
           dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
       }
-
+*/}
 
       <section>
         <section className="modal new-modal hidden">
