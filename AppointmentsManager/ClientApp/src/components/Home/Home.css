@@ -38,7 +38,7 @@
 .RegisterBTn:hover {
     color: #92cbfc;
     transform: scale(1.05);
-    transition: transform 0.3s ease;
+    transition: transform 0.31s ease;
 }
 
 .srcBox {
