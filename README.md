@@ -2,42 +2,38 @@
 
 # University ExamHall Booking System
 
-<b>UMS</b> is a <b>CRUD (Create, Read, Update, Delete) </b> based management system which uses <b> File Handling</b> to manipulate data and perform the CRUD operations. It is a group project made using <b> Java</b> procedural programming having both User and Admin sides. It is a console-based universtiy management system which contain <b>four</b> major modules that are integrated with each other. <b> User</b> will be given a unique registration number (while registering) and he can perform all the following tasks with same id/reg-number and all the data will be stored using the same registration number in corresponding (<b>"reg_number.txt"</b>) files. <b> Admin</b> can view and change all the data stored in files accordingly. Major modules of UMS contain:<br> <br> 
 
 <img align="right" alt="GIF" src="Home.jpeg" width="500" height="320" />
 
 - 🙋‍♂️ Student Portal
-- ☕ Cafe Mangement System
-- 📚 Library management System
-- 🚌 Transport Management System <br>
+## Introduction
+The Exam Hall Booking System streamlines the process of reserving exam halls within educational institutions. It caters to lecturers, academic staff, administration, and students, offering a user-friendly interface for booking halls like the Drawing Office Room and Computer Department Exam Hall. This system enhances scheduling for various exam types while ensuring administrative oversight.
 
+## Stakeholders
+1. **Lecturers:** Schedule exams and book halls for their courses.
+2. **Academic Staff:** Coordinate exams and plan resources.
+3. **Administration:** Approves/rejects bookings to allocate resources efficiently.
+4. **Mechanical Department HOD:** Checks drawing Exam hall availability.
+5. **Students:** Benefit from organized exam scheduling.
+6. **Developers:** Design, implement, and maintain the system.
 
-# 
+## Functional Requirements
+- **User Accounts:** Lecturer and Administrative accounts for system access.
+- **User Authentication:** Secure login for lecturers and administrators.
+- **Exam Hall Management:** Availability checking, booking requests, scheduling, and reservation modifications.
+- **Admin User Management:** Adding and managing administrative accounts.
+- **Activity Logging:** Comprehensive logs for administrative actions.
+- **Session Management:** Secure sign-out and inactivity timeout.
+- **Access Control:** Role-based access for different user roles.
 
-## 🙋‍♂️ Student Portal
-- Signup/Login.
-- Course Registeration.
-- Field Validation.
-- Student Records
+## Non-Functional Requirements
+- Performance, Security, Reliability, Usability, Scalability, Compliance, and Maintainability aspects addressed.
 
-## ☕ Cafe Management System
-- Display Menu.
-- Buy items.
-- Return Items.
-- Bill Payments.
-- Menu offers.
+## GitHub Repository
+[Exam Hall Booking System Repository](https://github.com/CydexCode/ExamHallBookingSystem)
 
-## 📚 Library management System
-- Search books.
-- Borrow books.
-- Return Books.
-- Late submission fines.
-
-## 🚌 Transport Management System
-- Bus Routes and fee.
-- Bus Registration.
-- User Profile.
-- Delete and update registration.
+## Jira Board
+[Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
 ## Compilation
 
