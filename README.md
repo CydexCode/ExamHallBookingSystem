@@ -33,100 +33,48 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 
 ## Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
+
+
 ## 👨‍💻 Project Manager 
 <div align="center">
- <a href="https://github.com/Kishara0">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
-
- </div>
- <div align="center" >
- Qasim Ali
+ <a href="https://github.com/Kishara0">Kishara0</a>
  </div>
 
 ## 👨‍💻 Requirements Analysts
 <div align="center">
- <a href="https://github.com/SinethB">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
-  <a href="https://github.com/Sesadi13">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
-
- </div>
- <div align="center" >
- Bandara R.M.S.C.A
- Warusavitharana S.T.
+ <a href="https://github.com/SinethB">SinethB</a>
+  <a href="https://github.com/Sesadi13">Sesadi13</a>
  </div>
 
 ## 👨‍💻 Designers
 <div align="center">
- <a href="https://github.com/ManashviCode">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
-  <a href="https://github.com/ParamiJayasinghe">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
-
- </div>
- <div align="center" >
- Jayasinghe P.A.
- Perera S.D.M.
+ <a href="https://github.com/ManashviCode">ManashviCode</a>
+  <a href="https://github.com/ParamiJayasinghe">ParamiJayasinghe</a>
  </div>
 
  ## 👨‍💻 Senior Software Engineers 
 <div align="center">
- <a href="https://github.com/cydexcode">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
- <a href="https://github.com/ManurangaJay">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
- </div>
- <div align="center" >
- Swarnakumara L.Y.S.B.
- Jayawardhana D.D.V.M.
+ <a href="https://github.com/cydexcode">cydexcode</a>
+ <a href="https://github.com/ManurangaJay">ManurangaJay</a>
  </div>
  
 <!--Developers Account!-->
 ## 👨‍💻 Software Engineers 
 
 <div align="center">
- <a href="https://github.com/GithminiSandupama">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
- <a href="https://github.com/manoda98">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a> 
- <a href="https://github.com/ThanujaJeewanthi">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
-
- 
- </div>
- <div align="center" >
- Sandupama M.V.D.G.
- Senevirathne S.M.M.I.
- Jeewanthi U.B.T.
+ <a href="https://github.com/GithminiSandupama">GithminiSandupama</a>
+ <a href="https://github.com/manoda98">manoda98</a>
+ <a href="https://github.com/ThanujaJeewanthi">ThanujaJeewanthi</a>
  </div>
 
 
  ## 👨‍💻 Quality Assurance
 <div align="center">
- <a href="https://github.com/sachini24">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
-  <a href="https://github.com/DilushaWD">
-    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
- </a>
-
- </div>
- <div align="center" >
- Lakshika K.R.S.
- Wickramarachchi V.D.
+ <a href="https://github.com/sachini24">sachini24</a>
+  <a href="https://github.com/DilushaWD">DilushaWD</a>
  </div>
 
- 
- #
+#
 <!--Typing Animation!-->
  <img src="https://readme-typing-svg.herokuapp.com?font=Open+Sans&color000&width=500&lines=Show+Some+Love+By+Giving+it+A+⭐.." >
+
