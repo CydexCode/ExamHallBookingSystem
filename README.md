@@ -5,8 +5,7 @@
 
 <img align="right" alt="GIF" src="Home.jpeg" width="500" height="320" />
 
-- 🙋‍♂️ Student Portal
-## Introduction
+
 The Exam Hall Booking System streamlines the process of reserving exam halls within educational institutions. It caters to lecturers, academic staff, administration, and students, offering a user-friendly interface for booking halls like the Drawing Office Room and Computer Department Exam Hall. This system enhances scheduling for various exam types while ensuring administrative oversight.
 
 ## Stakeholders
@@ -35,17 +34,9 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 ## Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
-## Compilation
 
-- Open Command Prompt
-- Type: ``"javac Main.java"``
 
-## Runing
 
-- Open Command Prompt
-- Type: ``"java Main"``
-
-#
 <!--Developers Account!-->
 ## 👨‍💻 Developers 
 
