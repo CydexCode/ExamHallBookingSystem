@@ -36,27 +36,87 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 
 
 
-
-<!--Developers Account!-->
-## 👨‍💻 Developers 
-
+## 👨‍💻 Project Manager 
 <div align="center">
- <a href="https://github.com/m-qasim-ali">
+ <a href="https://github.com/Kishara0">
     <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
  </a>
- <a href="https://github.com/Daoud-Hussain">
+
+ </div>
+ <div align="center" >
+ </div>
+
+## 👨‍💻 Requireaments Analysts
+<div align="center">
+ <a href="https://github.com/SinethB">
+    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+ </a>
+  <a href="https://github.com/Sesadi13">
+    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+ </a>
+
+ </div>
+ <div align="center" >
+ </div>
+
+## 👨‍💻 Designers
+<div align="center">
+ <a href="https://github.com/ManashviCode">
+    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+ </a>
+  <a href="https://github.com/ParamiJayasinghe">
+    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+ </a>
+
+ </div>
+ <div align="center" >
+ </div>
+
+ ## 👨‍💻 Senior Software Engineers 
+<div align="center">
+ <a href="https://github.com/cydexcode">
+    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+ </a>
+ <a href="https://github.com/ManurangaJay">
+    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+ </a>
+ </div>
+ <div align="center" >
+ </div>
+ 
+<!--Developers Account!-->
+## 👨‍💻 Software Engineers 
+
+<div align="center">
+ <a href="https://github.com/GithminiSandupama">
+    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+ </a>
+ <a href="https://github.com/manoda98">
     <img src="https://img.shields.io/badge/Daoud_Hussain-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
  </a> 
- <a href="https://github.com/shahzaneer">
+ <a href="https://github.com/ThanujaJeewanthi">
     <img src="https://img.shields.io/badge/Shahzaneer_Ahmed-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
  </a>
- <a href="https://github.com/Sameem-Amjad">
-    <img src="https://img.shields.io/badge/Sameem_Amjad-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
- </a>
+
  
  </div>
  <div align="center" >
  </div>
+
+
+ ## 👨‍💻 Quality Assurance
+<div align="center">
+ <a href="https://github.com/sachini24">
+    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+ </a>
+  <a href="https://github.com/DilushaWD">
+    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+ </a>
+
+ </div>
+ <div align="center" >
+ </div>
+
  
  #
 <!--Typing Animation!-->
