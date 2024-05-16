@@ -33,25 +33,25 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 - [MANILKA B.P.K.](https://github.com/Kishara0)
 
 ## 👨‍💻 Requirements Analysts
-- [SinethB](https://github.com/SinethB)
-- [Sesadi13](https://github.com/Sesadi13)
+- [BANDARA R.M.S.C.A.](https://github.com/SinethB)
+- [WARUSAVITHARANA S.T.](https://github.com/Sesadi13)
 
 ## 👨‍💻 Designers
-- [ManashviCode](https://github.com/ManashviCode)
-- [ParamiJayasinghe](https://github.com/ParamiJayasinghe)
+- [PERERA S.D.M.](https://github.com/ManashviCode)
+- [JAYASINGHE P.A.](https://github.com/ParamiJayasinghe)
 
 ## 👨‍💻 Senior Software Engineers 
-- [cydexcode](https://github.com/cydexcode)
-- [ManurangaJay](https://github.com/ManurangaJay)
+- [SWARNAKUMARA L.Y.S.B.](https://github.com/cydexcode)
+- [JAYAWARDHANA D.D.V.M.](https://github.com/ManurangaJay)
 
 ## 👨‍💻 Software Engineers 
-- [GithminiSandupama](https://github.com/GithminiSandupama)
-- [manoda98](https://github.com/manoda98)
-- [ThanujaJeewanthi](https://github.com/ThanujaJeewanthi)
+- [SANDUPAMA M.V.D.G.](https://github.com/GithminiSandupama)
+- [SENEVIRATHNE S.M.M.I.](https://github.com/manoda98)
+- [JEEWANTHI U.B.T.](https://github.com/ThanujaJeewanthi)
 
 ## 👨‍💻 Quality Assurance
-- [sachini24](https://github.com/sachini24)
-- [DilushaWD](https://github.com/DilushaWD)
+- [LAKSHIKA K.R.S.](https://github.com/sachini24)
+- [WICRAMARACHCHI V.D.](https://github.com/DilushaWD)
 
 <!--Typing Animation-->
 <p align="center">
