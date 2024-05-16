@@ -11,7 +11,7 @@ const Footer = () => {
 
             </ul>
             <p style={{marginLeft: 250}}>
-                &copy; 2024 Exam Booking System | All rights reserved | Terms of Service | Privacy
+                &copy; 2024 Exam Booking  System | All rights reserved | Terms of Service | Privacy
             </p>
         </div>
     );
