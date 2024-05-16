@@ -29,7 +29,7 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 ## Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
-## 👨‍💻 Project Manager 
+### 👨‍💻 Project Manager 
 - [MANILKA B.P.K.](https://github.com/Kishara0)
 
 ## 👨‍💻 Requirements Analysts
