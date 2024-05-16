@@ -26,14 +26,11 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 ## Non-Functional Requirements
 - Performance, Security, Reliability, Usability, Scalability, Compliance, and Maintainability aspects addressed.
 
-## GitHub Repository
-[Exam Hall Booking System Repository](https://github.com/CydexCode/ExamHallBookingSystem)
-
 ## Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
 ## 👨‍💻 Project Manager 
-- [Kishara0](https://github.com/Kishara0)
+- [MANILKA B.P.K.](https://github.com/Kishara0)
 
 ## 👨‍💻 Requirements Analysts
 - [SinethB](https://github.com/SinethB)
