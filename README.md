@@ -33,55 +33,59 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 
 ## Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
-
-
-
 ## 👨‍💻 Project Manager 
 <div align="center">
  <a href="https://github.com/Kishara0">
-    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
 
  </div>
  <div align="center" >
+ Qasim Ali
  </div>
 
-## 👨‍💻 Requireaments Analysts
+## 👨‍💻 Requirements Analysts
 <div align="center">
  <a href="https://github.com/SinethB">
-    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
   <a href="https://github.com/Sesadi13">
-    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
 
  </div>
  <div align="center" >
+ Bandara R.M.S.C.A
+ Warusavitharana S.T.
  </div>
 
 ## 👨‍💻 Designers
 <div align="center">
  <a href="https://github.com/ManashviCode">
-    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
   <a href="https://github.com/ParamiJayasinghe">
-    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
 
  </div>
  <div align="center" >
+ Jayasinghe P.A.
+ Perera S.D.M.
  </div>
 
  ## 👨‍💻 Senior Software Engineers 
 <div align="center">
  <a href="https://github.com/cydexcode">
-    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
  <a href="https://github.com/ManurangaJay">
-    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
  </div>
  <div align="center" >
+ Swarnakumara L.Y.S.B.
+ Jayawardhana D.D.V.M.
  </div>
  
 <!--Developers Account!-->
@@ -89,32 +93,37 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 
 <div align="center">
  <a href="https://github.com/GithminiSandupama">
-    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
  <a href="https://github.com/manoda98">
-    <img src="https://img.shields.io/badge/Daoud_Hussain-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a> 
  <a href="https://github.com/ThanujaJeewanthi">
-    <img src="https://img.shields.io/badge/Shahzaneer_Ahmed-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
 
  
  </div>
  <div align="center" >
+ Sandupama M.V.D.G.
+ Senevirathne S.M.M.I.
+ Jeewanthi U.B.T.
  </div>
 
 
  ## 👨‍💻 Quality Assurance
 <div align="center">
  <a href="https://github.com/sachini24">
-    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
   <a href="https://github.com/DilushaWD">
-    <img src="https://img.shields.io/badge/Qasim_Ali-000.svg?&style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://avatars.githubusercontent.com/u/21556312?s=200&v=4" />
  </a>
 
  </div>
  <div align="center" >
+ Lakshika K.R.S.
+ Wickramarachchi V.D.
  </div>
 
  
