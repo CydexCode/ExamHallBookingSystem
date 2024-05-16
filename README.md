@@ -29,27 +29,27 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 ## Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
-### 👨‍💻 Project Manager 
+#### 👨‍💻 Project Manager 
 - [MANILKA B.P.K.](https://github.com/Kishara0)
 
-## 👨‍💻 Requirements Analysts
+#### 👨‍💻 Requirements Analysts
 - [BANDARA R.M.S.C.A.](https://github.com/SinethB)
 - [WARUSAVITHARANA S.T.](https://github.com/Sesadi13)
 
-## 👨‍💻 Designers
+#### 👨‍💻 Designers
 - [PERERA S.D.M.](https://github.com/ManashviCode)
 - [JAYASINGHE P.A.](https://github.com/ParamiJayasinghe)
 
-## 👨‍💻 Senior Software Engineers 
+#### 👨‍💻 Senior Software Engineers 
 - [SWARNAKUMARA L.Y.S.B.](https://github.com/cydexcode)
 - [JAYAWARDHANA D.D.V.M.](https://github.com/ManurangaJay)
 
-## 👨‍💻 Software Engineers 
+#### 👨‍💻 Software Engineers 
 - [SANDUPAMA M.V.D.G.](https://github.com/GithminiSandupama)
 - [SENEVIRATHNE S.M.M.I.](https://github.com/manoda98)
 - [JEEWANTHI U.B.T.](https://github.com/ThanujaJeewanthi)
 
-## 👨‍💻 Quality Assurance
+#### 👨‍💻 Quality Assurance
 - [LAKSHIKA K.R.S.](https://github.com/sachini24)
 - [WICRAMARACHCHI V.D.](https://github.com/DilushaWD)
 
