@@ -1,10 +1,8 @@
-
-
 # University ExamHall Booking System
 
-
-<img align="right" alt="GIF" src="Home.jpeg" width="500" height="320" />
-
+<p align="center">
+  <img src="Home.jpeg" width="500" height="320" />
+</p>
 
 The Exam Hall Booking System streamlines the process of reserving exam halls within educational institutions. It caters to lecturers, academic staff, administration, and students, offering a user-friendly interface for booking halls like the Drawing Office Room and Computer Department Exam Hall. This system enhances scheduling for various exam types while ensuring administrative oversight.
 
@@ -34,47 +32,31 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 ## Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
-
 ## 👨‍💻 Project Manager 
-<div align="center">
- <a href="https://github.com/Kishara0">Kishara0</a>
- </div>
+- [Kishara0](https://github.com/Kishara0)
 
 ## 👨‍💻 Requirements Analysts
-<div align="center">
- <a href="https://github.com/SinethB">SinethB</a>
-  <a href="https://github.com/Sesadi13">Sesadi13</a>
- </div>
+- [SinethB](https://github.com/SinethB)
+- [Sesadi13](https://github.com/Sesadi13)
 
 ## 👨‍💻 Designers
-<div align="center">
- <a href="https://github.com/ManashviCode">ManashviCode</a>
-  <a href="https://github.com/ParamiJayasinghe">ParamiJayasinghe</a>
- </div>
+- [ManashviCode](https://github.com/ManashviCode)
+- [ParamiJayasinghe](https://github.com/ParamiJayasinghe)
 
- ## 👨‍💻 Senior Software Engineers 
-<div align="center">
- <a href="https://github.com/cydexcode">cydexcode</a>
- <a href="https://github.com/ManurangaJay">ManurangaJay</a>
- </div>
- 
-<!--Developers Account!-->
+## 👨‍💻 Senior Software Engineers 
+- [cydexcode](https://github.com/cydexcode)
+- [ManurangaJay](https://github.com/ManurangaJay)
+
 ## 👨‍💻 Software Engineers 
+- [GithminiSandupama](https://github.com/GithminiSandupama)
+- [manoda98](https://github.com/manoda98)
+- [ThanujaJeewanthi](https://github.com/ThanujaJeewanthi)
 
-<div align="center">
- <a href="https://github.com/GithminiSandupama">GithminiSandupama</a>
- <a href="https://github.com/manoda98">manoda98</a>
- <a href="https://github.com/ThanujaJeewanthi">ThanujaJeewanthi</a>
- </div>
+## 👨‍💻 Quality Assurance
+- [sachini24](https://github.com/sachini24)
+- [DilushaWD](https://github.com/DilushaWD)
 
-
- ## 👨‍💻 Quality Assurance
-<div align="center">
- <a href="https://github.com/sachini24">sachini24</a>
-  <a href="https://github.com/DilushaWD">DilushaWD</a>
- </div>
-
-#
-<!--Typing Animation!-->
- <img src="https://readme-typing-svg.herokuapp.com?font=Open+Sans&color000&width=500&lines=Show+Some+Love+By+Giving+it+A+⭐.." >
-
+<!--Typing Animation-->
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Open+Sans&color=000000&width=500&lines=Show+Some+Love+By+Giving+it+A+⭐.." />
+</p>
