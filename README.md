@@ -26,6 +26,12 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 ## Non-Functional Requirements
 - Performance, Security, Reliability, Usability, Scalability, Compliance, and Maintainability aspects addressed.
 
+## Technologies Used
+- **Backend:** .NET Core 8
+- **Frontend:** ReactJS
+- **Database:** SQL Server
+
+
 ## Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
