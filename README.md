@@ -23,9 +23,6 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 - **Session Management:** Secure sign-out and inactivity timeout.
 - **Access Control:** Role-based access for different user roles.
 
-## Non-Functional Requirements
-- Performance, Security, Reliability, Usability, Scalability, Compliance, and Maintainability aspects addressed.
-
 ## Technologies Used
 - **Backend:** .NET Core 8
 - **Frontend:** ReactJS
