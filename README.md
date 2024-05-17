@@ -4,7 +4,7 @@
   <img src="Home.jpeg" width="500" height="320" />
 </p>
 
-The Exam Hall Booking System streamlines the process of reserving exam halls within educational institutions. It caters to lecturers, academic staff, administration, and students, offering a user-friendly interface for booking halls like the Drawing Office Room and Computer Department Exam Hall. This system enhances scheduling for various exam types while ensuring administrative oversight.
+The Exam Hall Booking System streamlines the process of reserving exam halls within educational institutions. It caters to lecturers, academic staff, administration, and students, offering a user-friendly interface for booking halls like the Drawing Office Hall and Computer Department Exam Hall. This system enhances scheduling for various exam types while ensuring administrative oversight.
 
 ## Stakeholders
 1. **Lecturers:** Schedule exams and book halls for their courses.
