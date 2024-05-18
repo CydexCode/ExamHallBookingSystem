@@ -1,4 +1,4 @@
-﻿import React from "react";
+﻿﻿import React from "react";
 import "./NavBar.css"; // Import the CSS file for styling (create this file)
 import { createRoot } from 'react-dom/client';
 import HomeLogo from "./assest/HomeLogo.png"; // Import HomeIcon image
@@ -9,7 +9,7 @@ const root = createRoot(rootElement);
 
 
 
-const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) => {
+const Navbar = ({ onMainClick, onAdminClick, onAllClick, onUserLoginClick, onUserRegisterClick }) => {
     return (
 
         <nav className="navbar">
@@ -18,38 +18,31 @@ const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) =
             <ul>
                 <li onClick={onMainClick}>
                     <span role="img" aria-label="User Icon">
-                        
+                        👤
                     </span>{" "}
                     Home
                 </li>
-                <li onClick={onDrawingHallClick}>
-                    <span role="img" aria-label="User Icon">
-
-                    </span>{" "}
-                    Drawing Hall
-                </li>
                 <li onClick={onAllClick}>
                     <span role="img" aria-label="User Icon">
-                        
+                        👤
                     </span>{" "}
-                    Computer Department Hall
+                    All Booking
                 </li>
-                <div className="admin">
                 <li onClick={onAdminClick}>
                     <span role="img" aria-label="Admin Icon">
-                        
+                        👑
                     </span>{" "}
                     Admin
                 </li>
-            </div>
-              {/*  <li className="log">
+               
+                <li onClick={onUserLoginClick} className="log">
                     LOGIN
                 </li>
                 <div className="vl"></div>
                 <div className="vl" style={{ marginLeft: '2px' }}></div>
-                <li className="reg">
+                <li onClick={onUserRegisterClick} className="reg">
                     REGISTER
-                </li>*/}
+                </li>
             </ul>
         </nav>
     );

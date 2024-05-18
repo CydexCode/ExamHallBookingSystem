@@ -5,21 +5,16 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AdminHome from './components/Admin/Home';
 import MacAdminHome from './components/MacAdmin/Home';
 import UserHome from './components/User/Home';
-import UserDrawingHall from './components/UserDrawingHall/Home';
-import StaffDrawingHall from './components/StaffDrawingHall/Home';
 import AllBooking from './components/AllBooking/Home';
 import Staff from './components/Staff/Home';
-
 
 import MainHome from './components/Home/Main';
 import NavBar from './NavBar';
 import StaffLogin from './staffLogin';
 import Login from './Login';
-import LoginDrawingHall from './LoginDrawingHall';
 import Register from './Register';
 import AdminLogin from './adminLogin';
-import AllBookingUserDrawingHall from './components/AllBookingUserDrawingHall/Home';
-import StaffLoginDrawingHall from './staffLoginDrawingHall';
+
 import Footer from './Footer';
 
 
@@ -35,35 +30,37 @@ const App = () => {
     const handleAdminClick = () => {
         window.location.href = '/adminLogin';
     };
-    const handleDrawingHallClick = () => {
-        window.location.href = '/allBookingUserDrawingHall';
+
+    const handleUserLoginClick = () => {
+        window.location.href = '/login';
     };
+
+    const handleUserRegisterClick = () => {
+        window.location.href = '/register';
+    };
+
     return (
         <Router>
             <div>
             <div>
                 <NavBar
-                        onMainClick={handleMainClick}
-                        onAllClick={handleAllClick}
-                        onAdminClick={handleAdminClick}
-                        onDrawingHallClick={handleDrawingHallClick}
+                    onMainClick={handleMainClick}
+                    onAllClick={handleAllClick}
+                    onAdminClick={handleAdminClick}
+                    onUserLoginClick={handleUserLoginClick}
+                    onUserRegisterClick={handleUserRegisterClick}
                 />
                 <Routes>
                     <Route path="/main" element={<MainHome />} />
                     <Route path="/admin" element={<AdminHome />} />
-                        <Route path="/macAdmin" element={<MacAdminHome />} />
-                        <Route path="/user" element={<UserHome />} />
-                        <Route path="/userDrawingHall" element={<UserDrawingHall />} />
-                        <Route path="/staffDrawingHall" element={<StaffDrawingHall />} />
+                    <Route path="/macAdmin" element={<MacAdminHome />} />
+                    <Route path="/user" element={<UserHome />} />
                     <Route path="/login" element={<Login />} />
-                        <Route path="/staff" element={<Staff />} />
-                        <Route path="/loginDrawingHall" element={<LoginDrawingHall />} />
-                        <Route path="/staffLoginDrawingHall" element={<StaffLoginDrawingHall />} />
+                    <Route path="/staff" element={<Staff />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/adminLogin" element={<AdminLogin />} />
                     <Route path="/allBooking" element={<AllBooking />} />
-                        <Route path="/staffLogin" element={<StaffLogin />} />
-                        <Route path="/allBookingUserDrawingHall" element={<AllBookingUserDrawingHall />} />
+                    <Route path="/staffLogin" element={<StaffLogin />} />
                 </Routes>
                 </div>
                <Footer/>
