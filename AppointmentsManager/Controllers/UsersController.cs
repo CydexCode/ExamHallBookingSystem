@@ -9,7 +9,7 @@ using ExamHallBooking.DataAccess;
 
 using ExamHallBooking.DataAccess.Data.Models;
 
-namespace AppointmentsManager.Controllers
+namespace ExamHallBooking.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

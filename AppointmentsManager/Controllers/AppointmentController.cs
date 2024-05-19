@@ -6,8 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ExamHallBooking.DataAccess.Data;
-using ExamHallBooking.DataAccess.Data.Models;
 using ExamHallBooking.DataAccess;
+
+using ExamHallBooking.DataAccess.Data.Models;
 
 namespace AppointmentsManager.Controllers
 {
