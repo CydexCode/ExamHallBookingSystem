@@ -1,5 +1,8 @@
-using AppointmentsManager.Data;
+
+using ExamHallBooking.DataAccess;
 using Microsoft.EntityFrameworkCore;
+using ExamHallBooking.DataAccess.Data.Models;
+using ExamHallBooking.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 

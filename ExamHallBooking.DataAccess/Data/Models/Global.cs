@@ -1,4 +1,4 @@
-﻿namespace AppointmentsManager.Data.Models
+﻿namespace ExamHallBooking.DataAccess.Data.Models
 {
     public class Global
     {

@@ -1,6 +1,6 @@
-﻿namespace AppointmentsManager.Data.Models
+﻿namespace ExamHallBooking.DataAccess.Data.Models
 {
-    public class Filter
+    public class FilterDrawingHall
     {
         public byte? LevelOfImportance { get; set; } = null;
         public string? SpecifiedTime { get; set; } = null;

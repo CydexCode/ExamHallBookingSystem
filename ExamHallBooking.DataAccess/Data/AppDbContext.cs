@@ -1,8 +1,9 @@
-﻿using AppointmentsManager.Data.Models;
+﻿
+using ExamHallBooking.DataAccess.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AppointmentsManager.Data
-{
+namespace ExamHallBooking.DataAccess
+{ 
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
