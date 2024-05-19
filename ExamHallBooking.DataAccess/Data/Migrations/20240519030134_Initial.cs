@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ExamHallBooking.Data.Migrations
+namespace ExamHallBooking.DataAccess.Data.Migrations
 {
-    public partial class Initial3 : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

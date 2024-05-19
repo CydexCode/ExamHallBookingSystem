@@ -1,7 +1,8 @@
 ﻿using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using System.Data;
 
-namespace AppointmentsManager.Data.Models
+namespace ExamHallBooking.DataAccess.Data.Models
 {
     public class DB
     {

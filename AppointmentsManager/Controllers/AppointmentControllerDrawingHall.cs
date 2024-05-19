@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using AppointmentsManager.Data;
-using AppointmentsManager.Data.Models;
+
+
+using ExamHallBooking.DataAccess;
+using ExamHallBooking.DataAccess.Data.Models;
 
 namespace AppointmentsManager.Controllers
 {
@@ -14,9 +16,9 @@ namespace AppointmentsManager.Controllers
     [ApiController]
     public class AppointmentControllerDrawingHall : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly ExamHallBooking.DataAccess.AppDbContext _context;
 
-        public AppointmentControllerDrawingHall(AppDbContext context)
+        public AppointmentControllerDrawingHall(ExamHallBooking.DataAccess.AppDbContext context)
         {
             _context = context;
         }

@@ -1,10 +1,13 @@
-﻿using AppointmentsManager.Data.Models;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using AppointmentsManager.Data;
-using AppointmentsManager.Data.Models;
+using ExamHallBooking.DataAccess.Data.Models;
+using ExamHallBooking.DataAccess;
+
+
+using ExamHallBooking.DataAccess.Data.Models;
 
 namespace AppointmentsManager.Controllers
 {
