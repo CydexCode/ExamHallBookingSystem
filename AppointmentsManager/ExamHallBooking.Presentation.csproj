@@ -11,6 +11,7 @@
     <SpaProxyServerUrl>https://localhost:44418</SpaProxyServerUrl>
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>$(ExamHallBooking)</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
