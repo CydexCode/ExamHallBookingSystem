@@ -1,7 +1,7 @@
 ﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './adminLogin.css'; // Import the CSS file
-import backgroundImage from './assest/Background1.png'; // Import your background image
+import backgroundImage from '../assest/Background1.png'; // Import your background image
 function Login() {
     const [loginName, setLoginName] = useState('');
     const [password, setPassword] = useState('');

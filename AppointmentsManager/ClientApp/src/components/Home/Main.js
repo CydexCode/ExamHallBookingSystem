@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import Login from '../../Login';
-import Register from '../../Register';
+import Login from '../../Login Forms/Login';
+import Register from '../../Login Forms/Register';
 import "./Home.css";
 import backgroundImage from '../../assest/Background.png'; // Import your background image
 import uniLogo from '../../assest/UniversityLogo.png';

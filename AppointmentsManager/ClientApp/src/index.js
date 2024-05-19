@@ -2,25 +2,25 @@ import React from 'react';
 import { render } from 'react-dom';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AdminHome from './components/Admin/Home';
+import AdminHome from './components/ComAdmin/Home';
 import MacAdminHome from './components/MacAdmin/Home';
-import UserHome from './components/User/Home';
+import UserHome from './components/UserComHall/Home';
 import UserDrawingHall from './components/UserDrawingHall/Home';
 import StaffDrawingHall from './components/StaffDrawingHall/Home';
-import AllBooking from './components/AllBooking/Home';
-import Staff from './components/Staff/Home';
+import AllBooking from './components/AllBookingUserComHall/Home';
+import Staff from './components/StaffComHall/Home';
 
 
 import MainHome from './components/Home/Main';
-import NavBar from './NavBar';
-import StaffLogin from './staffLogin';
-import Login from './Login';
-import LoginDrawingHall from './LoginDrawingHall';
-import Register from './Register';
-import AdminLogin from './adminLogin';
+import NavBar from './NavBar/NavBar';
+import StaffLogin from './Login Forms/staffLogin';
+import Login from './Login Forms/Login';
+import LoginDrawingHall from './Login Forms/LoginDrawingHall';
+import Register from './Login Forms/Register';
+import AdminLogin from './Login Forms/adminLogin';
 import AllBookingUserDrawingHall from './components/AllBookingUserDrawingHall/Home';
-import StaffLoginDrawingHall from './staffLoginDrawingHall';
-import Footer from './Footer';
+import StaffLoginDrawingHall from './Login Forms/staffLoginDrawingHall';
+import Footer from './Footer/Footer';
 
 
 const App = () => {

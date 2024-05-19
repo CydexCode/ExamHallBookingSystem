@@ -1,8 +1,7 @@
-﻿import './login_rejister.css'; // Import the CSS file
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import backgroundImage from './assest/Background1.png'; // Import your background image
-
+import './login_rejister.css'; // Import the CSS file
+import backgroundImage from '../assest/Background1.png'; // Import your background image
 function Login() {
     const [loginName, setLoginName] = useState('');
     const [password, setPassword] = useState('');
@@ -27,7 +26,7 @@ function Login() {
         }).then((result) => {
             result.json().then((resp) => {
                 console.warn(resp);
-                navigate("/user");
+                navigate("/userDrawingHall");
             })
         }).catch((error) => {
             // Handle any network errors or other exceptions here
@@ -36,11 +35,6 @@ function Login() {
     }
 
     return (
-
-
-    
-
-
         <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="bg-gradient-primary">
 
@@ -110,8 +104,8 @@ function Login() {
 
             </div>
 
-            </div>
-            
+          
+            </div> 
 
         </div>
     )
