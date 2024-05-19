@@ -5,7 +5,7 @@ import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
 
-import "../../NavBar.css"; // Import the CSS file for styling (create this file)
+import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
 import { getDefault, openModal, filter, getAppointmentsDrawingHall, notifyUser } from "./Lib"
 

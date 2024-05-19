@@ -1,7 +1,7 @@
 ﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './adminLogin.css'; // Import the CSS file
-import backgroundImage from './assest/Background1.png'; 
+import backgroundImage from '../assest/Background1.png'; // Import your background image
 function Login() {
     const [loginName, setLoginName] = useState('');
     const [password, setPassword] = useState('');
@@ -36,6 +36,7 @@ function Login() {
                             <div className="card-body p-0">
                                 <div className="row">
                                     <div className="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                              
                                         <div className="p-5">
                                             <div className="text-center">
                                                 <h1 className="h2 ">Admin Login</h1>

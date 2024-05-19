@@ -1,13 +1,15 @@
 
 import { useEffect, useState } from "react"
+import { Link } from 'react-router-dom'
 import Delete from "./Delete"
 import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
 
+
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
-import { getDefault, openModal, filter, getAppointmentsDrawingHall, notifyUser } from "./Lib"
+import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib"
 
 export default function Home(props) {
 
@@ -20,57 +22,25 @@ export default function Home(props) {
     let name_ = e.target.name;
     let v_ = e.target.value;
 
-      if (name_ === "All" || name_ === "Done" || name_ === "Deleted") {
-          v_ = e.target.checked;
-          filter[name_] = v_;
+    if (name_ === "All" || name_ === "Done" || name_ === "Deleted") {
+      v_ = e.target.checked;
+        filter[name_] = v_;
 
-          if (name_ === "SpecifiedDate") {
-              filter.SpecifiedDate = new Date(v_);
-              filter.StartDate = null
-              filter.EndDate = null
-          }
+        if (name_ === "SpecifiedDate") {
+            filter.SpecifiedDate = new Date(v_);
+            filter.StartDate = null
+            filter.EndDate = null
+        }
 
-          if (name_ === "SpecifiedTime") {
-              filter.SpecifiedTime = v_;
-          }
+        if (name_ === "SpecifiedTime") {
+            filter.SpecifiedTime = v_;
+        }
 
-          if (name_ === "LevelOfImportance") {
-              filter.LevelOfImportance = Number(v_) === 9 ? null : Number(v_);
-          }
+        if (name_ === "LevelOfImportance") {
+            filter.LevelOfImportance = Number(v_) === 9 ? null : Number(v_);
+        }
 
           if (name_ === "period") {
-              // 1 = today, 2 = this week, 3 = last week
-              let sd_ = new Date(), ed_ = new Date();
-              const dayNum = sd_.getDay();
-
-              if (v_ === "1") {
-                  sd_.setDate(dayNum - 1)
-              }
-
-              if (v_ === "2") {
-                  let startDaysInSec = (dayNum - 1) * 24 * 60 * 60 * 1000;
-                  let endDaysInSec = (7 - dayNum) * 24 * 60 * 60 * 1000;
-
-                  sd_ = new Date(Date.now() - startDaysInSec);
-                  ed_ = new Date(Date.now() + endDaysInSec);
-              }
-
-              if (v_ === "3") {
-                  let startDaysInSec = dayNum * 24 * 60 * 60 * 1000;
-                  let endDaysInSec = (6 + dayNum) * 24 * 60 * 60 * 1000;
-
-                  ed_ = new Date(Date.now() - startDaysInSec);
-                  sd_ = new Date(Date.now() - endDaysInSec);
-              }
-
-              filter.StartDate = v_ === '4' ? null : sd_;
-              filter.EndDate = v_ === '4' ? null : ed_;
-              filter.SpecifiedDate = null
-          }
-
-      }
-
-    if (name_ === "period") {
       // 1 = today, 2 = this week, 3 = last week
       let sd_ = new Date(), ed_ = new Date();
       const dayNum = sd_.getDay();
@@ -100,6 +70,54 @@ export default function Home(props) {
       filter.SpecifiedDate = null
     }
 
+      }
+
+/*      // Handle "Done" button click
+      if (name_ === "Done") {
+          // Set filter for "Done" appointments
+          filter.Done = v_;
+          // Fetch data with filter
+          getAppointments(filter).then(r => {
+              if (r.length < 1) {
+                  notifyUser("Filter result is empty!")
+              }
+              setDataList(r)
+          }).catch(e => console.log("Error getting data on filter: ", e))
+      }*/
+
+
+
+    if (name_ === "period") {
+      // 1 = today, 2 = this week, 3 = last week
+      let sd_ = new Date(), ed_ = new Date();
+      const dayNum = sd_.getDay();
+
+        if (v_ === "1") {
+            sd_.setDate(dayNum - 1)
+        }
+
+        if (v_ === "2") {
+            let startDaysInSec = (dayNum - 1) * 24 * 60 * 60 * 1000;
+            let endDaysInSec = (7 - dayNum) * 24 * 60 * 60 * 1000;
+
+            sd_ = new Date(Date.now() - startDaysInSec);
+            ed_ = new Date(Date.now() + endDaysInSec);
+        }
+
+        if (v_ === "3") {
+            let startDaysInSec = dayNum * 24 * 60 * 60 * 1000;
+            let endDaysInSec = (6 + dayNum) * 24 * 60 * 60 * 1000;
+
+            ed_ = new Date(Date.now() - startDaysInSec);
+            sd_ = new Date(Date.now() - endDaysInSec);
+        }
+
+        filter.StartDate = v_ === '4' ? null : sd_;
+        filter.EndDate = v_ === '4' ? null : ed_;
+        filter.SpecifiedDate = null;
+
+    }
+
     if (name_ === "SpecifiedDate") {
       filter.SpecifiedDate = new Date(v_);
       filter.StartDate = null
@@ -115,7 +133,7 @@ export default function Home(props) {
     }
 
     // fetch data with filter
-      getAppointmentsDrawingHall(filter).then(r => {
+    getAppointments(filter).then(r => {
       if (r.length < 1) {
         notifyUser("Filter result is empty!")
       }
@@ -135,18 +153,29 @@ export default function Home(props) {
           <br></br>
           <br></br>
           <div className="centered-heading">
-              <h1>Exam Hall Booking System -Mac Admin</h1>
+              <h1>Computer Department All Exams</h1>
           </div>
 
           <br></br>
           <br></br>
-          <br></br>
-          <br></br>
-   
+         
+          <div>
+           
+              <Link to="/staffLogin">End Exam Booking</Link>
+              <br></br>
+              <br></br>
+              <Link to="/login">Mid / Quiz Booking</Link>
+          </div>
+ 
+{/*
           <div className="add-btn row items-center content-center">
-              <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
+              <div className="btn add" onClick={() => openModal("new-modal")}>Mid/Quiz</div>
           </div>
-
+          <br></br>
+          <br></br>
+          <div className="add-btn2 row items-center content-center">
+              <div className="btn add" onClick={() => openModal("new-modal")}>End Exam</div>
+          </div>*/}
 
       <div className="notifications spacer-20"></div>
 
@@ -159,13 +188,14 @@ export default function Home(props) {
             <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
           </div>
 
-          <div>
-                      <label htmlFor="Done_f">Requests accepted</label> <br />
-            <input type="checkbox" id="Done_f" name="Done" onChange={filterApp} />
-          </div>
+                  <div>
+                      <label htmlFor="Done_f">accepted</label> <br />
+                      <input type="checkbox" id="Done_f" name="Done" onChange={filterApp}  />
+                  </div>
+
 
           <div>
-            <label htmlFor="Deleted_f">Rejected</label> <br />
+                      <label htmlFor="Deleted_f">Rejected</label> <br />
             <input type="checkbox" id="Deleted_f" name="Deleted" onChange={filterApp} />
           </div>
           <div>
@@ -185,7 +215,7 @@ export default function Home(props) {
           </div>
 
           <div>
-            <label htmlFor="SpecifiedTime">Specified Date</label> <br />
+            <label htmlFor="SpecifiedTime">Specified Start Time</label> <br />
             <input type="time" id="SpecifiedTime" name="SpecifiedTime" onChange={filterApp} />
           </div>
 
@@ -194,7 +224,7 @@ export default function Home(props) {
             <select name="LevelOfImportance" id="LevelOfImportance_f" defaultValue={8} onChange={filterApp}>
               <option value={8} disabled>Exam Type</option>
               <option value={9} >Reset</option>
-             
+          
                           <option value={3}>Assignment</option>
                           <option value={2}>Quiz</option>
                           <option value={1}>Mid Exam</option>
@@ -204,25 +234,24 @@ export default function Home(props) {
         </div>
       </section>
 
-          <div className="userPage">
-              <div className="row underline hdr">
-                  <div className="column id">#</div>
-                  <div className="column examHall">Exam Hall</div>
-                  <div className="column lectureName">Lecture Name</div>
-                  <div className="column numOfStudent">Number Of Student</div>
-                  <div className="column year">Year</div>
-                  <div className="column semester">Semester</div>
-                  <div className="column subject">Subject</div>
-                  <div className="column importance">Exam Type</div>
-                  <div className="column date">Date</div>
-                  <div className="column time">Start Time </div>
+      <div className="userPage">
+      <div className="row underline hdr">
+        <div className="column id">#</div>
+        <div className="column examHall">Exam Hall</div>
+              <div className="column lectureName">Lecture Name</div>
+              <div className="column numOfStudent">Number Of Student</div>
+              <div className="column year">Year</div>
+              <div className="column semester">Semester</div>
+              <div className="column subject">Subject</div>
+        <div className="column importance">Exam Type</div>
+        <div className="column date">Date</div>
+                  <div className="column time">Start Time</div>
                   <div className="column ">-</div>
                   <div className="column endTime">End Time</div>
-                  <div className="column academicStaff">Non Academic Staff Member</div>
-
-              </div>
-              </div>
-
+          <div className="column academicStaff">Academic Staff Member</div>
+   
+      </div>
+          </div>
       {
         dataList.length === 0 ?
           <div className="row mt-15 waiting">Loading <div className="loading">...</div></div> :
@@ -233,8 +262,8 @@ export default function Home(props) {
       <section>
         <section className="modal new-modal hidden">
           <New refreshApp={setRefreshData} />
-        </section>
-             
+              </section>
+              <div className="block">
         <section className="modal edit-modal hidden">
           <Edit stateListener={stateListener} refreshApp={setRefreshData} />
         </section>
@@ -242,7 +271,7 @@ export default function Home(props) {
         <section className="modal delete-modal hidden">
           <Delete stateListener={stateListener} refreshApp={setRefreshData} />
                   </section>
-    
+              </div>
       </section>
     </main>
   )
