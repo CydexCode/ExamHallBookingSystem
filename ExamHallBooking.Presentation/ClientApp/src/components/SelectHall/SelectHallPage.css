@@ -1,0 +1,45 @@
+.exam-hall-selection {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hall-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .hall-box {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .hall-box:hover {
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+  }
+  
+  .hall-box h2 {
+    margin-bottom: 10px;
+  }
+  
+  .hall-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hall-box button:hover {
+    background-color: #0056b3;
+  }
+  
+
