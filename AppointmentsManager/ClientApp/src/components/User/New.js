@@ -110,7 +110,7 @@ export default function New(props) {
                 <option value="3">3rd Year</option>
                 <option value="2">2nd Year</option>
                 <option value="1">1st Year</option>
-                <option value="0">3rd Year</option>
+                <option value="0">Select Year</option>
             </select>
         </div>
 
@@ -125,7 +125,7 @@ export default function New(props) {
                 <option value="3">3rd Semester</option>
                 <option value="2">2nd Semester</option>
                 <option value="1">1st Semester</option>
-                <option value="0">3rd Semester</option>
+                <option value="0"> Semester</option>
             </select>
         </div>
 
