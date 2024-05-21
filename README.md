@@ -4,11 +4,12 @@
   <img src="Home.jpeg" width="500" height="320" />
 </p>
 
+## Description
 The Exam Hall Booking System streamlines the process of reserving exam halls within educational institutions. It caters to lecturers, academic staff, administration, and students, offering a user-friendly interface for booking halls like the Drawing Office Hall and Computer Department Exam Hall. This system enhances scheduling for various exam types while ensuring administrative oversight.
 
 ## ER Diagram
 <p align="center">
-  <img src="./img/ER Diagram.jpeg" width="500" height="320" />
+  <img src="./img/Team.jpeg" width="500" height="320" />
 </p>
 
 
@@ -21,6 +22,10 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 - **Session Management:** Secure sign-out and inactivity timeout.
 - **Access Control:** Role-based access for different user roles.
 
+## Non Functional Requirements
+- Performance , Security , Usability , Reliability , Maintainability
+
+
 ## Technologies Used
 - **Backend:** .NET Core 8
 - **Frontend:** ReactJS
@@ -30,19 +35,26 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 ## Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
-#### 👨‍💻 Project Manager :  - [MANILKA B.P.K.](https://github.com/Kishara0)
+## Team members
 
-#### 👨‍💻 Requirements Analysts : - [BANDARA R.M.S.C.A.](https://github.com/SinethB) , - [WARUSAVITHARANA S.T.](https://github.com/Sesadi13)
+#### 👨‍💻 Project Manager :   [MANILKA B.P.K.](https://github.com/Kishara0)
 
-#### 👨‍💻 Designers :- [PERERA S.D.M.](https://github.com/ManashviCode) , - [JAYASINGHE P.A.](https://github.com/ParamiJayasinghe)
+#### 👨‍💻 Requirements Analysts :  [BANDARA R.M.S.C.A.](https://github.com/SinethB) ,  [WARUSAVITHARANA S.T.](https://github.com/Sesadi13)
 
-#### 👨‍💻 Senior Software Engineers  : - [SWARNAKUMARA L.Y.S.B.](https://github.com/cydexcode) , - [JAYAWARDHANA D.D.V.M.](https://github.com/ManurangaJay)
+#### 👨‍💻 Designers : [PERERA S.D.M.](https://github.com/ManashviCode) ,  [JAYASINGHE P.A.](https://github.com/ParamiJayasinghe)
 
-#### 👨‍💻 Software Engineers  : - [SANDUPAMA M.V.D.G.](https://github.com/GithminiSandupama) , - [SENEVIRATHNE S.M.M.I.](https://github.com/manoda98) , - [JEEWANTHI U.B.T.](https://github.com/ThanujaJeewanthi)
+#### 👨‍💻 Senior Software Engineers  :  [SWARNAKUMARA L.Y.S.B.](https://github.com/cydexcode) ,  [JAYAWARDHANA D.D.V.M.](https://github.com/ManurangaJay)
 
-#### 👨‍💻 Quality Assurance : - [LAKSHIKA K.R.S.](https://github.com/sachini24) , - [WICRAMARACHCHI V.D.](https://github.com/DilushaWD)
+#### 👨‍💻 Software Engineers  :  [SANDUPAMA M.V.D.G.](https://github.com/GithminiSandupama) ,  [SENEVIRATHNE S.M.M.I.](https://github.com/manoda98) , - [JEEWANTHI U.B.T.](https://github.com/ThanujaJeewanthi)
+
+#### 👨‍💻 Quality Assurance :  [LAKSHIKA K.R.S.](https://github.com/sachini24) ,  [WICRAMARACHCHI V.D.](https://github.com/DilushaWD)
+
+<p align="center">
+  <img src="./img/ER Diagram.jpeg" width="500" height="320" />
+</p>
 
 <!--Typing Animation-->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Open+Sans&color=000000&width=500&lines=Show+Some+Love+By+Giving+it+A+⭐.." />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Open+Sans&color=0000FF&width=500&lines=Show+Some+Love+By+Giving+it+A+⭐.." />
 </p>
+
