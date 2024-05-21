@@ -151,7 +151,7 @@ export default function Home(props) {
       <div className="notifications spacer-20"></div>
 
       <section className="row justify-btw items-center filter">
-        <div className="modal-title">Filter</div>
+        <div className="modal-title">Filters</div>
         <div className="row items-center filter-items">
           <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
           <div>
