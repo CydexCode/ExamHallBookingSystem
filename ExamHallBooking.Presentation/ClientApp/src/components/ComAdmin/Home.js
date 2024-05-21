@@ -145,13 +145,14 @@ export default function Home(props) {
           <br></br>
           <br></br>
    
-      <div className="add-btn row items-center content-center">
-        <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
-      </div>
+      
 
       <div className="notifications spacer-20"></div>
 
       <section className=" filter">
+      <div className="add-btn row items-center content-center">
+        <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
+      </div>
         <div className="modal-title">Filters</div>
         <div className="row items-center filter-items">
           <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
@@ -206,7 +207,8 @@ export default function Home(props) {
 
         </div>
       </section>
-<section className="table">
+      
+<div className="table">
       <div className="row underline hdr">
         <div className="column id">#</div>
         <div className="column examHall">Exam Hall</div>
@@ -247,7 +249,7 @@ export default function Home(props) {
 
               </section>
 
-          </section>
+          </div>
 
     </main>
   )
