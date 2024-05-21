@@ -12,14 +12,6 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 </p>
 
 
-## Stakeholders
-1. **Lecturers:** Schedule exams and book halls for their courses.
-2. **Academic Staff:** Coordinate exams and plan resources.
-3. **Administration:** Approves/rejects bookings to allocate resources efficiently.
-4. **Mechanical Department HOD:** Checks drawing Exam hall availability.
-5. **Students:** Benefit from organized exam scheduling.
-6. **Developers:** Design, implement, and maintain the system.
-
 ## Functional Requirements
 - **User Accounts:** Lecturer and Administrative accounts for system access.
 - **User Authentication:** Secure login for lecturers and administrators.
