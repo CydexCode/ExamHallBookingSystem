@@ -7,7 +7,7 @@ import Appointment from "./Appointment"
 
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
-import "./AR.css"
+import "./AR-com.css"
 import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib"
 
 export default function Home(props) {
@@ -151,12 +151,12 @@ export default function Home(props) {
 
       <div className="notifications spacer-20"></div>
 
-      <section className="row justify-btw items-center filter">
-        <div className="modal-title">Filter</div>
+      <section className=" filter">
+        <div className="modal-title">Filters</div>
         <div className="row items-center filter-items">
           <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
           <div>
-                      <label htmlFor="All_f">All Requests</label> <br />
+                      <label htmlFor="All_f">All  Requests</label> <br />
             <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
           </div>
 
@@ -206,7 +206,7 @@ export default function Home(props) {
 
         </div>
       </section>
-
+<section className="table">
       <div className="row underline hdr">
         <div className="column id">#</div>
         <div className="column examHall">Exam Hall</div>
@@ -245,7 +245,7 @@ export default function Home(props) {
           <Delete stateListener={stateListener} refreshApp={setRefreshData} />
               </section>
 
-         
+              </section>
 
           </section>
 
