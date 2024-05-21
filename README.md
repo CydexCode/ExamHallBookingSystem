@@ -9,7 +9,7 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 
 ## ER Diagram
 <p align="center">
-  <img src="./img/Team.jpeg" width="500" height="320" />
+  <img src="./img/ER Diagram.jpeg" width="500" height="320" />
 </p>
 
 
@@ -50,7 +50,7 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 #### 👨‍💻 Quality Assurance :  [LAKSHIKA K.R.S.](https://github.com/sachini24) ,  [WICRAMARACHCHI V.D.](https://github.com/DilushaWD)
 
 <p align="center">
-  <img src="./img/ER Diagram.jpeg" width="500" height="320" />
+  <img src="./img/Team.jpeg" width="500" height="320" />
 </p>
 
 <!--Typing Animation-->
