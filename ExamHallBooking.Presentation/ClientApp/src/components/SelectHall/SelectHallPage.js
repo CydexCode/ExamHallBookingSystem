@@ -8,8 +8,8 @@ const ExamHallSelection = () => {
   const handleSelect = (hall) => {
     if (hall === 'Computer Department Exam Hall') {
       navigate('/computer-department-exam-hall');
-    } else if (hall === 'Drawing Office Hall of Admin') {
-      navigate('/drawing-office-hall-of-admin');
+    } else if (hall === 'Drawing Office Hall') {
+      navigate('/drawing-office-hall');
     }
   };
 
@@ -20,8 +20,8 @@ const ExamHallSelection = () => {
         <div className="hall-box" onClick={() => handleSelect('Computer Department Exam Hall')}>
           <h2 className="hall-name">Computer Department Exam Hall</h2>
         </div>
-        <div className="hall-box" onClick={() => handleSelect('Drawing Office Hall of Admin')}>
-          <h2 className="hall-name">Drawing Office Hall of Admin</h2>
+        <div className="hall-box" onClick={() => handleSelect('Drawing Office Hall')}>
+          <h2 className="hall-name">Drawing Office Hall</h2>
         </div>
       </div>
     </div>
