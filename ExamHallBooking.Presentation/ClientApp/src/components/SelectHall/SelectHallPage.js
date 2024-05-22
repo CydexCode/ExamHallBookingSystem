@@ -1,12 +1,16 @@
-﻿import React, { useState } from 'react';
+﻿import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SelectHallPage.css';
 
 const ExamHallSelection = () => {
-  const [selectedHall, setSelectedHall] = useState(null);
+  const navigate = useNavigate();
 
   const handleSelect = (hall) => {
-    setSelectedHall(hall);
-    alert(`You have selected the ${hall}`);
+    if (hall === 'Computer Department Exam Hall') {
+      navigate('/computer-department-exam-hall');
+    } else if (hall === 'Drawing Office Hall of Admin') {
+      navigate('/drawing-office-hall-of-admin');
+    }
   };
 
   return (
@@ -14,12 +18,10 @@ const ExamHallSelection = () => {
       <h1>Select Exam Hall</h1>
       <div className="hall-boxes">
         <div className="hall-box" onClick={() => handleSelect('Computer Department Exam Hall')}>
-          <h2>Computer Department Exam Hall</h2>
-          <button>Select</button>
+          <h2 className="hall-name">Computer Department Exam Hall</h2>
         </div>
-        <div className="hall-box" onClick={() => handleSelect('Drawing Office Hall ')}>
-          <h2>Drawing Office Hall of Admin</h2>
-          <button>Select</button>
+        <div className="hall-box" onClick={() => handleSelect('Drawing Office Hall of Admin')}>
+          <h2 className="hall-name">Drawing Office Hall of Admin</h2>
         </div>
       </div>
     </div>
