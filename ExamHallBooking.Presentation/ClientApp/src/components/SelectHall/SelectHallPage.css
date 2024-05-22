@@ -17,16 +17,20 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: 50px;
   }
   
   .hall-box {
-    background-color: #f0f0f0;
-    border: 2px solid #ccc;
+    background-color: rgba(3, 12, 34, 0.285);
+    border: 3px solid #ccc;
     border-radius: 10px;
-    padding: 20px;
-    width: 200px;
+    padding: 50px;
+    width: 400px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .hall-box:hover {
