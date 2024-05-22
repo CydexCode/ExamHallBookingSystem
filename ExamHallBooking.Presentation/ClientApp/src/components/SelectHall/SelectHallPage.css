@@ -1,7 +1,17 @@
 .exam-hall-selection {
     text-align: center;
     padding: 20px;
-  }
+    background-image: url('https://yt3.googleusercontent.com/ytc/AIdro_kRNOiKj-9TgxxH54qs3yis5jAaEw-SQtEdH336Yg=s900-c-k-c0x00ffffff-no-rj');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white
+}
+
   
   .hall-boxes {
     display: flex;
