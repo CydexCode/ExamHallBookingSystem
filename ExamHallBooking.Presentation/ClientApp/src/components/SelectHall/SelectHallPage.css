@@ -13,19 +13,19 @@
     overflow: hidden;
 }
 .header{
-   display: flex;
-   align-items: center;
-   margin-left: 200px;
-   font-size: 40px;
-   margin-bottom: 5px;
-   font-weight: bold;
-   color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;  
 }
 .header::before {
-  content: '>>';
-  margin-right:15px;
-  font-size: 40px;
-  font-weight: bold; 
+    content: '>>';
+    margin-right:15px;
+    font-size: 40px;
+    font-weight: bold; 
   
 }
 
@@ -34,6 +34,7 @@
     justify-content: center;
     gap: 20px;
     margin-top: 50px;
+    margin-top: 30px;
 }
   
 .hall-box {
