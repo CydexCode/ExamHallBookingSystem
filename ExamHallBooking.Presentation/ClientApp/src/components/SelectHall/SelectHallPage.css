@@ -12,16 +12,23 @@
     position: relative;
     overflow: hidden;
 }
-
-  
-  .hall-boxes {
+.header{
+   display: flex;
+   align-items: center;
+   margin-left: 200px;
+   font-size: 40px;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: white;
+}
+.hall-boxes {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 50px;
-  }
+}
   
-  .hall-box {
+.hall-box {
     background-color: rgba(3, 12, 34, 0.285);
     border: 3px solid #ccc;
     border-radius: 10px;
