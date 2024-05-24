@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ExamHallBooking.DataAccess.Interfaces;
+
 
 using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using ExamHallBooking.DataAccess.Data.Models;
+using ExamHallBooking.Service.Interfaces;
 
 namespace ExamHallBooking.DataAccess.Controllers
 {
@@ -22,8 +23,9 @@ namespace ExamHallBooking.DataAccess.Controllers
             _logger = logger;
         }
 
+
         [HttpPost]
-        public async Task<IActionResult> SendEmail([FromForm] MailSendRequest request)
+        public async Task<IActionResult> SendEmail([FromBody] MailSendRequest request)
         {
             try
             {
@@ -42,5 +44,6 @@ namespace ExamHallBooking.DataAccess.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
+
     }
 }

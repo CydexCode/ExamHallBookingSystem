@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamHallBooking.Presentatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamHallBooking.DataAccess", "ExamHallBooking.DataAccess\ExamHallBooking.DataAccess.csproj", "{D5464E2F-6F56-4BAE-9EDB-5EA41D2CBC7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamHallBooking.Service", "ExamHallBooking.Service\ExamHallBooking.Service.csproj", "{03E319D7-B337-4F7E-BA64-F9D456589878}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D5464E2F-6F56-4BAE-9EDB-5EA41D2CBC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5464E2F-6F56-4BAE-9EDB-5EA41D2CBC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5464E2F-6F56-4BAE-9EDB-5EA41D2CBC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E319D7-B337-4F7E-BA64-F9D456589878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E319D7-B337-4F7E-BA64-F9D456589878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E319D7-B337-4F7E-BA64-F9D456589878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E319D7-B337-4F7E-BA64-F9D456589878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

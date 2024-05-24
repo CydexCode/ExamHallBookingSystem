@@ -1,12 +1,14 @@
 ﻿using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
-using ExamHallBooking.DataAccess.Interfaces;
+
 using Microsoft.Extensions.Options;
 
 using ExamHallBooking.DataAccess.Data.Models;
+using ExamHallBooking.Presentation.Interfaces;
+using Microsoft.Extensions.Logging;
 
-namespace ExamHallBooking.DataAccess.Services
+namespace ExamHallBooking.Services.Services
 {
     public class MailSendService : IMailSendService
     {

@@ -231,7 +231,7 @@ namespace AppointmentsManager.Controllers
             return Ok("Appointment deleted successfully.");
         }
 
-        // Delete : api/appoinments/2
+  /*      // Delete : api/appoinment/2
         [HttpDelete("{id}")]
         public async Task<ActionResult<Appointment>> DeleteAppoinmentP(int id)
         {
@@ -248,7 +248,7 @@ namespace AppointmentsManager.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
-
+*/
 
         private bool AppointmentExists(int id)
         {

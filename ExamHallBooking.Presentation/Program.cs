@@ -3,9 +3,10 @@ using ExamHallBooking.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using ExamHallBooking.DataAccess.Data.Models;
 
-using ExamHallBooking.DataAccess.Interfaces;
 
-using ExamHallBooking.DataAccess.Services;
+
+using ExamHallBooking.Service.Services;
+using ExamHallBooking.Service.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

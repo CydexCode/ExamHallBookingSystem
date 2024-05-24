@@ -1,7 +1,7 @@
 ﻿using ExamHallBooking.DataAccess.Data.Models;
 
 
-namespace ExamHallBooking.DataAccess.Interfaces
+namespace ExamHallBooking.Service.Interfaces
 {
     public interface IMailSendService
     {
