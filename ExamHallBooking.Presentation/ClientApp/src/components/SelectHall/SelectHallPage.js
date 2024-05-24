@@ -15,7 +15,7 @@ const ExamHallSelection = () => {
 
   return (
     <div className="exam-hall-selection">
-      <h1 class="header">Select exam hall </h1>
+      <h1 class="header">Select Exam Hall </h1>
       <div className="hall-boxes">
         <div className="hall-box" onClick={() => handleSelect('Computer Department Exam Hall')}>
           <h2 className="hall-name">Computer Department Exam Hall</h2>
