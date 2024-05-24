@@ -21,6 +21,14 @@
    font-weight: bold;
    color: white;
 }
+.header::before {
+  content: '>>';
+  margin-right:15px;
+  font-size: 40px;
+  font-weight: bold; 
+  
+}
+
 .hall-boxes {
     display: flex;
     justify-content: center;
