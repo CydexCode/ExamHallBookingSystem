@@ -11,47 +11,24 @@ const root = createRoot(rootElement);
 
 const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) => {
     return (
-
-        <nav className="navbar">
-            <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" />
-
-            <ul>
-                <li onClick={onMainClick}>
-                    <span role="img" aria-label="User Icon">
-                        
-                    </span>{" "}
-                    Home
-                </li>
-                <li onClick={onDrawingHallClick}>
-                    <span role="img" aria-label="User Icon">
-
-                    </span>{" "}
-                    Drawing Hall
-                </li>
-                <li onClick={onAllClick}>
-                    <span role="img" aria-label="User Icon">
-                        
-                    </span>{" "}
-                    Computer Department Hall
-                </li>
-                <div className="admin">
-                <li onClick={onAdminClick}>
-                    <span role="img" aria-label="Admin Icon">
-                        
-                    </span>{" "}
-                    Admin
-                </li>
-            </div>
-              {/*  <li className="log">
-                    LOGIN
-                </li>
-                <div className="vl"></div>
-                <div className="vl" style={{ marginLeft: '2px' }}></div>
-                <li className="reg">
-                    REGISTER
-                </li>*/}
-            </ul>
-        </nav>
+        <div>
+            <nav className="navbar">
+                <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" />
+                <ul>
+                    <li onClick={onMainClick}>
+                        Home
+                    </li>
+                    <li onClick={onDrawingHallClick}>
+                        User
+                    </li>
+                    <li onClick={onAdminClick}>
+                        Admin
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        // <div>
+        // </div>
     );
 };
 
