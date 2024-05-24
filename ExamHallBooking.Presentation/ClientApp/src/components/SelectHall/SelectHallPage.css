@@ -35,7 +35,7 @@
   
   .hall-box:hover {
     transform: scale(1.05);
-    background-color:rgba(31, 33, 38, 0.734)
+    background-color:rgba(0, 0, 0, 0.69)
   }
   .hall-name {
     margin: 0;
