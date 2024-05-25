@@ -9,7 +9,7 @@ export const testData = [
 
 export const entry = {
     examHall: "Drawing Hall",
-    lectureName: "Test Lecture Name",
+    lectureName: "Testmail@gmail.com",
     numOfStudent: 5,
     year: 1,
     semester: 2,

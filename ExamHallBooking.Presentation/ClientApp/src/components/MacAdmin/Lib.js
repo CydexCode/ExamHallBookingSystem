@@ -9,19 +9,19 @@ export const testData = [
 
 
 export const entry = {
-    examHall: "Test hall",
-    lectureName: "Test Lecture Name",
+    examHall: "Drawing Hall",
+    lectureName: "Testmail@gmail.com",
     numOfStudent: 5,
     year: 1,
     semester: 2,
     subject: "EC1020",
-    academicStaff: "Test address",
+    academicStaff: " ",
     date: new Date(),
     time: formatedTimeToStr(),
     endTime: formatedTimeToStr(),
     done: false,
     deleted: false,
-    levelOfImportance: 2,
+    levelOfImportance: 0,
 }
 
 export const filter = {

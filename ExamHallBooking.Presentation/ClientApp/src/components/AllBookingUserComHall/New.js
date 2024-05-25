@@ -67,7 +67,7 @@ export default function New(props){
             </div>
 
             <div className="mt-15">
-                <label htmlFor="Description_n">Lecture Name</label> <br/>
+                <label htmlFor="Description_n">Enter Email Address</label> <br/>
                 <textarea id="Description_n" maxLength={50} className="mt-5" name="lectureName" onChange={newApp} cols={25} rows={1}></textarea> <br />
                
             </div>

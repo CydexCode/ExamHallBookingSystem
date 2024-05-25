@@ -73,7 +73,7 @@ export default function New(props) {
         </div>*/}
         <br></br>
         <div className="mt-15">
-            <label htmlFor="LectureName_n">Lecturer Name&nbsp; :</label>
+                <label htmlFor="LectureName_n">Enter Email Address&nbsp; :</label>
             <input type="text" id="LectureName_n" name="lectureName" onChange={newApp} maxLength={50} />
 
         </div>
