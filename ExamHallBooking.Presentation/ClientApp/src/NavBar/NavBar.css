@@ -1,31 +1,38 @@
 ﻿.navbar {
-    font-family: Helvetica, sans-serif;
-    width: 100%;
-    background-color: #002a4f;
-    padding: 20px 0;
-    top: 0;
-    left: 0;
-    display: fixed;
     display: flex;
     align-items: center;
-    justify-content: center;
-    z-index: 10;
-    position: relative;
-    font-size: 20px;
+    justify-content: space-between;
+    background-color: #002a4f;
+    padding: 20px 80px;
+
+    font-family: Helvetica, sans-serif;
+    /* font-size: 20px; */
+    /* z-index: 10; */
+    /* position: relative; */
+    /* width: 100%; */
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-li {
-    margin-left: 70px;
-    cursor: pointer;
-    color: #fff;
-    text-align: end;
+ul li {
+    list-style-type: none;
+    padding: 0 20px;
+    position: relative;
+    font-weight: 400;
+    font-size: 1.3rem;
+
+    /* cursor: pointer; */
+    /* color: #fff; */
+    /* text-align: end; */
+    /* margin-left: 70px; */
+}
+
+ul li a{
+    text-decoration: none;
 }
 
     li:hover {
@@ -33,15 +40,6 @@ li {
         transform: scale(1.1);
         transition: transform 0.3s ease; /* Smooth transition */
     }
-
-.reg {
-    margin-left: 5px;
-}
-
-.log {
-    margin-left: 200px;
-    margin-right: 5px;
-}
 
 .homeBtn {
     cursor: pointer;
@@ -59,12 +57,12 @@ li {
         transition: transform 0.3s ease;
     }
 
-.vl {
+/* .vl {
     border-left: 1px solid rgb(255, 255, 255);
     height: 20px;
-}
+} */
 
-.admin{
+/* .admin{
     align-items:end;
         margin-left:20px;
-}
+} */
