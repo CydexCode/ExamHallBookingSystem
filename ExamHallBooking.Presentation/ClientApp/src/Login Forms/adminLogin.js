@@ -60,7 +60,7 @@ function Login() {
         />
 
         
-        <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
         <div className="bg-gradient-primary">
             <div className="container2">
                 <div className="row justify-content-center">
@@ -99,7 +99,7 @@ function Login() {
                             </div>
                         </div>
                     </div>
-                </div>
+                
             </div>
             </div>
         </div>

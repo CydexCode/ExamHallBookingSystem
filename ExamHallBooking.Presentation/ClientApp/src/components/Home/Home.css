@@ -1,16 +1,16 @@
-﻿﻿.homepage {
+﻿﻿/* General styles */
+.mainhomepage {
     font-family: Helvetica, sans-serif;
     color: azure;
-    text-align: right;
+    text-align: center;
     background-size: cover;
     background-position: center;
-    /* height: 900px;
-    width: 100%;*/
     top: 60px;
     left: 0;
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     position: fixed;
     max-width: 100%;
     max-height: 100%;
@@ -18,93 +18,117 @@
 
 .login-register-container {
     display: flex;
-    margin-top: 40px;
-    justify-content: right;
-        color: #ffffff;
-        text-decoration: none;
+    justify-content: end;
+    margin-top: -200px;
+    gap: 10px;
+    margin-right: 100px;
 }
 
 .loginBtn,
 .RegisterBTn {
-     font-size: 20px;
-    margin-right: 10px;
+    font-size: 20px;
     cursor: pointer;
     background-color: #002a4f; 
     color: #ffffff; 
     padding: 15px 30px; 
     border-radius: 10px; 
-    border: 1px ;
     text-decoration: none;
 }
 
-    .loginBtn:hover,
-    .RegisterBTn:hover {
-        background-color: #92cbfc; /* Darker green */
-        border-color: #45a049; /* Darker green border */
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-        text-decoration: none;
-    }
-
-
-.content01{
-    margin-right: 150px;
+.loginBtn:hover,
+.RegisterBTn:hover {
+    background-color: #92cbfc;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
+
+.content01 {
+    margin-left: 100px;
+    text-align: end;
+    padding-top: 250px;
+    gap: 10px;
+    margin-right: 100px;
+
+}
+.content02 {
+    margin-right: 1300px;
+    text-align: start;
+    margin-top: 20px;
+}
+
+
 .LMbtn {
     font-size: 20px;
     border: 2px solid white;
     height: 40px;
     width: 180px;
     display: flex;
-    margin-left: 1563px;
-    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0 auto;
+    gap: 10px;
+    margin-right: 100px;
 }
 
-    .LMbtn span {
-        margin: auto;
-        cursor: pointer;
-        color: white;
-    }
-
-    .LMbtn:hover {
-        color: #92cbfc;
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-    }
+.LMbtn:hover {
+    color: #92cbfc;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
 
 .srcBox {
-    width: 300px;
+    width: 80%;
+    max-width: 300px;
     height: 35px;
     padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    margin-top: 30px;
-    margin-left: 800px;
+    margin: 30px auto;
 }
 
-    .srcBox:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-    }
+.srcBox:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
 
 .hero {
     font-size: 20px;
+    color: white;
+    margin-top: 30px;
 }
 
 .ehb {
     -webkit-text-stroke: 1px #608fb5;
 }
+
 .search-container {
     display: flex;
-    align-items: center; /* Align items vertically */
-    margin-right: auto; /* Pushes the search box to the right */
-    margin-left: 100px; /* Adds space between the university logo and the search box */
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
 }
 
 .uniLogo {
-    max-height: 120px; /* Adjust size as needed */
-    margin-right: 10px; /* Adds space between the logo and the search box */
+    max-height: 100px;
+    margin-right: 10px;
     position: relative;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .login-register-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        font-size: 18px;
+    }
+
+    .LMbtn {
+        width: 150px;
+        height: 35px;
+        font-size: 18px;
+    }
+}

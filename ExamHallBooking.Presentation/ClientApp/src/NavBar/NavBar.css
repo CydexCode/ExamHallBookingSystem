@@ -80,6 +80,17 @@ li:hover {
     border-radius: 5px;
     font-size: 16px;
 }
+.admin {
+    margin-left: auto;
+    margin-right: 40px;
+   
+    cursor: pointer;
+   
+   
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
 
 .signOutButton:hover {
     background-color: #0059b3;

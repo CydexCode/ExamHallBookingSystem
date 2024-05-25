@@ -25,7 +25,7 @@ import StaffLoginDrawingHall from './Login Forms/staffLoginDrawingHall';
 import Footer from './Footer/Footer';
 
 
-import "./Home.css";
+
 import backgroundImage from './assest/Background.png'; // Import your background image
 import uniLogo from './assest/UniversityLogo.png';
 
