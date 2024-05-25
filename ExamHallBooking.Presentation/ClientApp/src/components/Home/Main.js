@@ -2,14 +2,53 @@
 import { Link } from 'react-router-dom';
 import Login from '../../Login Forms/Login';
 import Register from '../../Login Forms/Register';
-import "./Home.css";
+import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
+
 import backgroundImage from '../../assest/Background.png'; // Import your background image
 import uniLogo from '../../assest/UniversityLogo.png';
 
+import { createRoot } from 'react-dom/client';
 
-const HomePage = () => {
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+
+
+const HomePage = ({ onMainClick, onUserClick, onAdminClick, onAllClick, onDrawingHallClick }) => {
+
+    const handleMainClick = () => {
+        window.location.href = '/';
+    };
+
+    const handleUserClick = () => {
+        window.location.href = '/login';
+    };
+    const handleAdminClick = () => {
+        window.location.href = '/adminLogin';
+    };
+    const handleSignOutClick = () => {
+        window.location.href = '/';
+    };
+
     return (
+
+        <div>
+        <NavBar
+                        onMainClick={handleMainClick}
+                        onUserClick={handleUserClick}
+
+                        onAdminClick={handleAdminClick}
+                        onSignOutClick={handleSignOutClick}
+                        showAdminUser={true} // Default show User and Admin
+                        showHomeBtton ={true}
+
+                    />
+        
+ 
                 <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>
+                 
+      
+ 
                     <div className='content01'>
                 <header>
                     <div className="login-register-container">
@@ -59,6 +98,8 @@ const HomePage = () => {
             <br></br>
             <Link to="/register">Register</Link>
         </div>*/
+
+        </div>
     );
 }
 

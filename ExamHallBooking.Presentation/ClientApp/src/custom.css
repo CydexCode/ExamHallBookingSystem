@@ -1,11 +1,12 @@
 body {
-    margin: 0 5px;
+    margin: 0 0px;
     padding: 0;
 }
 
 .row {
     display: flex;
 }
+
 
 .items-center {
     align-items: center;

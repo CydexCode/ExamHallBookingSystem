@@ -4,6 +4,7 @@ import Delete from "./Delete"
 import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
+import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
 
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
@@ -84,7 +85,34 @@ export default function Home(props) {
       setDataList(data)
     }).catch(e => console.log("Error inside home: ", e))
   }, [refreshData])
+
+  const handleMainClick = () => {
+    window.location.href = '/';
+};
+
+const handleUserClick = () => {
+    window.location.href = '/login';
+};
+const handleAdminClick = () => {
+    window.location.href = '/adminLogin';
+};
+const handleSignOutClick = () => {
+    window.location.href = '/';
+};
+
   return (
+
+    <div>
+    <NavBar
+       
+       onMainClick={handleMainClick}
+       onUserClick={handleUserClick}
+
+       onAdminClick={handleAdminClick}
+       onSignOutClick={handleSignOutClick}
+        showAdminUser={false} // Hide User and Admin
+        showSignOutButton ={true}
+    />
       <main>
 
           <br></br>
@@ -200,5 +228,7 @@ export default function Home(props) {
         </section>
       </section>
     </main>
+
+    </div>
   )
 }

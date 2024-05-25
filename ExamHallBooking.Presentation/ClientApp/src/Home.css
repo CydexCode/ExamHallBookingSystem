@@ -29,7 +29,7 @@
      font-size: 20px;
     margin-right: 10px;
     cursor: pointer;
-    background-color: #002a4f; 
+    background-color: #265aa4; 
     color: #ffffff; 
     padding: 15px 30px; 
     border-radius: 10px; 
@@ -43,7 +43,6 @@
         border-color: #45a049; /* Darker green border */
         transform: scale(1.1);
         transition: transform 0.3s ease;
-        text-decoration: none;
     }
 
 

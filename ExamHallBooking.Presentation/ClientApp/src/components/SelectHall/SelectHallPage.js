@@ -1,6 +1,7 @@
 ﻿import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SelectHallPage.css';
+import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
 
 const ExamHallSelection = () => {
     const navigate = useNavigate();
@@ -12,8 +13,32 @@ const ExamHallSelection = () => {
             navigate('/allBookingUserDrawingHall');
         }
     };
-
+    const handleMainClick = () => {
+        window.location.href = '/';
+    };
+    
+    const handleUserClick = () => {
+        window.location.href = '/login';
+    };
+    const handleAdminClick = () => {
+        window.location.href = '/adminLogin';
+    };
+    const handleSignOutClick = () => {
+        window.location.href = '/';
+    };
     return (
+
+        <div>
+        <NavBar
+           
+           onMainClick={handleMainClick}
+           onUserClick={handleUserClick}
+    
+           onAdminClick={handleAdminClick}
+           onSignOutClick={handleSignOutClick}
+            showAdminUser={false} // Hide User and Admin
+            showSignOutButton ={true}
+        />
         <div className="exam-hall-selection">
             <h1 class="header">Select Exam Hall </h1>
             <div className="hall-boxes">
@@ -24,6 +49,7 @@ const ExamHallSelection = () => {
                     <h2 className="hall-name">Drawing Office Hall</h2>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
