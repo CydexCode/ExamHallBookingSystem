@@ -241,7 +241,7 @@ const handleSignOutClick = () => {
         <div className="column examHall">Exam Hall</div>
               <div className="column lectureName">Lecturer Email Address</div>
               <div className="column numOfStudent">Number Of Student</div>
-              <div className="column year">Year</div>
+              <div className="column year">Batch</div>
               <div className="column semester">Semester</div>
               <div className="column subject">Subject</div>
         <div className="column importance">Exam Type</div>
