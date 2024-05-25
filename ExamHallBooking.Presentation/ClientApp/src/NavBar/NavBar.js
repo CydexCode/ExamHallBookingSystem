@@ -9,20 +9,26 @@ const root = createRoot(rootElement);
 
 
 
-const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) => {
+const Navbar = ({ onMainClick, onUserClick, onAdminClick, onAllClick, onDrawingHallClick }) => {
     return (
 
         <nav className="navbar">
             <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" />
 
             <ul>
-                <li onClick={onMainClick}>
+            {/*    <li onClick={onMainClick}>
                     <span role="img" aria-label="User Icon">
                         
                     </span>{" "}
                     Home
+                </li>*/}
+                <li onClick={onUserClick}>
+                    <span role="img" aria-label="User Icon">
+
+                    </span>{" "}
+                    User
                 </li>
-                <li onClick={onDrawingHallClick}>
+           {/*     <li onClick={onDrawingHallClick}>
                     <span role="img" aria-label="User Icon">
 
                     </span>{" "}
@@ -33,7 +39,7 @@ const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) =
                         
                     </span>{" "}
                     Computer Department Hall
-                </li>
+                </li>*/}
                 <div className="admin">
                 <li onClick={onAdminClick}>
                     <span role="img" aria-label="Admin Icon">
@@ -41,15 +47,12 @@ const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) =
                     </span>{" "}
                     Admin
                 </li>
-            </div>
-              {/*  <li className="log">
-                    LOGIN
-                </li>
-                <div className="vl"></div>
-                <div className="vl" style={{ marginLeft: '2px' }}></div>
-                <li className="reg">
-                    REGISTER
+                </div>
+
+             {/*   <li className="SignOut">
+                    SignOut
                 </li>*/}
+               
             </ul>
         </nav>
     );

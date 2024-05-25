@@ -164,15 +164,15 @@ export default function Home(props) {
               <Link to="/staffLogin">End Exam Booking</Link>
               <br></br>
               <br></br>
-              <Link to="/login">Mid / Quiz Booking</Link>
+             {/* <Link to="/user">Mid / Quiz Booking</Link>*/}
           </div>
  
-{/*
+
           <div className="add-btn row items-center content-center">
-              <div className="btn add" onClick={() => openModal("new-modal")}>Mid/Quiz</div>
+              <div className="btn add" onClick={() => openModal("new-modal")}>Mid/Quiz Booking</div>
           </div>
           <br></br>
-          <br></br>
+       {/*   <br></br>
           <div className="add-btn2 row items-center content-center">
               <div className="btn add" onClick={() => openModal("new-modal")}>End Exam</div>
           </div>*/}

@@ -9,7 +9,7 @@ import UserDrawingHall from './components/UserDrawingHall/Home';
 import StaffDrawingHall from './components/StaffDrawingHall/Home';
 import AllBooking from './components/AllBookingUserComHall/Home';
 import Staff from './components/StaffComHall/Home';
-
+import SelectHallPage from './components/SelectHall/SelectHallPage';
 
 import MainHome from './components/Home/Main';
 import NavBar from './NavBar/NavBar';
@@ -28,25 +28,30 @@ const App = () => {
         window.location.href = '/main';
     };
 
-    const handleAllClick = () => {
-        window.location.href = '/allBooking';
+    const handleUserClick = () => {
+        window.location.href = '/login';
     };
-
     const handleAdminClick = () => {
         window.location.href = '/adminLogin';
     };
+/*    const handleAllClick = () => {
+        window.location.href = '/allBooking';
+    };
+
+  
     const handleDrawingHallClick = () => {
         window.location.href = '/allBookingUserDrawingHall';
-    };
+    };*/
     return (
         <Router>
             <div>
             <div>
                 <NavBar
                         onMainClick={handleMainClick}
-                        onAllClick={handleAllClick}
+                        onUserClick={handleUserClick}
+                       
                         onAdminClick={handleAdminClick}
-                        onDrawingHallClick={handleDrawingHallClick}
+                     
                 />
                 <Routes>
                     <Route path="/main" element={<MainHome />} />
@@ -64,6 +69,7 @@ const App = () => {
                     <Route path="/allBooking" element={<AllBooking />} />
                         <Route path="/staffLogin" element={<StaffLogin />} />
                         <Route path="/allBookingUserDrawingHall" element={<AllBookingUserDrawingHall />} />
+                        <Route path="/selectHallPage" element={<SelectHallPage />} />
                 </Routes>
                 </div>
                <Footer/>

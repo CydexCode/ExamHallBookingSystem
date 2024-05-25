@@ -27,7 +27,7 @@ function Login() {
         }).then((result) => {
             result.json().then((resp) => {
                 console.warn(resp);
-                navigate("/user");
+                navigate("/selectHallPage");
             })
         }).catch((error) => {
             // Handle any network errors or other exceptions here
