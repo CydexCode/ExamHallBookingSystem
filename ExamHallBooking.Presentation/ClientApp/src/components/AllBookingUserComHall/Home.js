@@ -1,22 +1,23 @@
+import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+import Delete from "./Delete";
+import Edit from "./Edit";
+import New from "./New";
+import Appointment from "./Appointment";
 
-import { useEffect, useState } from "react"
-import { Link } from 'react-router-dom'
-import Delete from "./Delete"
-import Edit from "./Edit"
-import New from "./New"
-import Appointment from "./Appointment"
-
-
-import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
-import "../../custom.css";
-import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib"
+// Keep the existing NavBar CSS import if necessary
+import "../../NavBar/NavBar.css"; 
+// Import the new CSS file for styling
+import "./comHome.css"; 
+// Remove the old custom CSS import if no longer needed
+// import "../../custom.css"; 
+import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib";
 
 export default function Home(props) {
+  const [dataList, setDataList] = useState([]);
 
-  const [dataList, setDataList] = useState([])
-
-  const [refreshData, setRefreshData] = useState(0)
-  const [stateListener, setStateListener] = useState(0)
+  const [refreshData, setRefreshData] = useState(0);
+  const [stateListener, setStateListener] = useState(0);
 
   const filterApp = (e) => {
     let name_ = e.target.name;
@@ -24,29 +25,59 @@ export default function Home(props) {
 
     if (name_ === "All" || name_ === "Done" || name_ === "Deleted") {
       v_ = e.target.checked;
-        filter[name_] = v_;
+      filter[name_] = v_;
 
-        if (name_ === "SpecifiedDate") {
-            filter.SpecifiedDate = new Date(v_);
-            filter.StartDate = null
-            filter.EndDate = null
+      if (name_ === "SpecifiedDate") {
+        filter.SpecifiedDate = new Date(v_);
+        filter.StartDate = null;
+        filter.EndDate = null;
+      }
+
+      if (name_ === "SpecifiedTime") {
+        filter.SpecifiedTime = v_;
+      }
+
+      if (name_ === "LevelOfImportance") {
+        filter.LevelOfImportance = Number(v_) === 9 ? null : Number(v_);
+      }
+
+      if (name_ === "period") {
+        // 1 = today, 2 = this week, 3 = last week
+        let sd_ = new Date(), ed_ = new Date();
+        const dayNum = sd_.getDay();
+
+        if (v_ === "1") {
+          sd_.setDate(dayNum - 1);
         }
 
-        if (name_ === "SpecifiedTime") {
-            filter.SpecifiedTime = v_;
+        if (v_ === "2") {
+          let startDaysInSec = (dayNum - 1) * 24 * 60 * 60 * 1000;
+          let endDaysInSec = (7 - dayNum) * 24 * 60 * 60 * 1000;
+
+          sd_ = new Date(Date.now() - startDaysInSec);
+          ed_ = new Date(Date.now() + endDaysInSec);
         }
 
-        if (name_ === "LevelOfImportance") {
-            filter.LevelOfImportance = Number(v_) === 9 ? null : Number(v_);
+        if (v_ === "3") {
+          let startDaysInSec = dayNum * 24 * 60 * 60 * 1000;
+          let endDaysInSec = (6 + dayNum) * 24 * 60 * 60 * 1000;
+
+          ed_ = new Date(Date.now() - startDaysInSec);
+          sd_ = new Date(Date.now() - endDaysInSec);
         }
 
-          if (name_ === "period") {
-      // 1 = today, 2 = this week, 3 = last week
+        filter.StartDate = v_ === '4' ? null : sd_;
+        filter.EndDate = v_ === '4' ? null : ed_;
+        filter.SpecifiedDate = null;
+      }
+    }
+
+    if (name_ === "period") {
       let sd_ = new Date(), ed_ = new Date();
       const dayNum = sd_.getDay();
 
       if (v_ === "1") {
-        sd_.setDate(dayNum - 1)
+        sd_.setDate(dayNum - 1);
       }
 
       if (v_ === "2") {
@@ -67,61 +98,13 @@ export default function Home(props) {
 
       filter.StartDate = v_ === '4' ? null : sd_;
       filter.EndDate = v_ === '4' ? null : ed_;
-      filter.SpecifiedDate = null
-    }
-
-      }
-
-/*      // Handle "Done" button click
-      if (name_ === "Done") {
-          // Set filter for "Done" appointments
-          filter.Done = v_;
-          // Fetch data with filter
-          getAppointments(filter).then(r => {
-              if (r.length < 1) {
-                  notifyUser("Filter result is empty!")
-              }
-              setDataList(r)
-          }).catch(e => console.log("Error getting data on filter: ", e))
-      }*/
-
-
-
-    if (name_ === "period") {
-      // 1 = today, 2 = this week, 3 = last week
-      let sd_ = new Date(), ed_ = new Date();
-      const dayNum = sd_.getDay();
-
-        if (v_ === "1") {
-            sd_.setDate(dayNum - 1)
-        }
-
-        if (v_ === "2") {
-            let startDaysInSec = (dayNum - 1) * 24 * 60 * 60 * 1000;
-            let endDaysInSec = (7 - dayNum) * 24 * 60 * 60 * 1000;
-
-            sd_ = new Date(Date.now() - startDaysInSec);
-            ed_ = new Date(Date.now() + endDaysInSec);
-        }
-
-        if (v_ === "3") {
-            let startDaysInSec = dayNum * 24 * 60 * 60 * 1000;
-            let endDaysInSec = (6 + dayNum) * 24 * 60 * 60 * 1000;
-
-            ed_ = new Date(Date.now() - startDaysInSec);
-            sd_ = new Date(Date.now() - endDaysInSec);
-        }
-
-        filter.StartDate = v_ === '4' ? null : sd_;
-        filter.EndDate = v_ === '4' ? null : ed_;
-        filter.SpecifiedDate = null;
-
+      filter.SpecifiedDate = null;
     }
 
     if (name_ === "SpecifiedDate") {
       filter.SpecifiedDate = new Date(v_);
-      filter.StartDate = null
-      filter.EndDate = null
+      filter.StartDate = null;
+      filter.EndDate = null;
     }
 
     if (name_ === "SpecifiedTime") {
@@ -132,147 +115,117 @@ export default function Home(props) {
       filter.LevelOfImportance = Number(v_) === 9 ? null : Number(v_);
     }
 
-    // fetch data with filter
     getAppointments(filter).then(r => {
       if (r.length < 1) {
-        notifyUser("Filter result is empty!")
+        notifyUser("Filter result is empty!");
       }
-      setDataList(r)
-    }).catch(e => console.log("Error getting data on filter: ", e))
-  }
-
+      setDataList(r);
+    }).catch(e => console.log("Error getting data on filter: ", e));
+  };
 
   useEffect(() => {
     getDefault().then(data => {
-      setDataList(data)
-    }).catch(e => console.log("Error inside home: ", e))
-  }, [refreshData])
+      setDataList(data);
+    }).catch(e => console.log("Error inside home: ", e));
+  }, [refreshData]);
+
   return (
-      <main>
-
-          <br></br>
-          <br></br>
-          <div className="centered-heading">
-              <h1>Computer Department All Exams</h1>
-          </div>
-
-          <br></br>
-          <br></br>
-         
+    <main>
+      <div className="heading">
+        <h1>Computer Department Hall User Booking</h1>
+      </div>
+      
+      <div className="actions">
+        <Link to="/staffLogin" className="btn">End Exam Booking</Link>
+        <Link to="/login" className="btn">Mid / Quiz Booking</Link>
+      </div>
+      
+      <section className="row filter">
+        <div className="filter-title">Filter</div>
+        <div className="filter-items">
+          <button className="me-15" onClick={() => window.location.reload()}>Clear Filters</button>
           <div>
-           
-              <Link to="/staffLogin">End Exam Booking</Link>
-              <br></br>
-              <br></br>
-              <Link to="/login">Mid / Quiz Booking</Link>
-          </div>
- 
-{/*
-          <div className="add-btn row items-center content-center">
-              <div className="btn add" onClick={() => openModal("new-modal")}>Mid/Quiz</div>
-          </div>
-          <br></br>
-          <br></br>
-          <div className="add-btn2 row items-center content-center">
-              <div className="btn add" onClick={() => openModal("new-modal")}>End Exam</div>
-          </div>*/}
-
-      <div className="notifications spacer-20"></div>
-
-      <section className="row justify-btw items-center filter">
-        <div className="modal-title">Filter</div>
-        <div className="row items-center filter-items">
-          <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
-          <div>
-                      <label htmlFor="All_f">All Requests</label> <br />
+            <label htmlFor="All_f">All Requests</label> <br />
             <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
           </div>
-
-                  <div>
-                      <label htmlFor="Done_f">accepted</label> <br />
-                      <input type="checkbox" id="Done_f" name="Done" onChange={filterApp}  />
-                  </div>
-
-
           <div>
-                      <label htmlFor="Deleted_f">Rejected</label> <br />
+            <label htmlFor="Done_f">Accepted</label> <br />
+            <input type="checkbox" id="Done_f" name="Done" onChange={filterApp} />
+          </div>
+          <div>
+            <label htmlFor="Deleted_f">Rejected</label> <br />
             <input type="checkbox" id="Deleted_f" name="Deleted" onChange={filterApp} />
           </div>
           <div>
             <label htmlFor="period">Period</label> <br />
             <select name="period" id="period" defaultValue={"4"} onChange={filterApp}>
               <option value="5" disabled>Period</option>
-              <option value="4" >Default</option>
+              <option value="4">Default</option>
               <option value="1">Today</option>
               <option value="2">This week</option>
               <option value="3">Last week</option>
             </select>
           </div>
-
           <div>
             <label htmlFor="SpecifiedDate">Specified Date</label> <br />
             <input type="date" id="SpecifiedDate" name="SpecifiedDate" onChange={filterApp} />
           </div>
-
           <div>
             <label htmlFor="SpecifiedTime">Specified Start Time</label> <br />
             <input type="time" id="SpecifiedTime" name="SpecifiedTime" onChange={filterApp} />
           </div>
-
           <div>
             <label htmlFor="LevelOfImportance_f">Exam Type</label> <br />
             <select name="LevelOfImportance" id="LevelOfImportance_f" defaultValue={8} onChange={filterApp}>
               <option value={8} disabled>Exam Type</option>
-              <option value={9} >Reset</option>
-          
-                          <option value={3}>Assignment</option>
-                          <option value={2}>Quiz</option>
-                          <option value={1}>Mid Exam</option>
-                          <option value={0}>End Exam</option>
+              <option value={9}>Reset</option>
+              <option value={3}>Assignment</option>
+              <option value={2}>Quiz</option>
+              <option value={1}>Mid Exam</option>
+              <option value={0}>End Exam</option>
             </select>
           </div>
         </div>
       </section>
 
-      <div className="userPage">
-      <div className="row underline hdr">
-        <div className="column id">#</div>
-        <div className="column examHall">Exam Hall</div>
-              <div className="column lectureName">Lecture Name</div>
-              <div className="column numOfStudent">Number Of Student</div>
-              <div className="column year">Year</div>
-              <div className="column semester">Semester</div>
-              <div className="column subject">Subject</div>
-        <div className="column importance">Exam Type</div>
-        <div className="column date">Date</div>
-                  <div className="column time">Start Time</div>
-                  <div className="column ">-</div>
-                  <div className="column endTime">End Time</div>
-          <div className="column academicStaff">Academic Staff Member</div>
-   
-      </div>
-          </div>
-      {
-        dataList.length === 0 ?
-          <div className="row mt-15 waiting">Loading <div className="loading">...</div></div> :
-          dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
-      }
+      <section className="table-section">
+        <div className="userPage">
+          <div className="row underline hdr">
+            <div className="column examHall">Exam Hall</div>
+            <div className="column lectureName">Lecture Name</div>
+            <div className="column numOfStudent">Number Of Student</div>
+            <div className="column year">Year</div>
+            <div className="column semester">Semester</div>
+            <div className="column subject">Subject</div>
+            <div className="column importance">Exam Type</div>
+            <div className="column date">Date</div>
+            <div className="column time">Start Time</div>
 
+            <div className="column endTime">End Time</div>
+            <div className="column academicStaff">Academic Staff Member</div>
+          </div>
+        </div>
+
+        {
+          dataList.length === 0 ?
+            <div className="row mt-15 waiting">Loading <div className="loading">...</div></div> :
+            dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
+        }
+      </section>
 
       <section>
         <section className="modal new-modal hidden">
           <New refreshApp={setRefreshData} />
-              </section>
-              <div className="block">
-        <section className="modal edit-modal hidden">
-          <Edit stateListener={stateListener} refreshApp={setRefreshData} />
         </section>
-
-        <section className="modal delete-modal hidden">
-          <Delete stateListener={stateListener} refreshApp={setRefreshData} />
-                  </section>
-              </div>
+        <div className="block">
+          <section className="modal edit-modal hidden">
+            <Edit stateListener={stateListener} refreshApp={setRefreshData} />
+          </section>
+          <section className="modal delete-modal hidden">
+            <Delete stateListener={stateListener} refreshApp={setRefreshData} />
+          </section>
+        </div>
       </section>
     </main>
-  )
+  );
 }
