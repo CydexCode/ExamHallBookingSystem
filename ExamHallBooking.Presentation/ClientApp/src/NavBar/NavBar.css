@@ -12,18 +12,19 @@
     /* width: 100%; */
 }
 
-ul {
+.navBarUl {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-ul li {
+.navBarUl li {
     list-style-type: none;
-    padding: 0 20px;
+    padding: 0 200px;
     position: relative;
     font-weight: 400;
     font-size: 1.3rem;
+    color: #fff;
 
     /* cursor: pointer; */
     /* color: #fff; */
@@ -31,13 +32,13 @@ ul li {
     /* margin-left: 70px; */
 }
 
-ul li a{
+.navBarUl li a{
     text-decoration: none;
 }
 
     li:hover {
         color: #acd8ff;
-        transform: scale(1.1);
+        transform: scale(1.075);
         transition: transform 0.3s ease; /* Smooth transition */
     }
 
@@ -56,6 +57,15 @@ ul li a{
         transform: scale(1.3);
         transition: transform 0.3s ease;
     }
+
+    #mobile {
+        display: none;
+      }
+      
+      #mobile i {
+        color: #fff;
+        align-items: center;
+      }
 
 /* .vl {
     border-left: 1px solid rgb(255, 255, 255);

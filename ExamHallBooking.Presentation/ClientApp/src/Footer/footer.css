@@ -2,7 +2,7 @@
     font-family: Helvetica, sans-serif;
     background-color: #002a4f;
     width: 100%;
-    padding: 5px;
+    padding: 10px 50px;
     font-size: 10px;
     position: fixed;
     left: 0;
@@ -14,7 +14,7 @@
     z-index: 10;
 }
 
-.fotterUL {
+/* .fotterUL {
     font-size: 10px;
     list-style-type: none;
     margin: 0;
@@ -32,4 +32,26 @@ li {
 
     li:hover {
         color: #acd8ff;
+    } */
+    .fotterUL {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .fotterUL li {
+        list-style-type: none;
+        padding: 0 50px;
+        position: relative;
+        font-weight: 400;
+        font-size: 1rem;
+    
+        /* cursor: pointer; */
+        /* color: #fff; */
+        /* text-align: end; */
+        /* margin-left: 70px; */
+    }
+    
+    .fotterUL li a{
+        text-decoration: none;
     }

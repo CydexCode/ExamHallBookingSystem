@@ -11,10 +11,10 @@ const root = createRoot(rootElement);
 
 const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) => {
     return (
-        <div>
             <nav className="navbar">
-                <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" />
-                <ul>
+                <div>
+                {/* <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" /> */}
+                <ul className="navBarUl">
                     <li onClick={onMainClick}>
                         Home
                     </li>
@@ -25,10 +25,12 @@ const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) =
                         Admin
                     </li>
                 </ul>
+                </div>
+                <div id="mobile">
+                    <i className="fas fa-bars"></i>
+
+                </div>
             </nav>
-        </div>
-        // <div>
-        // </div>
     );
 };
 
