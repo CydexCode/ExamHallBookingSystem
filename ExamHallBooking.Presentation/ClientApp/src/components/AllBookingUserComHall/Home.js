@@ -139,7 +139,7 @@ export default function Home(props) {
         <Link to="/staffLogin" className="btn">End Exam Booking</Link>
         <Link to="/login" className="btn">Mid / Quiz Booking</Link>
       </div>
-      
+      <div className="table1">
       <section className="row filter">
         <div className="filter-title">Filter</div>
         <div className="filter-items">
@@ -200,7 +200,6 @@ export default function Home(props) {
             <div className="column importance">Exam Type</div>
             <div className="column date">Date</div>
             <div className="column time">Start Time</div>
-
             <div className="column endTime">End Time</div>
             <div className="column academicStaff">Academic Staff Member</div>
           </div>
@@ -212,6 +211,9 @@ export default function Home(props) {
             dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
         }
       </section>
+
+      </div>
+
 
       <section>
         <section className="modal new-modal hidden">
