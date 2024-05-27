@@ -199,16 +199,17 @@ export default function Home(props) {
                 <div className="column id">#</div>
                 <div className="column examHall">Exam Hall</div>
                 <div className="column lectureName">Lecture Name</div>
-                <div className="column numOfStudent">Number Of Student</div>
+                <div className="column numOfStudent">Number Of Students</div>
                 <div className="column year">Year</div>
                 <div className="column semester">Semester</div>
                 <div className="column subject">Subject</div>
                 <div className="column importance">Exam Type</div>
                 <div className="column date">Date</div>
                 <div className="column time">Start Time</div>
-                <div className="column ">-</div>
                 <div className="column endTime">End Time</div>
                 <div className="column academicStaff">Non Academic Staff Member</div>
+                <div className="column endTime">Edit</div>
+                <div className="column endTime">Delete</div>
             </div>
 
             {
