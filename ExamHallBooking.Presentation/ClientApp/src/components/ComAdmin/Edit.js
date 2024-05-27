@@ -8,6 +8,13 @@ export default function Edit(props){
     const [importance, setImportance] = useState(0)
     const [data, setData] = useState({})
 
+    const importanceMap = {
+        3: "Assignment",
+        2: "Quiz",
+        1: "Mid Exam",
+        0: "End Exam"
+    };
+
     const editApp =(e)=> {
         const name_ = e.target.name
         let v_ = e.target.value
@@ -34,15 +41,46 @@ export default function Edit(props){
         entry[name_] = v_
     }
 
-    const updateApp = ()=>{
-        updateAppointment(entry).then(r =>{
-            console.log("Updated successfully: ", r)
-            props.refreshApp(Math.random() * 248 * Math.random())
-        })
-        .catch(e=>console.log("Could not update the appointment: ", e))
-        closeModal("edit-modal")
+    const sendEmail = async () => {
+        const emailRequest = {
+            toEmail: entry.lectureName,  
+            subject: "Computer Department ExamHall Booking Confirmed",
+            body: `Your time slot from ${entry.time} to ${entry.endTime} is confirmed for  ${entry.year} Year ,  ${entry.semester} student  ${importanceMap[data.levelOfImportance]}.`
+        };
+
+        try {
+            const response = await fetch("/SendMail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(emailRequest)
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to send email");
+            }
+
+            console.log("Email sent successfully");
+        } catch (error) {
+            console.error("Error sending email:", error);
+        }
+    };
+
+
+    const updateApp = () => {
+        updateAppointment(entry)
+            .then(r => {
+                console.log("Updated successfully: ", r);
+                props.refreshApp(Math.random() * 248 * Math.random());
+                sendEmail();  // Send email after successful update
+            })
+            .catch(e => console.log("Could not update the appointment: ", e));
+
+        closeModal("edit-modal");
         window.location.reload();
-    }
+    };
+
 
     const defaultDate = typeof(entry.date) === "string" ? entry.date.split("T")[0] : ""
 
@@ -56,14 +94,14 @@ export default function Edit(props){
         <div className="modal-container">
             <div className="modal-title">Edit Booking</div>
             <br></br>
-            <div className="mt-15">
+         {/*   <div className="mt-15">
                 <label htmlFor="Title_e">Exam Hall  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;    :</label> 
                 <input type="text" className="mt-5" id="Title_e" maxLength={50} name="examHall" defaultValue={data.examHall} onChange={editApp}/>
                
-            </div>
+            </div>*/}
             <br></br>
             <div className="mt-15">
-                <label htmlFor="Description_e">Lecturer Name&nbsp; :</label> 
+                <label htmlFor="Description_e">Lecturer Email Address&nbsp; :</label> 
                 <input id="Description_e" maxLength={50} className="mt-5" name="lectureName" defaultValue={data.lectureName} onChange={editApp}></input> <br />
               
             </div>
@@ -147,7 +185,7 @@ export default function Edit(props){
 
             <div className="row justify-btw modal-action-container mt-15">
                 <div className="btn" onClick={()=> closeModal("edit-modal")}>Cancel</div>
-                <div className="btn" onClick={updateApp}>Update</div>
+                <div className="btn" onClick={updateApp}>Confirm</div>
             </div>
         </div>
     )
