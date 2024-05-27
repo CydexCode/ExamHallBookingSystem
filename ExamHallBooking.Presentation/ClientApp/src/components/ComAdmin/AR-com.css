@@ -96,4 +96,13 @@
       opacity: 0.1;
     }
   }
-  
+  .row.underline.hdr {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 0.8fr));
+    background-color: #002D62;
+    font-weight: bold;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 3px;
+}
