@@ -32,10 +32,11 @@
   gap: 5px; 
 }
 
-  
-  .hdr, .row {
-    display: flex;
-  }
+.hdr, .row {
+  display: flex;
+  margin: 0; 
+  border: none;
+}
   
   .hdr {
     font-weight: bold;
