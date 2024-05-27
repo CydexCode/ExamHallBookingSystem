@@ -7,6 +7,7 @@ import Appointment from "./Appointment"
 
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
+import "./Home.css"; // Create and import the Home.css file
 import { getDefault, openModal, filter, getAppointmentsDrawingHall, notifyUser } from "./Lib"
 
 export default function Home(props) {
@@ -87,7 +88,7 @@ export default function Home(props) {
   return (
       <main>
 
-          <br></br>
+          {/* <br></br>
           <br></br>
           <div className="centered-heading">
               <h1>Mid / Quiz Exam Booking</h1>
@@ -104,7 +105,98 @@ export default function Home(props) {
           </div>
  
 
-      <div className="notifications spacer-20"></div>
+      <div className="notifications spacer-20"></div> */}
+
+
+      <div className="container">
+        <div className="filter-panel">
+          <button className="add-booking" onClick={() => openModal("new-modal")}>Add a booking</button>
+          <div className="filters">
+            <label>
+              <input type="checkbox" name="All" onChange={filterApp} /> All
+            </label>
+            <label>
+              <input type="checkbox" name="Done" onChange={filterApp} /> Done
+            </label>
+            <label>
+              <input type="checkbox" name="Deleted" onChange={filterApp} /> Deleted
+            </label>
+            <label>
+              Period:
+              <select name="period" onChange={filterApp}>
+                <option value="Default">Default</option>
+                <option value="1">Today</option>
+                <option value="2">This Week</option>
+                <option value="3">Last Week</option>
+              </select>
+            </label>
+            <label>
+              Specific Date:
+              <input type="date" name="SpecifiedDate" onChange={filterApp} />
+            </label>
+            <label>
+              Specific Time:
+              <input type="time" name="SpecifiedTime" onChange={filterApp} />
+            </label>
+            <label>
+              Exam type:
+              <select name="LevelOfImportance" onChange={filterApp}>
+                <option value="9">Select</option>
+                {/* Add more options as needed */}
+              </select>
+            </label>
+            <button onClick={() => filterApp({ target: { name: 'clear' } })}>Clear Filters</button>
+          </div>
+        </div>
+        <div className="table-panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Exam hall</th>
+                <th>Lecturer Name</th>
+                <th>Number of Students</th>
+                <th>Year</th>
+                <th>Semester</th>
+                <th>Subject</th>
+                <th>Exam Type</th>
+                <th>Date</th>
+                <th>Start time</th>
+                <th>End time</th>
+                <th>Academic staff member</th>
+              </tr>
+            </thead>
+            <tbody>
+              {dataList.map((data, index) => (
+                <tr key={index}>
+                  <td>{data.examHall}</td>
+                  <td>{data.lecturerName}</td>
+                  <td>{data.numberOfStudents}</td>
+                  <td>{data.year}</td>
+                  <td>{data.semester}</td>
+                  <td>{data.subject}</td>
+                  <td>{data.examType}</td>
+                  <td>{data.date}</td>
+                  <td>{data.startTime}</td>
+                  <td>{data.endTime}</td>
+                  <td>{data.academicStaffMember}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 {/*      <section className="row justify-btw items-center filter">
         <div className="modal-title">Filter</div>
