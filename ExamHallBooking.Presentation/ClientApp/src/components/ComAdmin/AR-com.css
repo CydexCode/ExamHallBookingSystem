@@ -43,6 +43,12 @@
   .add-btn {
     margin-bottom: 20px;
   }
+
+  .me-15{
+    text-align: center;
+    color: darkgray;
+    
+  }
   
   .centered-heading-container{
     display: flex;
