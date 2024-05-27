@@ -64,13 +64,13 @@
     padding: 10px 10px;
 }
   
-  .centered-heading-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    height: 50px; /* Adjust as necessary for your layout */
-    margin-bottom: 40px; /* Add some space below the heading */
+.centered-heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px; 
+  margin-top:30px;
+  margin-bottom: 30px; 
 }
 
 .centered-heading-container h1 {
