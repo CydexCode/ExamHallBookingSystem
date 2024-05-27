@@ -113,3 +113,10 @@
 .table .row:not(.hdr):nth-child(odd) {
   background-color: #59788E; 
 }
+
+.table .row {
+  font-weight: bold;
+  margin: 0;
+  border: none;
+  font-family: sans-serif;
+}
