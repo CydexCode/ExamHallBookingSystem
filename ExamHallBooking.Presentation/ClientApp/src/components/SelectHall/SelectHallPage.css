@@ -1,3 +1,4 @@
+
 ﻿.exam-hall-selection {
     text-align: center;
     padding: 20px;
@@ -5,6 +6,15 @@
     background-size: cover;
     background-position: center;
     min-height: 86vh;
+
+.exam-hall-selection {
+    text-align: center;
+    padding: 20px;
+    background-image: url('https://jefaa.lk/gallery/1611201956img.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,13 +23,18 @@
     overflow: hidden;
 }
 
+
 .header {
+
+.header{
+
     display: flex;
     align-items: center;
     margin-left: 200px;
     font-size: 40px;
     margin-bottom: 5px;
     font-weight: bold;
+
     color: white;
 }
 
@@ -29,6 +44,17 @@
         font-size: 40px;
         font-weight: bold;
     }
+
+    color: white;  
+}
+.header::before {
+    content: '>>';
+    margin-right:15px;
+    font-size: 40px;
+    font-weight: bold; 
+  
+}
+
 
 .hall-boxes {
     display: flex;
@@ -49,6 +75,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
     .hall-box:hover {
@@ -57,12 +84,31 @@
     }
 
 .hall-name {
+
+  }
+  
+  .hall-box:hover {
+    transform: scale(1.05);
+    background-color:rgba(0, 0, 0, 0.69)
+  }
+  .hall-name {
+
     margin: 0;
     font-size: 28px;
     transition: text-decoration 0.3s ease;
     font-weight: 500;
+
 }
 
 .hall-box:active .hall-name {
     text-decoration: underline;
 }
+
+  }
+
+  .hall-box:active .hall-name {
+    text-decoration: underline;
+  }
+  
+
+

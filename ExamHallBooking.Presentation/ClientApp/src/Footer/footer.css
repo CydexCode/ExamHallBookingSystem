@@ -16,8 +16,13 @@
    margin-left: 0px;
 }
 
+
 .footerUL {
     font-size: 15px;
+
+.fotterUL {
+    font-size: 10px;
+
     list-style-type: none;
     margin: 0;
     padding: 0;

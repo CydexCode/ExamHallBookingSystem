@@ -1,7 +1,9 @@
 ﻿.navbar {
-    font-family: Helvetica, sans-serif;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #002a4f;
+
     padding: 20px 0;
     top: 0;
     left: 0;
@@ -11,36 +13,51 @@
     z-index: 10;
     position: relative;
     font-size: 20px;
+
+    padding: 20px 80px;
+
+    font-family: Helvetica, sans-serif;
+    /* font-size: 20px; */
+    /* z-index: 10; */
+    /* position: relative; */
+    /* width: 100%; */
 }
 
 ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+ul li {
     list-style-type: none;
+
     margin: 0;
     padding: 0;
     display: flex;
     flex: 1;
+
+    padding: 0 20px;
+    position: relative;
+    font-weight: 400;
+    font-size: 1.3rem;
+
+    /* cursor: pointer; */
+    /* color: #fff; */
+    /* text-align: end; */
+    /* margin-left: 70px; */
+
 }
 
-li {
-    margin-left: 70px;
-    cursor: pointer;
-    color: #fff;
-    text-align: end;
+ul li a{
+    text-decoration: none;
 }
 
 li:hover {
     color: #acd8ff;
     transform: scale(1.1);
     transition: transform 0.3s ease;
-}
-
-.reg {
-    margin-left: 5px;
-}
-
-.log {
-    margin-left: 200px;
-    margin-right: 5px;
 }
 
 .homeBtn {
@@ -59,10 +76,11 @@ li:hover {
     transition: transform 0.3s ease;
 }
 
-.vl {
+/* .vl {
     border-left: 1px solid rgb(255, 255, 255);
     height: 20px;
-}
+} */
+
 
 .admin {
     align-items: end;
@@ -98,3 +116,4 @@ li:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+

@@ -12,6 +12,7 @@ const root = createRoot(rootElement);
 const Navbar = ({ onMainClick, onUserClick, onAdminClick,onSignOutClick,onBackClick, onAllClick, onDrawingHallClick ,showAdminUser,showSignOutButton,showHomeBtton , showBackButton }) => {
     return (
 
+
         <nav className="navbar">
             {/* <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" /> */}
 
@@ -46,6 +47,26 @@ const Navbar = ({ onMainClick, onUserClick, onAdminClick,onSignOutClick,onBackCl
                
             </ul>
         </nav>
+
+        <div>
+            <nav className="navbar">
+                <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" />
+                <ul>
+                    <li onClick={onMainClick}>
+                        Home
+                    </li>
+                    <li onClick={onDrawingHallClick}>
+                        User
+                    </li>
+                    <li onClick={onAdminClick}>
+                        Admin
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        // <div>
+        // </div>
+
     );
 };
 

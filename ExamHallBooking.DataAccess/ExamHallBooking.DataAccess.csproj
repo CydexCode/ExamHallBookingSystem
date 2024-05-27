@@ -21,7 +21,11 @@
     </PackageReference>
     <PackageReference Include="MimeKit" Version="4.6.0" />
     <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+
     <PackageReference Include="SendGrid" Version="9.29.3" />
+
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+
   </ItemGroup>
 
   <ItemGroup>
