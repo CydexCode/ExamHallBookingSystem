@@ -89,7 +89,7 @@ export default function Home(props) {
 
 
   const handleBackClick = () => {
-    window.location.href = '/';
+      window.location.href = '/allBookingUserDrawingHall';
 };
 
   const handleMainClick = () => {
@@ -112,7 +112,7 @@ const handleSignOutClick = () => {
     <NavBar
        
        onBackClick={handleBackClick}
-       showBackButton={false}
+       showBackButton={true}
        
        onMainClick={handleMainClick}
        onUserClick={handleUserClick}

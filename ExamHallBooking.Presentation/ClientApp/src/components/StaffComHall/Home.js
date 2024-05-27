@@ -87,7 +87,7 @@ export default function Home(props) {
   }, [refreshData])
 
   const handleBackClick = () => {
-    window.location.href = '/';
+    window.location.href = '/allBooking';
 };
 
   const handleMainClick = () => {
@@ -109,8 +109,8 @@ const handleSignOutClick = () => {
     <div>
     <NavBar
        
-       onBackClick={handleBackClick}
-       showBackButton={false}
+              onBackClick={handleBackClick}
+              showBackButton={true}
        onMainClick={handleMainClick}
        onUserClick={handleUserClick}
 
