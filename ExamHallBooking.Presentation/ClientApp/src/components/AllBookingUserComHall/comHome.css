@@ -14,9 +14,9 @@ main {
     font-family: Arial, sans-serif;
 }
 
-/* Align the heading to the left */
+/* Align the heading to the center */
 .heading {
-    text-align: left;
+    text-align:center;
     margin-bottom: 20px;
 }
 
@@ -30,7 +30,7 @@ main {
 /* Style the action buttons */
 .actions {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
     margin-bottom: 20px;
 }
@@ -69,12 +69,19 @@ main {
     flex-direction: column;
     gap: 10px;
     color: black; /* Added to change the font color to black */
+    align-items: flex-start;
 }
 
 .filter-items div {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     color: black; /* Added to change the font color to black */
+    align-items: baseline;
+}
+
+.filter-items .filter-item-type1 {
+    flex-direction: column;
 }
 
 .filter-items label {
@@ -161,7 +168,122 @@ main {
     margin-top: 20px;
 }
 
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
 
 .hidden {
     display: none !important;
 }
+
+/* General table styling */
+.table-section {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-section .userPage .row.hdr {
+    background-color: #2C3E50;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table-section .Booking_table .row {
+    border-bottom: 1px solid #dddddd;
+    padding: 15px;
+}
+
+.table-section .Booking_table .row:hover {
+    background-color: #f1f1f1;
+}
+
+.table-section .column {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.table-section .column.examHall,
+.table-section .column.lectureName,
+.table-section .column.numOfStudent,
+.table-section .column.year,
+.table-section .column.semester,
+.table-section .column.subject,
+.table-section .column.importance,
+.table-section .column.date,
+.table-section .column.time,
+.table-section .column.endTime,
+.table-section .column.academicStaff {
+    width: 10%;
+}
+
+.table-section .column.id {
+    width: 3%;
+}
+
+.table-section .column.importance.bc-green {
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+}
+
+.table-section .column.importance.bc-gold {
+    background-color: #f1c40f;
+    color: white;
+    text-align: center;
+}
+
+input,
+select {
+    margin-left: 30px;
+    border-width: 3px;
+    border-color: #000;
+    border-radius: 5px;
+    outline: 1px rgb(34, 146, 239) solid;
+    padding: 2px 4px;
+    width: 120px;
+}
+
+/* General table styling */
+.table-section {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-section th,
+.table-section td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.table-section thead {
+    background-color: #2C3E50;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.table-section tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+

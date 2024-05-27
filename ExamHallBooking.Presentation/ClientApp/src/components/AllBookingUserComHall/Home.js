@@ -143,9 +143,9 @@ export default function Home(props) {
       <section className="row filter">
         <div className="filter-title">Filter</div>
         <div className="filter-items">
-          <button className="me-15" onClick={() => window.location.reload()}>Clear Filters</button>
+          
           <div>
-            <label htmlFor="All_f">All Requests</label> <br />
+            <label htmlFor="All_f">All</label> <br />
             <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
           </div>
           <div>
@@ -156,7 +156,7 @@ export default function Home(props) {
             <label htmlFor="Deleted_f">Rejected</label> <br />
             <input type="checkbox" id="Deleted_f" name="Deleted" onChange={filterApp} />
           </div>
-          <div>
+          <div className="filter-item-type1">
             <label htmlFor="period">Period</label> <br />
             <select name="period" id="period" defaultValue={"4"} onChange={filterApp}>
               <option value="5" disabled>Period</option>
@@ -166,15 +166,15 @@ export default function Home(props) {
               <option value="3">Last week</option>
             </select>
           </div>
-          <div>
+          <div className="filter-item-type1">
             <label htmlFor="SpecifiedDate">Specified Date</label> <br />
             <input type="date" id="SpecifiedDate" name="SpecifiedDate" onChange={filterApp} />
           </div>
-          <div>
+          <div className="filter-item-type1">
             <label htmlFor="SpecifiedTime">Specified Start Time</label> <br />
             <input type="time" id="SpecifiedTime" name="SpecifiedTime" onChange={filterApp} />
           </div>
-          <div>
+          <div className="filter-item-type1">
             <label htmlFor="LevelOfImportance_f">Exam Type</label> <br />
             <select name="LevelOfImportance" id="LevelOfImportance_f" defaultValue={8} onChange={filterApp}>
               <option value={8} disabled>Exam Type</option>
@@ -185,31 +185,36 @@ export default function Home(props) {
               <option value={0}>End Exam</option>
             </select>
           </div>
+          <button className="me-15" onClick={() => window.location.reload()}>Clear Filters</button>
         </div>
       </section>
 
       <section className="table-section">
-        <div className="userPage">
-          <div className="row underline hdr">
-            <div className="column examHall">Exam Hall</div>
-            <div className="column lectureName">Lecture Name</div>
-            <div className="column numOfStudent">Number Of Student</div>
-            <div className="column year">Year</div>
-            <div className="column semester">Semester</div>
-            <div className="column subject">Subject</div>
-            <div className="column importance">Exam Type</div>
-            <div className="column date">Date</div>
-            <div className="column time">Start Time</div>
-            <div className="column endTime">End Time</div>
-            <div className="column academicStaff">Academic Staff Member</div>
-          </div>
-        </div>
-
-        {
+      <table>
+            <thead>
+                <tr>
+                    <th>Exam Hall</th>
+                    <th>Lecture Name</th>
+                    <th>Number Of Students</th>
+                    <th>Year</th>
+                    <th>Semester</th>
+                    <th>Subject</th>
+                    <th>Exam Type</th>
+                    <th>Date</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Academic Staff Member</th>
+                </tr>
+            </thead>
+            <tbody>
+            {
           dataList.length === 0 ?
             <div className="row mt-15 waiting">Loading <div className="loading">...</div></div> :
             dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
-        }
+            
+            }
+            </tbody>
+        </table>
       </section>
 
       </div>
