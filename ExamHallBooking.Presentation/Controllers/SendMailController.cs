@@ -17,7 +17,7 @@ namespace MailSend_DotNETCore8WebAPI.Controllers
 
         public SendMailController(IMailSendService mailService, ILogger<SendMailController> logger)
         {
-            _mailService = mailService;
+            _mailService = mailService; 
             _logger = logger;
         }
 
