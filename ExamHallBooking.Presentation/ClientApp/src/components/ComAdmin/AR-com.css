@@ -8,15 +8,13 @@
     display: flex;
     flex-direction: column;
   }
-  
   .filter-items {
-    display: flex;
-    flex-direction: column;
-    gap:2px;
+    display: inline-flex;
     align-items: self-start;
- 
-  }
-  
+    margin-right: 20px;
+    flex-direction: column;
+    gap: 15px;
+}
   .table {
     width: 80%;
   }
