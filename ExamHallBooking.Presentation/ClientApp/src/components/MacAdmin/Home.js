@@ -131,18 +131,13 @@ export default function Home(props) {
     }).catch(e => console.log("Error inside home: ", e))
   }, [refreshData])
   return (
+    <body>
       <main>
 
-          <br></br>
-          <br></br>
+          
           <div className="centered-heading">
               <h1>Exam Hall Booking System -Mac Admin</h1>
           </div>
-
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
 
           
    
@@ -251,5 +246,6 @@ export default function Home(props) {
       </section>
       </section>
     </main>
+    </body>
   )
 }
