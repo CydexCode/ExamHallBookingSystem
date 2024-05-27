@@ -126,9 +126,9 @@
 }
 
 .column.importance {
-  height:35px; /* Adjust the height as needed */
-  line-height: 27px; /* Ensures the text is vertically centered */
-  padding:  3px; /* Adjust padding as needed */
+  height:35px; 
+  line-height: 27px; 
+  padding:  3px;
   display: flex;
   align-items: center; 
  
