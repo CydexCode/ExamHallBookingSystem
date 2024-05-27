@@ -106,3 +106,10 @@
     text-align: center;
     padding: 3px;
 }
+
+.table .row:not(.hdr):nth-child(even) {
+  background-color: #C5C6D0; 
+}
+.table .row:not(.hdr):nth-child(odd) {
+  background-color: #59788E; 
+}
