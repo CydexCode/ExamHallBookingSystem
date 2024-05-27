@@ -56,12 +56,13 @@
   .add-btn {
     margin-bottom: 20px;
   }
-
-  .me-15{
+  .me-15 {
     text-align: center;
-    color: darkgray;
-    
-  }
+    color: black;
+    background-color: darkgray;
+    border-radius: 3px;
+    padding: 10px 10px;
+}
   
   .centered-heading-container{
     display: flex;
