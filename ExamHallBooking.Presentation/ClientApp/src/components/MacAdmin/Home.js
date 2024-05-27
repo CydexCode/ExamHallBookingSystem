@@ -132,23 +132,24 @@ export default function Home(props) {
   }, [refreshData])
   return (
     <body>
-      <main>
+      
 
           
-          <div className="centered-heading">
+          <div className="centered-heading-container">
               <h1>Exam Hall Booking System -Mac Admin</h1>
           </div>
 
-          
-   
+          <main>
+            
+      <div className="notifications spacer-20"></div>
+      <section className="filter">
           <div className="add-btn row items-center content-center">
               <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
           </div>
 
 
-      <div className="notifications spacer-20"></div>
 
-      <section className="filter">
+    
         <div className="modal-title">Filters</div>
         <div className="row items-center filter-items">
           <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
