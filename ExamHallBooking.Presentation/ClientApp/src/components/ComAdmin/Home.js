@@ -148,19 +148,20 @@ export default function Home(props) {
             </div>
             <div className="modal-title">Filters</div>
             <div className="row items-center filter-items">
-              
-                <div>
-                    <label htmlFor="All_f">All Requests</label> 
-                    <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
-                </div>
-                <div>
-                    <label htmlFor="Done_f">Requests accepted</label> 
-                    <input type="checkbox" id="Done_f" name="Done" onChange={filterApp} />
-                </div>
-                <div>
-                    <label htmlFor="Deleted_f">Rejected</label> 
-                    <input type="checkbox" id="Deleted_f" name="Deleted" onChange={filterApp} />
-                </div>
+            <div className="checkbox">
+     <div className="c1">
+         <label htmlFor="All_f">All </label>
+         <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
+     </div>
+     <div className="c1">
+         <label htmlFor="Done_f">Accepted</label>
+         <input type="checkbox" id="Done_f" name="Done" onChange={filterApp} />
+     </div>
+     <div className="c1">
+         <label htmlFor="Deleted_f">Rejected</label>
+         <input type="checkbox" id="Deleted_f" name="Deleted" onChange={filterApp} />
+     </div>                       
+      </div>
                 <div>
                     <label htmlFor="period">Period</label> <br />
                     <select name="period" id="period" defaultValue={"4"} onChange={filterApp}>
