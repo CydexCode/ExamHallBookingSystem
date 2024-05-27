@@ -120,3 +120,8 @@
   border: none;
   font-family: sans-serif;
 }
+
+.table .row + .row {
+  margin-top: 5px; 
+}
+
