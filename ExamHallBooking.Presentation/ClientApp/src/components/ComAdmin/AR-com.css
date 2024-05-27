@@ -43,11 +43,11 @@
   }
   
   .column {
+    width:50px;
     flex: 1;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    padding: 3px;
     text-align: center;
-  }
+}
   
   .underline {
     border-bottom: 2px solid #000;
