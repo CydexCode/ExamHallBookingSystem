@@ -125,3 +125,12 @@
   margin-top: 5px; 
 }
 
+.column.importance {
+  height:35px; /* Adjust the height as needed */
+  line-height: 27px; /* Ensures the text is vertically centered */
+  padding:  3px; /* Adjust padding as needed */
+  display: flex;
+  align-items: center; 
+ 
+}
+
