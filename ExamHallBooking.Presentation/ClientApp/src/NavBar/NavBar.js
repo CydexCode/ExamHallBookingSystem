@@ -48,22 +48,7 @@ const Navbar = ({ onMainClick, onUserClick, onAdminClick,onSignOutClick,onBackCl
             </ul>
         </nav>
 
-        <div>
-            <nav className="navbar">
-                <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" />
-                <ul>
-                    <li onClick={onMainClick}>
-                        Home
-                    </li>
-                    <li onClick={onDrawingHallClick}>
-                        User
-                    </li>
-                    <li onClick={onAdminClick}>
-                        Admin
-                    </li>
-                </ul>
-            </nav>
-        </div>
+       
         // <div>
         // </div>
 

@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 
 
-
 using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
@@ -10,15 +9,6 @@ using ExamHallBooking.DataAccess.Data.Models;
 using ExamHallBooking.Service.Interfaces;
 
 namespace ExamHallBooking.DataAccess.Controllers
-
-using MailSend_DotNETCore8WebAPI.Interfaces;
-using MailSend_DotNETCore8WebAPI.Models;
-using System;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
-
-namespace MailSend_DotNETCore8WebAPI.Controllers
-
 {
     [ApiController]
     [Route("[controller]")]
@@ -34,13 +24,8 @@ namespace MailSend_DotNETCore8WebAPI.Controllers
         }
 
 
-
         [HttpPost]
         public async Task<IActionResult> SendEmail([FromBody] MailSendRequest request)
-
-        [HttpPost]
-        public async Task<IActionResult> SendEmail([FromForm] MailSendRequest request)
-
         {
             try
             {

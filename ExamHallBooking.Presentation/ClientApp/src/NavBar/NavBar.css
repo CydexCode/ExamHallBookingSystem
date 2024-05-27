@@ -3,65 +3,39 @@
     align-items: center;
     justify-content: space-between;
     background-color: #002a4f;
-
-    padding: 20px 0;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10;
+    padding: 20px 80px;
     position: relative;
     font-size: 20px;
-
-    padding: 20px 80px;
-
     font-family: Helvetica, sans-serif;
-    /* font-size: 20px; */
-    /* z-index: 10; */
-    /* position: relative; */
-    /* width: 100%; */
 }
 
 ul {
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 ul li {
-    list-style-type: none;
-
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex: 1;
-
     padding: 0 20px;
-    position: relative;
+    cursor: pointer;
     font-weight: 400;
     font-size: 1.3rem;
-
-    /* cursor: pointer; */
-    /* color: #fff; */
-    /* text-align: end; */
-    /* margin-left: 70px; */
-
+    color: white;
 }
 
-ul li a{
+ul li a {
     text-decoration: none;
+    color: inherit;
 }
 
 li:hover {
     color: #acd8ff;
     transform: scale(1.1);
     transition: transform 0.3s ease;
-}
-
-.homeBtn {
-    cursor: pointer;
 }
 
 .homeLogo {
@@ -76,38 +50,19 @@ li:hover {
     transition: transform 0.3s ease;
 }
 
-/* .vl {
-    border-left: 1px solid rgb(255, 255, 255);
-    height: 20px;
-} */
-
-
-.admin {
-    align-items: end;
-    margin-left: 20px;
+.admin,
+.signOutButton {
+    margin-left: auto;
 }
 
 .signOutButton {
-    margin-left: auto;
-    margin-right: 20px;
     padding: 10px 20px;
-    cursor: pointer;
     background-color: #fff;
     color: #004080;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-}
-.admin {
-    margin-left: auto;
-    margin-right: 40px;
-   
     cursor: pointer;
-   
-   
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
 }
 
 .signOutButton:hover {
@@ -117,3 +72,26 @@ li:hover {
     transition: transform 0.3s ease;
 }
 
+.admin {
+    margin-right: 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.admin:hover {
+    color: #acd8ff;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 706px) {
+    ul li {
+        margin: 0;
+        padding: 0 20px;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: white;
+    }
+ }
