@@ -197,7 +197,7 @@ export default function Home(props) {
 
         <div className="table">
             <div className="row underline hdr">
-                <div className="column id">#</div>
+                <div className="column id">Booking No</div>
                 <div className="column examHall">Exam Hall</div>
                 <div className="column lectureName">Lecture Name</div>
                 <div className="column numOfStudent">Number Of Students</div>
