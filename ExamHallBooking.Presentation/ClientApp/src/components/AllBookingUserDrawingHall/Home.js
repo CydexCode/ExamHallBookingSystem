@@ -5,7 +5,7 @@ import Delete from "./Delete"
 import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
-
+import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
 
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
@@ -147,7 +147,42 @@ export default function Home(props) {
       setDataList(data)
     }).catch(e => console.log("Error inside home: ", e))
   }, [refreshData])
+
+  const handleBackClick = () => {
+    window.location.href = '/selectHallPage';
+};
+
+  const handleMainClick = () => {
+    window.location.href = '/';
+};
+
+const handleUserClick = () => {
+    window.location.href = '/login';
+};
+const handleAdminClick = () => {
+    window.location.href = '/adminLogin';
+};
+const handleSignOutClick = () => {
+    window.location.href = '/';
+};
+
   return (
+
+    <div>
+    <NavBar
+       
+       onBackClick={handleBackClick}
+       showBackButton={true}
+       
+       onMainClick={handleMainClick}
+       onUserClick={handleUserClick}
+
+       onAdminClick={handleAdminClick}
+       onSignOutClick={handleSignOutClick}
+        showAdminUser={false} // Hide User and Admin
+        showSignOutButton ={true}
+    />
+
       <main>
 
           <br></br>
@@ -164,15 +199,15 @@ export default function Home(props) {
               <Link to="/staffLoginDrawingHall">End Exam Booking</Link>
               <br></br>
               <br></br>
-              <Link to="/loginDrawingHall">Mid / Quiz Booking</Link>
+           {/*   <Link to="/userDrawingHall">Mid / Quiz Booking</Link>*/}
           </div>
  
-{/*
+
           <div className="add-btn row items-center content-center">
               <div className="btn add" onClick={() => openModal("new-modal")}>Mid/Quiz</div>
           </div>
           <br></br>
-          <br></br>
+    {/*      <br></br>
           <div className="add-btn2 row items-center content-center">
               <div className="btn add" onClick={() => openModal("new-modal")}>End Exam</div>
           </div>*/}
@@ -240,7 +275,7 @@ export default function Home(props) {
         <div className="column examHall">Exam Hall</div>
                   <div className="column lectureName">Lecturer Email Address</div>
               <div className="column numOfStudent">Number Of Student</div>
-              <div className="column year">Year</div>
+              <div className="column year">Batch</div>
               <div className="column semester">Semester</div>
               <div className="column subject">Subject</div>
         <div className="column importance">Exam Type</div>
@@ -274,5 +309,6 @@ export default function Home(props) {
               </div>
       </section>
     </main>
+    </div>
   )
 }

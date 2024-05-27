@@ -110,14 +110,14 @@ export default function New(props) {
                 </div>
 
                 <div className="form-field">
-                    <label for="Year_n">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year :</label>
+                    <label for="Year_n">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Batch :</label>
                     <select id="Year_n" name="year" onChange={newApp} defaultValue={0}>
 
-                        <option value={4}>4th Year</option>
-                        <option value={3}>3rd Year</option>
-                        <option value={2}>2nd Year</option>
-                        <option value={1}>1st Year</option>
-                        <option value={0}>Select Year</option>
+                            <option value={2022}>2022</option>
+                            <option value={2021}>2021</option>
+                            <option value={2020}>2020</option>
+                            <option value={2019}>2019</option>
+                            <option value={0}>Select Batch</option>
                     </select>
 
                 </div>

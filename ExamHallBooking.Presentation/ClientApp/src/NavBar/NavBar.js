@@ -9,8 +9,45 @@ const root = createRoot(rootElement);
 
 
 
-const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) => {
+const Navbar = ({ onMainClick, onUserClick, onAdminClick,onSignOutClick,onBackClick, onAllClick, onDrawingHallClick ,showAdminUser,showSignOutButton,showHomeBtton , showBackButton }) => {
     return (
+
+
+        <nav className="navbar">
+            {/* <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" /> */}
+
+            <ul>
+            {showBackButton && (
+                <li onClick={onBackClick}>
+                    <span role="img" aria-label="Back Icon"></span> Back
+                </li>
+            )}
+            {showHomeBtton && (
+            <li onClick={onMainClick}>
+                    <span role="img" aria-label="Home Icon">🏠</span> Home
+                </li>
+                 )}
+                {showAdminUser && (
+                    <>
+                        <li onClick={onUserClick}>
+                            <span role="img" aria-label="User Icon">👤</span> User
+                        </li>
+                        <div className="admin">
+                            <li onClick={onAdminClick}>
+                                <span role="img" aria-label="Admin Icon">🔧</span> Admin
+                            </li>
+                        </div>
+                    </>
+                )}
+                 {showSignOutButton && (
+                <button className="signOutButton" onClick={onSignOutClick}>
+                    <span role="img" aria-label="Sign Out Icon"></span> Sign Out
+                </button>
+            )}
+               
+            </ul>
+        </nav>
+
         <div>
             <nav className="navbar">
                 <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" />
@@ -29,6 +66,7 @@ const Navbar = ({ onMainClick, onAdminClick, onAllClick, onDrawingHallClick }) =
         </div>
         // <div>
         // </div>
+
     );
 };
 

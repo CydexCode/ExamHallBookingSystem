@@ -45,7 +45,7 @@ export default function Edit(props) {
         const emailRequest = {
             toEmail: entry.lectureName,  // Assuming lectureName is the email address
             subject: "Drawing ExamHall Booking Confirmed",
-            body: `Your time slot from ${entry.time} to ${entry.endTime} is confirmed for  ${entry.year} Year  ${entry.semester} semester students ${importanceMap[data.levelOfImportance]}. `
+            body: `Your time slot from ${entry.time} to ${entry.endTime} is confirmed for  ${entry.year} Batch students  ${entry.subject}   ${importanceMap[data.levelOfImportance]}.`
         };
 
         try {
@@ -124,7 +124,7 @@ export default function Edit(props) {
                         <input type="text" className="mt-5" id="Title_e" maxLength="2" name="numOfStudent" defaultValue={data.numOfStudent} onChange={editApp} />
                     </div>
                     <div className="form-field">
-                        <label htmlFor="Title_e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year :</label> <br />
+                        <label htmlFor="Title_e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Batch :</label> <br />
                         <input type="text" className="mt-5" id="Title_e" name="year" defaultValue={data.year} onChange={editApp} />
                     </div>
                     <div className="form-field">
