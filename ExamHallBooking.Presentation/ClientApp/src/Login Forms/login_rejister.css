@@ -21,21 +21,7 @@
     max-height: 100%;
 }
 
-.container2 {
-    width: 380px;
-    background-color: #002a4f;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    margin-left:750px;
-    margin-top: 135px;
-    margin-bottom: 80px;
-    height: 500px;
-    border-radius: 30px;
-    align-items: center;
-}
+
 
 .container3 {
     width: 470px;

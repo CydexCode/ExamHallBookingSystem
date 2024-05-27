@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
-import Delete from "./Delete";
-import Edit from "./Edit";
-import New from "./New";
-import Appointment from "./Appointment";
 
-// Keep the existing NavBar CSS import if necessary
-import "../../NavBar/NavBar.css"; 
-// Import the new CSS file for styling
-import "./comHome.css"; 
-// Remove the old custom CSS import if no longer needed
-// import "../../custom.css"; 
-import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib";
+import { useEffect, useState } from "react"
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import Delete from "./Delete"
+import Edit from "./Edit"
+import New from "./New"
+import Appointment from "./Appointment"
+import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
+
+import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
+import "./comHome.css";
+import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib"
 
 export default function Home(props) {
   const [dataList, setDataList] = useState([]);
@@ -125,25 +124,80 @@ export default function Home(props) {
 
   useEffect(() => {
     getDefault().then(data => {
-      setDataList(data);
-    }).catch(e => console.log("Error inside home: ", e));
-  }, [refreshData]);
+      setDataList(data)
+    }).catch(e => console.log("Error inside home: ", e))
+  }, [refreshData])
+
+  const handleBackClick = () => {
+    window.location.href = '/selectHallPage';
+};
+
+  const handleMainClick = () => {
+    window.location.href = '/';
+};
+
+const handleUserClick = () => {
+    window.location.href = '/login';
+};
+const handleAdminClick = () => {
+    window.location.href = '/adminLogin';
+};
+const handleSignOutClick = () => {
+    window.location.href = '/';
+};
 
   return (
-    <main>
-      <div className="heading">
-        <h1>Computer Department Hall User Booking</h1>
-      </div>
-      
-      <div className="actions">
-        <Link to="/staffLogin" className="btn">End Exam Booking</Link>
-        <Link to="/login" className="btn">Mid / Quiz Booking</Link>
-      </div>
-      <div className="table1">
-      <section className="row filter">
-        <div className="filter-title">Filter</div>
-        <div className="filter-items">
-          
+
+    <div>
+    <NavBar
+
+       onBackClick={handleBackClick}
+       showBackButton={true}
+       onMainClick={handleMainClick}
+       onUserClick={handleUserClick}
+
+       onAdminClick={handleAdminClick}
+       onSignOutClick={handleSignOutClick}
+        showAdminUser={false} // Hide User and Admin
+        showSignOutButton ={true}
+    />
+
+      <main>
+
+          <br></br>
+          <br></br>
+          <div className="centered-heading">
+              <h1>Computer Department All Exams</h1>
+          </div>
+
+          <br></br>
+          <br></br>
+
+          <div>
+
+              <Link to="/staffLogin">End Exam Booking</Link>
+              <br></br>
+              <br></br>
+             {/* <Link to="/user">Mid / Quiz Booking</Link>*/}
+          </div>
+
+
+          <div className="add-btn row items-center content-center">
+              <div className="btn add" onClick={() => openModal("new-modal")}>Mid/Quiz Booking</div>
+          </div>
+          <br></br>
+       {/*   <br></br>
+          <div className="add-btn2 row items-center content-center">
+              <div className="btn add" onClick={() => openModal("new-modal")}>End Exam</div>
+          </div>*/}
+
+      <div className="notifications spacer-20"></div>
+       <div className="table1">
+
+      <section className="row justify-btw items-center filter">
+        <div className="modal-title">Filter</div>
+        <div className="row items-center filter-items">
+          <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
           <div>
             <label htmlFor="All_f">All</label> <br />
             <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
@@ -194,9 +248,9 @@ export default function Home(props) {
             <thead>
                 <tr>
                     <th>Exam Hall</th>
-                    <th>Lecture Name</th>
+                    <th>Lecturer Email Address</th>
                     <th>Number Of Students</th>
-                    <th>Year</th>
+                    <th>Batch</th>
                     <th>Semester</th>
                     <th>Subject</th>
                     <th>Exam Type</th>
@@ -211,7 +265,7 @@ export default function Home(props) {
           dataList.length === 0 ?
             <div className="row mt-15 waiting">Loading <div className="loading">...</div></div> :
             dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
-            
+
             }
             </tbody>
         </table>
@@ -234,5 +288,6 @@ export default function Home(props) {
         </div>
       </section>
     </main>
-  );
+    </div>
+  )
 }

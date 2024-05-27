@@ -1,11 +1,16 @@
 body {
-    margin: 0 5px;
+
+    margin: 0 0px;
+
+    margin: 0;
+
     padding: 0;
 }
 
 .row {
     display: flex;
 }
+
 
 .items-center {
     align-items: center;
@@ -21,7 +26,7 @@ body {
 
 .centered-heading {
     text-align: center;
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px; 
 }
 
 h1 {

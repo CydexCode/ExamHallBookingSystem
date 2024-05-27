@@ -2,13 +2,17 @@
 using ExamHallBooking.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using ExamHallBooking.DataAccess.Data.Models;
-using ExamHallBooking.DataAccess;
+using ExamHallBooking.Service.Services;
+using ExamHallBooking.Service.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.Configure<MailSendSettings>(builder.Configuration.GetSection("MailSettings"));
+builder.Services.AddTransient<IMailSendService, MailSendService>();
 
 builder.Services.AddDbContext<AppDbContext>(options=>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

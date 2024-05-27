@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import backgroundImage from '../assest/Background1.png'; // Import your background image
-
+import NavBar from "../NavBar/NavBar.js"; // Make sure the path is correct
 function Login() {
     const [loginName, setLoginName] = useState('');
     const [password, setPassword] = useState('');
@@ -27,16 +27,48 @@ function Login() {
         }).then((result) => {
             result.json().then((resp) => {
                 console.warn(resp);
-                navigate("/user");
+                navigate("/selectHallPage");
             })
         }).catch((error) => {
             // Handle any network errors or other exceptions here
             console.error('Error occurred:', error);
         });
     }
-
-    return (
-
+    const handleBackClick = () => {
+        window.location.href = '/selectHallPage';
+    };
+    
+      const handleMainClick = () => {
+        window.location.href = '/';
+    };
+    
+    const handleUserClick = () => {
+        window.location.href = '/login';
+    };
+    const handleAdminClick = () => {
+        window.location.href = '/adminLogin';
+    };
+    const handleSignOutClick = () => {
+        window.location.href = '/';
+    };
+    
+      return (
+    
+        <div>
+        <NavBar
+           
+           onBackClick={handleBackClick}
+           showBackButton={false}
+           
+           onMainClick={handleMainClick}
+           onUserClick={handleUserClick}
+    
+           onAdminClick={handleAdminClick}
+           showSignOutButton ={false}
+           onSignOutClick={false}
+            showAdminUser={false} // Hide User and Admin
+            showHomeBtton ={true}
+        />
 
     
 
@@ -112,7 +144,7 @@ function Login() {
 
             </div>
             
-
+            </div>
         </div>
     )
 }

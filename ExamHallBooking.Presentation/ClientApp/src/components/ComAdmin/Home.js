@@ -4,11 +4,15 @@ import Delete from "./Delete"
 import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
-
+import { useNavigate } from 'react-router-dom';
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
 import "./AR.css"
-import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib"
+import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib" ;
+import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
+
+
+
 
 export default function Home(props) {
 
@@ -131,13 +135,47 @@ export default function Home(props) {
       setDataList(data)
     }).catch(e => console.log("Error inside home: ", e))
   }, [refreshData])
+
+  const handleBackClick = () => {
+    window.location.href = '/';
+};
+
+  const handleMainClick = () => {
+    window.location.href = '/';
+};
+
+const handleUserClick = () => {
+    window.location.href = '/login';
+};
+const handleAdminClick = () => {
+    window.location.href = '/adminLogin';
+};
+const handleSignOutClick = () => {
+    window.location.href = '/';
+};
+
   return (
+
+    <div>
+    <NavBar
+       
+       onBackClick={handleBackClick}
+       showBackButton={false}
+       
+       onMainClick={handleMainClick}
+       onUserClick={handleUserClick}
+
+       onAdminClick={handleAdminClick}
+       onSignOutClick={handleSignOutClick}
+        showAdminUser={false} // Hide User and Admin
+        showSignOutButton ={true}
+    />
       <main>
 
           <br></br>
           <br></br>
           <div className="centered-heading">
-              <h1>Exam Hall Booking System - Admin</h1>
+              <h1>Computer Department Exam Hall Booking System - Admin</h1>
           </div>
 
           <br></br>
@@ -209,9 +247,9 @@ export default function Home(props) {
       <div className="row underline hdr">
         <div className="column id">#</div>
         <div className="column examHall">Exam Hall</div>
-              <div className="column lectureName">Lecture Name</div>
+              <div className="column lectureName">Lecturer Email Address</div>
               <div className="column numOfStudent">Number Of Student</div>
-              <div className="column year">Year</div>
+              <div className="column year">Batch</div>
               <div className="column semester">Semester</div>
               <div className="column subject">Subject</div>
         <div className="column importance">Exam Type</div>
@@ -249,5 +287,6 @@ export default function Home(props) {
           </section>
 
     </main>
+    </div>
   )
 }

@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login_rejister.css'; // Import the CSS file
 import backgroundImage from '../assest/Background1.png'; // Import your background image
+import NavBar from "../NavBar/NavBar.js"; // Make sure the path is correct
+
+
 function Register() {
     const [id, setId] = useState('0');
     const [loginName, setLoginName] = useState('');
@@ -31,7 +34,36 @@ function Register() {
                 })
             })
     }
+    const handleMainClick = () => {
+        window.location.href = '/';
+    };
+    
+    const handleUserClick = () => {
+        window.location.href = '/login';
+    };
+    const handleAdminClick = () => {
+        window.location.href = '/adminLogin';
+    };
+    const handleSignOutClick = () => {
+        window.location.href = '/';
+    };
+
     return (
+
+        
+        <div>
+        <NavBar
+           
+           onMainClick={handleMainClick}
+           onUserClick={handleUserClick}
+    
+           onAdminClick={handleAdminClick}
+           showSignOutButton ={false}
+           onSignOutClick={false}
+            showAdminUser={false} // Hide User and Admin
+            showHomeBtton ={true}
+        />
+
         <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="bg-gradient-primary">
 
@@ -112,6 +144,7 @@ function Register() {
            
             <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
             </div>
+        </div>
         </div>
     )
 
