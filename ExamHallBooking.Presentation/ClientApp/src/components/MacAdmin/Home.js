@@ -154,7 +154,7 @@ return (
   <body>
 
       <div className="centered-heading-container">
-          <h1>Exam Hall Booking System - Admin</h1>
+          <h1>Exam Hall Booking System - Mac Admin</h1>
       </div>
 
       <main>
