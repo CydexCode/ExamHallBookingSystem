@@ -132,6 +132,10 @@ export default function Home(props) {
     }).catch(e => console.log("Error inside home: ", e))
   }, [refreshData])
 
+  const handleBackClick = () => {
+    window.location.href = '/';
+};
+
   const handleMainClick = () => {
     window.location.href = '/';
 };
@@ -150,6 +154,9 @@ const handleSignOutClick = () => {
 
     <div>
     <NavBar
+       
+       onBackClick={handleBackClick}
+       showBackButton={false}
        
        onMainClick={handleMainClick}
        onUserClick={handleUserClick}

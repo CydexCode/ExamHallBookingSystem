@@ -148,6 +148,10 @@ export default function Home(props) {
     }).catch(e => console.log("Error inside home: ", e))
   }, [refreshData])
 
+  const handleBackClick = () => {
+    window.location.href = '/selectHallPage';
+};
+
   const handleMainClick = () => {
     window.location.href = '/';
 };
@@ -161,10 +165,14 @@ const handleAdminClick = () => {
 const handleSignOutClick = () => {
     window.location.href = '/';
 };
+
   return (
 
     <div>
     <NavBar
+       
+       onBackClick={handleBackClick}
+       showBackButton={true}
        
        onMainClick={handleMainClick}
        onUserClick={handleUserClick}

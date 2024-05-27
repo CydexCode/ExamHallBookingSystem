@@ -34,7 +34,10 @@ import { createRoot } from 'react-dom/client';
 
 const App = () => {
 
-   
+
+    const handleBackClick = () => {
+        window.location.href = '/selectHallPage';
+    };
 
     const handleMainClick = () => {
         window.location.href = '/';
@@ -58,18 +61,18 @@ const App = () => {
             window.location.href = '/allBookingUserDrawingHall';
         };*/
 
-    
+
 
     return (
 
 
-    <Router>
+        <Router>
             <div>
 
-        
+
 
                 <div>
-                 
+
 
 
 
@@ -94,7 +97,7 @@ const App = () => {
                     </Routes>
 
 
-                    
+
                 </div>
                 <Footer />
             </div>

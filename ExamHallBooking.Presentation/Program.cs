@@ -2,9 +2,6 @@
 using ExamHallBooking.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using ExamHallBooking.DataAccess.Data.Models;
-
-
-
 using ExamHallBooking.Service.Services;
 using ExamHallBooking.Service.Interfaces;
 

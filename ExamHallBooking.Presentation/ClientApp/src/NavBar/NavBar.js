@@ -9,13 +9,18 @@ const root = createRoot(rootElement);
 
 
 
-const Navbar = ({ onMainClick, onUserClick, onAdminClick,onSignOutClick, onAllClick, onDrawingHallClick ,showAdminUser,showSignOutButton,showHomeBtton }) => {
+const Navbar = ({ onMainClick, onUserClick, onAdminClick,onSignOutClick,onBackClick, onAllClick, onDrawingHallClick ,showAdminUser,showSignOutButton,showHomeBtton , showBackButton }) => {
     return (
 
         <nav className="navbar">
             {/* <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" /> */}
 
             <ul>
+            {showBackButton && (
+                <li onClick={onBackClick}>
+                    <span role="img" aria-label="Back Icon"></span> Back
+                </li>
+            )}
             {showHomeBtton && (
             <li onClick={onMainClick}>
                     <span role="img" aria-label="Home Icon">🏠</span> Home

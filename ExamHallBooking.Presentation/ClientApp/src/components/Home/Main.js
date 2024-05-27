@@ -16,10 +16,14 @@ const root = createRoot(rootElement);
 
 const HomePage = ({ onMainClick, onUserClick, onAdminClick, onAllClick, onDrawingHallClick }) => {
 
-    const handleMainClick = () => {
+    const handleBackClick = () => {
         window.location.href = '/';
     };
-
+    
+      const handleMainClick = () => {
+        window.location.href = '/';
+    };
+    
     const handleUserClick = () => {
         window.location.href = '/login';
     };
@@ -29,11 +33,14 @@ const HomePage = ({ onMainClick, onUserClick, onAdminClick, onAllClick, onDrawin
     const handleSignOutClick = () => {
         window.location.href = '/';
     };
-
-    return (
-
+    
+      return (
+    
         <div>
-            <NavBar
+        <NavBar
+           
+           onBackClick={handleBackClick}
+           showBackButton={false}
                 onMainClick={handleMainClick}
                 onUserClick={handleUserClick}
 

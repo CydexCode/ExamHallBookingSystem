@@ -88,6 +88,10 @@ export default function Home(props) {
 
 
 
+  const handleBackClick = () => {
+    window.location.href = '/';
+};
+
   const handleMainClick = () => {
     window.location.href = '/';
 };
@@ -102,11 +106,13 @@ const handleSignOutClick = () => {
     window.location.href = '/';
 };
 
-
   return (
 
     <div>
     <NavBar
+       
+       onBackClick={handleBackClick}
+       showBackButton={false}
        
        onMainClick={handleMainClick}
        onUserClick={handleUserClick}

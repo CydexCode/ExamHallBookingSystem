@@ -34,7 +34,11 @@ function Login() {
             console.error('Error occurred:', error);
         });
     }
-    const handleMainClick = () => {
+    const handleBackClick = () => {
+        window.location.href = '/selectHallPage';
+    };
+    
+      const handleMainClick = () => {
         window.location.href = '/';
     };
     
@@ -47,10 +51,14 @@ function Login() {
     const handleSignOutClick = () => {
         window.location.href = '/';
     };
-    return (
-
+    
+      return (
+    
         <div>
         <NavBar
+           
+           onBackClick={handleBackClick}
+           showBackButton={false}
            
            onMainClick={handleMainClick}
            onUserClick={handleUserClick}

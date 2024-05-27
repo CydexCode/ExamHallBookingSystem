@@ -13,7 +13,11 @@ const ExamHallSelection = () => {
             navigate('/allBookingUserDrawingHall');
         }
     };
-    const handleMainClick = () => {
+    const handleBackClick = () => {
+        window.location.href = '/selectHallPage';
+    };
+    
+      const handleMainClick = () => {
         window.location.href = '/';
     };
     
@@ -26,10 +30,14 @@ const ExamHallSelection = () => {
     const handleSignOutClick = () => {
         window.location.href = '/';
     };
-    return (
-
+    
+      return (
+    
         <div>
         <NavBar
+           
+           onBackClick={handleBackClick}
+           showBackButton={false}
            
            onMainClick={handleMainClick}
            onUserClick={handleUserClick}
