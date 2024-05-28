@@ -123,23 +123,23 @@ const handleSignOutClick = () => {
 
           <br></br>
           <br></br>
-          <div className="centered-heading">
+          {/* <div className="centered-heading">
               <h1>End Exam Booking - Staff</h1>
-          </div>
-
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+          </div> */}
      
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>  <br></br>  <br></br>
  
 
-          <div className="add-btn row items-center content-center">
+          <div className="add-btn row items-center content-center staff">
               <div className="btn add" onClick={() => openModal("new-modal")}>End Exam Booking</div>
           </div>
  
-
-        <div className="notifications spacer-20"></div>
+    
+        {/* <div className="notifications spacer-20"></div> */}
 
 {/*    <section className="row justify-btw items-center filter">
         <div className="modal-title">Filter</div>

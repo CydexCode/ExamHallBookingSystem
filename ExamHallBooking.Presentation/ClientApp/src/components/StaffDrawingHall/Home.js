@@ -126,15 +126,17 @@ const handleSignOutClick = () => {
 
           <br></br>
           <br></br>
-          <div className="centered-heading">
+          {/* <div className="centered-heading">
               <h1>End Exam Booking - Staff</h1>
           </div>
-
+          <div className="centered-heading-container">
+            <h1>Computer Department Exam Hall Booking System</h1>
+          </div> */}
           <br></br>
           <br></br>
           <br></br>
           <br></br>
-     
+          <br></br>  <br></br>  <br></br>  <br></br>
  
 
           <div className="add-btn row items-center content-center">
