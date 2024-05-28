@@ -113,10 +113,14 @@
     .container h1 {
         font-size: 28px;
     }
-
-
-
-
-
+    .form-control-user {
+        height: 30px;
+        font-size: 14px;
+    }
+    .btn-user {
+        margin-top: 20px;
+        height: 35px;
+        font-size: 14px;
+    }
 }
 
