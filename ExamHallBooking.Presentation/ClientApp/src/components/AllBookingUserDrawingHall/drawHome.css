@@ -1,5 +1,5 @@
 /* General styles for the main container */
-main {
+main-drawHome{
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -7,7 +7,7 @@ main {
     justify-content: flex-start;
 }
 
-.table1 {
+.table-drawing {
     display: flex;
     flex-direction: row;
     padding: 20px;
@@ -35,7 +35,7 @@ main {
     margin-bottom: 20px;
 }
 
-.button-container-com {
+.button-container {
     display: flex;
     justify-content: flex-start; /* Aligns the buttons to the left */
     align-items: center; /* Aligns items vertically center */
@@ -62,6 +62,7 @@ main {
     background-color: #0056b3;
 }
 
+tr:nth-child(even) {background-color: #c8ceec;}
 
 /* Style the filter section */
 .row.filter {
@@ -112,9 +113,6 @@ main {
     padding: 20px;
     background-color: #ffffff;
 }
-
-tr:nth-child(even) {background-color: #c8ceec;}
-
 
 .userPage .hdr {
     display: flex;

@@ -166,38 +166,32 @@ const handleSignOutClick = () => {
 
           <br></br>
           <br></br>
+          
           <div className="centered-heading">
               <h1>Computer Department All Exams</h1>
           </div>
-
-          <br></br>
-          <br></br>
-
-          <div>
-
-              <Link to="/staffLogin">End Exam Booking</Link>
-              <br></br>
-              <br></br>
-             {/* <Link to="/user">Mid / Quiz Booking</Link>*/}
-          </div>
-
+          <div className="button-container-com ">
+          <div className="add-btn row items-center content-center">
+    <Link to="/staffLogin" className="btn add">
+        End Exam Booking
+    </Link>
+      </div>
 
           <div className="add-btn row items-center content-center">
               <div className="btn add" onClick={() => openModal("new-modal")}>Mid/Quiz Booking</div>
           </div>
-          <br></br>
+          </div>
        {/*   <br></br>
           <div className="add-btn2 row items-center content-center">
               <div className="btn add" onClick={() => openModal("new-modal")}>End Exam</div>
           </div>*/}
 
-      <div className="notifications spacer-20"></div>
+      
        <div className="table1">
 
       <section className="row justify-btw items-center filter">
         <div className="modal-title">Filter</div>
         <div className="row items-center filter-items">
-          <button className="me-15" onClick={()=> window.location.reload()}>Clear Filters</button>
           <div>
             <label htmlFor="All_f">All</label> <br />
             <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
