@@ -149,17 +149,7 @@ main {
 }
 
 /* Style the modal sections */
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
+
 
 .block {
     display: flex;
@@ -176,10 +166,6 @@ main {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
-}
-
-.hidden {
-    display: none !important;
 }
 
 /* General table styling */
