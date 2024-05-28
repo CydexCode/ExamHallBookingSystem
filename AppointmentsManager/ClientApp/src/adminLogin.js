@@ -2,6 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 import './adminLogin.css'; // Import the CSS file
 import backgroundImage from './assest/Background1.png'; 
+
 function Login() {
     const [loginName, setLoginName] = useState('');
     const [password, setPassword] = useState('');
@@ -27,7 +28,7 @@ function Login() {
     }
 
     return (
-        <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="bg-gradient-primary">
             <div className="container2">
                 <div className="row justify-content-center">
@@ -55,18 +56,15 @@ function Login() {
                                                     Login
                                                 </button>
                                                 <hr />
-
                                             </div>
                                             <hr />
-
-                                    
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     )
