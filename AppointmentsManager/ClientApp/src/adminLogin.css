@@ -95,4 +95,28 @@
         color: #fff;
         font-size: 13px;
     }
-    
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .homepage {
+        justify-content: center;  
+        align-items: center;
+        padding: 20px;
+        height: auto;
+    }
+    .container {
+        width: 100%;
+        margin: 20px;
+        height: auto;
+        padding: 20px;
+    }
+    .container h1 {
+        font-size: 28px;
+    }
+
+
+
+
+
+}
+
