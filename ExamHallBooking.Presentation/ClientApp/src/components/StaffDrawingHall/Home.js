@@ -8,6 +8,7 @@ import Appointment from "./Appointment"
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
 import { getDefault, openModal, filter, getAppointmentsDrawingHall, notifyUser } from "./Lib"
+import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
 
 export default function Home(props) {
 
@@ -84,20 +85,58 @@ export default function Home(props) {
       setDataList(data)
     }).catch(e => console.log("Error inside home: ", e))
   }, [refreshData])
+
+
+
+  const handleBackClick = () => {
+      window.location.href = '/allBookingUserDrawingHall';
+};
+
+  const handleMainClick = () => {
+    window.location.href = '/';
+};
+
+const handleUserClick = () => {
+    window.location.href = '/login';
+};
+const handleAdminClick = () => {
+    window.location.href = '/adminLogin';
+};
+const handleSignOutClick = () => {
+    window.location.href = '/';
+};
+
   return (
+
+    <div>
+    <NavBar
+       
+       onBackClick={handleBackClick}
+       showBackButton={true}
+       
+       onMainClick={handleMainClick}
+       onUserClick={handleUserClick}
+
+       onAdminClick={handleAdminClick}
+       onSignOutClick={handleSignOutClick}
+        showAdminUser={false} // Hide User and Admin
+        showSignOutButton ={true}
+    />
       <main>
 
           <br></br>
           <br></br>
-          <div className="centered-heading">
+          {/* <div className="centered-heading">
               <h1>End Exam Booking - Staff</h1>
           </div>
-
+          <div className="centered-heading-container">
+            <h1>Computer Department Exam Hall Booking System</h1>
+          </div> */}
           <br></br>
           <br></br>
           <br></br>
           <br></br>
-     
+          <br></br>  <br></br>  <br></br>  <br></br>
  
 
           <div className="add-btn row items-center content-center">
@@ -200,5 +239,6 @@ export default function Home(props) {
         </section>
       </section>
     </main>
+    </div>
   )
 }

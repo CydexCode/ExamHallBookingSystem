@@ -7,19 +7,20 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    color: rgb(255, 255, 255);
-    align-items: center;
+    color: rgb(255, 255, 255); 
     display: flex;
-    justify-content: center;
     z-index: 10;
+   margin-left: 0px;
 }
 
 .fotterUL {
-    font-size: 15px;
+    font-size: 5px;
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: row;
+    
 }
 
 li {
@@ -30,6 +31,96 @@ li {
     padding: 0 10px;
 }
 
-    li:hover {
-        color: #acd8ff;
+li:hover {
+    color: #acd8ff;
+}
+
+.footerText {
+    margin-top: 10px;
+    text-align: end;
+    font-size: 10px;
+    justify-content: end;
+        text-align: end;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .footer {
+        padding: 10px;
+        font-size: 12px;
+        justify-content: center;
+        text-align: center;
     }
+    .footerUL {
+        font-size: 14px;
+        justify-content: center;
+        text-align: center;
+    }
+    li {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        flex-direction: column;
+        font-size: 14px;
+        padding: 10px 5px;
+        justify-content: center;
+        text-align: center;
+    }
+    .footerUL {
+        flex-direction: column;
+        align-items: center;
+    }
+    li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .footerText {
+        margin-left: 0;
+        margin-top: 15px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 14px;
+        justify-content: center;
+        text-align: center;
+    }
+    .footerUL {
+        font-size: 13px;
+        justify-content: center;
+        text-align: center;
+    }
+    li {
+        margin-left: 0;
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        font-size: 12px;
+        justify-content: center;
+        text-align: center;
+    }
+    .footerUL {
+        font-size: 12px;
+    }
+    li {
+        margin-left: 0;
+        margin-bottom: 5px;
+        font-size: 10px;
+        padding: 0 5px;
+    }
+    .footerText {
+        font-size: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+}

@@ -1,33 +1,148 @@
-/* Overall container */
-.container {
-    display: grid;
-    grid-template-columns: 25% 75%; /* Adjust column widths as needed */
-    grid-gap: 20px; /* Add spacing between columns */
+main {
+  display: flex;
+  margin: 40px;
+}
+
+.filter {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-items {
+  display: inline-flex;
+  align-items: self-start;
+  margin-right: 20px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkbox {
+      display: flex;
+      flex-direction: column;
   }
-  
-  /* Filter section */
-  .filter {
-    background-color: #f5f5f5; /* Optional background color */
-    padding: 20px;
+
+  .c1 {
+      display: flex;
+      align-items: center;
   }
-  
-  .filter .items-center {
-    display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    gap: 15px; /* Add spacing between items */
+
+ 
+.userPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px; 
+}
+
+.hdr, .row {
+  display: flex;
+  margin: 0; 
+  border: none;
+}
+
+.hdr {
+  font-weight: bold;
+}
+
+.column {
+  width:10px;
+  flex: 1;
+  padding: 3px;
+  text-align: center;
+}
+
+.underline {
+  border-bottom: 2px solid #000;
+}
+
+.add-btn {
+  margin-bottom: 20px;
+}
+
+.me-15 {
+  text-align: center;
+  color: black;
+  background-color: darkgray;
+  border-radius: 3px;
+  padding: 10px 10px;
+}
+
+.centered-heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px; 
+  margin-top:30px;
+  margin-bottom: 30px; 
+}
+
+  .centered-heading-container h1 {
+      margin: 0;
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 28px;
   }
-  
-  /* Table section */
-  .table {
-    padding: 20px;
+
+.loading {
+  animation: loadingAnimation 1s linear infinite;
+}
+
+@keyframes loadingAnimation {
+  0% {
+      opacity: 0.1;
   }
-  
-  /* Individual elements within sections */
-  .filter label,
-  .filter input,
-  .filter select,
-  .table .hdr,
-  .table .row {
-    /* Add specific styles for labels, inputs, etc. */
+
+  50% {
+      opacity: 1;
   }
-  
+
+  100% {
+      opacity: 0.1;
+  }
+}
+
+
+
+.row.underline.hdr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 0.8fr));
+  background-color: #002D62;
+  font-weight: bold;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 3px;
+}
+
+.column {
+  padding: 3px;
+}
+
+.table .row:not(.hdr):nth-child(even) {
+  background-color: #C5C6D0; 
+}
+
+.table .row:not(.hdr):nth-child(odd) {
+  background-color: #59788E; 
+}
+
+
+.table .row {
+  font-weight: bold;
+  margin: 0;
+  border: none;
+  font-family: sans-serif;
+}
+
+  .table .row + .row {
+      margin-top: 5px; 
+  }
+
+.column.importance {
+  height:35px; 
+  line-height: 27px; 
+  display: flex;
+  align-items: center; 
+ 
+}

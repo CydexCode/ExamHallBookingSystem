@@ -4,6 +4,7 @@ import Delete from "./Delete"
 import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
+import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
 
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
@@ -84,28 +85,61 @@ export default function Home(props) {
       setDataList(data)
     }).catch(e => console.log("Error inside home: ", e))
   }, [refreshData])
+
+  const handleBackClick = () => {
+    window.location.href = '/allBooking';
+};
+
+  const handleMainClick = () => {
+    window.location.href = '/';
+};
+
+const handleUserClick = () => {
+    window.location.href = '/login';
+};
+const handleAdminClick = () => {
+    window.location.href = '/adminLogin';
+};
+const handleSignOutClick = () => {
+    window.location.href = '/';
+};
+
   return (
+
+    <div>
+    <NavBar
+       
+              onBackClick={handleBackClick}
+              showBackButton={true}
+       onMainClick={handleMainClick}
+       onUserClick={handleUserClick}
+
+       onAdminClick={handleAdminClick}
+       onSignOutClick={handleSignOutClick}
+        showAdminUser={false} // Hide User and Admin
+        showSignOutButton ={true}
+    />
       <main>
 
           <br></br>
           <br></br>
-          <div className="centered-heading">
+          {/* <div className="centered-heading">
               <h1>End Exam Booking - Staff</h1>
-          </div>
-
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+          </div> */}
      
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>  <br></br>  <br></br>
  
 
-          <div className="add-btn row items-center content-center">
+          <div className="add-btn row items-center content-center staff">
               <div className="btn add" onClick={() => openModal("new-modal")}>End Exam Booking</div>
           </div>
  
-
-        <div className="notifications spacer-20"></div>
+    
+        {/* <div className="notifications spacer-20"></div> */}
 
 {/*    <section className="row justify-btw items-center filter">
         <div className="modal-title">Filter</div>
@@ -200,5 +234,7 @@ export default function Home(props) {
         </section>
       </section>
     </main>
+
+    </div>
   )
 }

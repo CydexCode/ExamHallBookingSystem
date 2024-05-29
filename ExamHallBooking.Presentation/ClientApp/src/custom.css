@@ -1,11 +1,16 @@
 body {
-    margin: 0 5px;
+
+    margin: 0 0px;
+
+    margin: 0;
+
     padding: 0;
 }
 
 .row {
     display: flex;
 }
+
 
 .items-center {
     align-items: center;
@@ -14,14 +19,17 @@ body {
 .content-center {
     align-content: center;
 }
-
+.content-center.staff {
+    align-content: start;
+}
 .justify-btw {
     justify-content: space-between;
 }
 
 .centered-heading {
     text-align: center;
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px; 
+    margin-right:1000px ;
 }
 
 h1 {
@@ -110,19 +118,22 @@ h1 {
 .filter-items .btn {
     height: 20px;
     width: 80px;
+    text-decoration: none;
 }
 
 .column {
     padding: 3px 6px;
     text-align: center;
-    vertical-align: middle;
+    justify-content: center;
 }
 
 .userPage {
 }
 
 .column.id {
-    width: 5px;
+    width: 5%;
+    margin: 0px;
+   
 }
 
 .column.examHall {
@@ -130,16 +141,16 @@ h1 {
 }
 
 .column.lectureName {
-    width: 10%;
+    width: 15%;
 }
 
 
 .column.numOfStudent {
-    width: 8%;
+    width: 5%;
 }
 
 .column.year {
-    width: 5%;
+    width: 2%;
 }
 
 .column.semester {
@@ -147,11 +158,11 @@ h1 {
 }
 
 .column.subject {
-    width: 10%;
+    width: 8%;
 }
 
 .column.importance {
-    width: 10%;
+    width: 8%;
 }
 
 .column.date {
@@ -251,9 +262,9 @@ h1 {
     cursor: not-allowed;
 }
 
-.waiting {
+/* .waiting {
     cursor: wait;
-}
+} */
 
 .no-event {
     pointer-events: none;
@@ -273,6 +284,7 @@ h1 {
 
 .mt-15 {
     margin-left: 35px;
+    margin-top: 20px;
 }
 
     .mt-15 select {
@@ -354,22 +366,24 @@ input[type="checkbox"] {
 }
 
 .modal-title {
-    text-align: center;
+    text-align: start;
     font-size: 20px;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
     color: #1c05B3;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 
-.notifications {
+/* .notifications {
     font-weight: bold;
     animation-name: notification;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate-reverse;
-}
+} */
 
 .loading {
     width: 0px;
@@ -484,6 +498,7 @@ input[type="checkbox"] {
 
 .Booking_table{
     max-height:300px;
+  margin-left: -60px;
 }
 
 

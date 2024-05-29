@@ -1,17 +1,21 @@
-﻿main {
+﻿﻿main {
     display: flex;
    
   }
   
   .filter {
-    width: 20%;
+    width: 15%;
     display: flex;
     flex-direction: column;
   }
   .filter-items {
     display: inline-flex;
     align-items: self-start;
+
     margin-right: 20px;
+
+    margin-right: 0px;
+
     flex-direction: column;
     gap: 15px;
 }
@@ -25,7 +29,11 @@
   align-items: center;
 }
 
+
 .table {
+
+.userPage {
+
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -131,6 +139,9 @@
   padding:  3px;
   display: flex;
   align-items: center; 
- 
+
+}
+
+
 }
 

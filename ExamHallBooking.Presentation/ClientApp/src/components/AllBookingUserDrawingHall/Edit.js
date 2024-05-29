@@ -80,7 +80,7 @@ export default function Edit(props){
                 </div>
                 <br></br>
                 <div className="mt-15">
-                    <label htmlFor="Title_e">Year</label> <br />
+                    <label htmlFor="Title_e">Batch</label> <br />
                     <input type="text" className="mt-5" id="Title_e" maxLength={5} name="year" defaultValue={data.year} onChange={editApp} />
 
                 </div>

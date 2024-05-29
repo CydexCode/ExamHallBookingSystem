@@ -10,7 +10,7 @@
     text-align: right;
     background-size: cover;
     background-position: center;
- 
+  
     top: 60px;
     left: 0;
     width: 100%;
@@ -21,12 +21,12 @@
     max-height: 100%;
 }
 
-.container {
-    width: 380px;
+/* .container {
+    width: 580px;
     background-color: #002a4f;
     color: black;
     display: flex;
-    flex-direction: column;
+   
     justify-content: center;
     margin: auto;
     margin-left:750px;
@@ -34,7 +34,35 @@
     margin-bottom: 80px;
     height: 500px;
     border-radius: 30px;
+} */
+.container2 {
+    width: 90%; /* Use percentage to make it responsive */
+    max-width: 380px; /* Maximum width to prevent it from getting too large */
+    background-color: #002a4f;
+    color: black;
+    display: flex;
+    position: relative;
+    background-position: center;
+    justify-content: center;
+    margin: auto; /* Center horizontally */
+    margin-top: 5%; /* Use percentage for vertical margins */
+    margin-bottom: 5%; /* Use percentage for vertical margins */
+    height: 50vh; /* Use viewport height for responsiveness */
+    max-height: 500px; /* Maximum height to prevent it from getting too large */
+    border-radius: 30px;
+    align-items: center;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .container2 {
+        width: 70%; /* Full width on small screens */
+        margin-top: 30px; /* Smaller top margin */
+        margin-bottom: 20px; /* Smaller bottom margin */
+        height: auto; /* Let the content dictate the height */
+    }
+}
+
 
     .container h1 {
         font-size: 36px;

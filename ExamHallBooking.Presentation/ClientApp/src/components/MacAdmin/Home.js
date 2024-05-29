@@ -6,9 +6,10 @@ import New from "./New"
 import Appointment from "./Appointment"
 
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
-import "../../custom.css";
+
 import "./AR-mac.css";
-import { getDefault, openModal, filter, getAppointmentsDrawingHall, notifyUser } from "./Lib"
+import { getDefault, openModal, filter, getAppointmentsDrawingHall, notifyUser } from "./Lib";
+import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
 
 export default function Home(props) {
 
@@ -118,7 +119,7 @@ export default function Home(props) {
     // fetch data with filter
       getAppointmentsDrawingHall(filter).then(r => {
       if (r.length < 1) {
-        notifyUser("Filter result is empty!")
+        notifyUser("")
       }
       setDataList(r)
     }).catch(e => console.log("Error getting data on filter: ", e))
@@ -130,6 +131,7 @@ export default function Home(props) {
       setDataList(data)
     }).catch(e => console.log("Error inside home: ", e))
   }, [refreshData])
+
   return (
     <body>
       
@@ -234,3 +236,144 @@ export default function Home(props) {
         </body>
     )
 }
+
+
+  const handleBackClick = () => {
+    window.location.href = '/';
+};
+
+  const handleMainClick = () => {
+    window.location.href = '/';
+};
+
+const handleUserClick = () => {
+    window.location.href = '/login';
+};
+const handleAdminClick = () => {
+    window.location.href = '/adminLogin';
+};
+const handleSignOutClick = () => {
+    window.location.href = '/';
+};
+
+  return (
+
+    <div>
+    <NavBar
+       
+       onBackClick={handleBackClick}
+       showBackButton={false}
+       
+       onMainClick={handleMainClick}
+       onUserClick={handleUserClick}
+
+       onAdminClick={handleAdminClick}
+       onSignOutClick={handleSignOutClick}
+        showAdminUser={false} // Hide User and Admin
+        showSignOutButton ={true}
+    />
+     <body>
+
+<div className="centered-heading-container">
+    <h1>Exam Hall Booking System - Mac Admin</h1>
+</div>
+
+<main>
+
+
+    {/* <div className="notifications spacer-20"></div> */}
+    <section className="filter">
+        <div className="add-btn row items-center content-center">
+            <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
+        </div>
+        <div className="modal-title">Filters</div>
+        <div className="row items-center filter-items">
+            <div className="checkbox">
+                <div className="c1">
+                    <label htmlFor="All_f">All </label>
+                    <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
+                </div>
+                <div className="c1">
+                    <label htmlFor="Done_f">Accepted</label>
+                    <input type="checkbox" id="Done_f" name="Done" onChange={filterApp} />
+                </div>
+                <div className="c1">
+                    <label htmlFor="Deleted_f">Rejected</label>
+                    <input type="checkbox" id="Deleted_f" name="Deleted" onChange={filterApp} />
+                </div>                        </div>
+            
+            <div>
+                <label htmlFor="period">Period</label> <br />
+                <select name="period" id="period" defaultValue={"4"} onChange={filterApp}>
+                    <option value="5" disabled>Period</option>
+                    <option value="4">Default</option>
+                    <option value="1">Today</option>
+                    <option value="2">This week</option>
+                    <option value="3">Last week</option>
+                </select>
+            </div>
+            <div>
+                <label htmlFor="SpecifiedDate">Specified Date</label> <br />
+                <input type="date" id="SpecifiedDate" name="SpecifiedDate" onChange={filterApp} />
+            </div>
+            <div>
+                <label htmlFor="SpecifiedTime">Specified Time</label> <br />
+                <input type="time" id="SpecifiedTime" name="SpecifiedTime" onChange={filterApp} />
+            </div>
+            <div>
+                <label htmlFor="LevelOfImportance_f">Exam Type</label> <br />
+                <select name="LevelOfImportance" id="LevelOfImportance_f" defaultValue={8} onChange={filterApp}>
+                    <option value={8} disabled>Exam Type</option>
+                    <option value={9}>Reset</option>
+                    <option value={3}>Assignment</option>
+                    <option value={2}>Quiz</option>
+                    <option value={1}>Mid Exam</option>
+                    <option value={0}>End Exam</option>
+                </select>
+            </div>
+            <button className="me-15" onClick={() => window.location.reload()}>Clear Filters</button>
+        </div>
+    </section>
+
+    <div className="userPage">
+        <div className="row underline hdr">
+            <div className="column id">Booking No</div>
+            <div className="column examHall">Exam Hall</div>
+            <div className="column lectureName">Lecture Name</div>
+            <div className="column numOfStudent">Number Of Students</div>
+            <div className="column year">Year</div>
+            <div className="column semester">Semester</div>
+            <div className="column subject">Subject</div>
+            <div className="column importance">Exam Type</div>
+            <div className="column date">Date</div>
+            <div className="column time">Start Time</div>
+            <div className="column endTime">End Time</div>
+            <div className="column academicStaff">Non Academic Staff</div>
+            <div className="column endTime">Edit</div>
+            <div className="column endTime">Delete</div>
+        </div>
+
+        {
+            dataList.length === 0 ?
+                <div className="row mt-15 waiting"><div className="loading"></div></div> :
+                dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
+        }
+
+        <section>
+            <section className="modal new-modal hidden">
+                <New refreshApp={setRefreshData} />
+            </section>
+            <section className="modal edit-modal hidden">
+                <Edit stateListener={stateListener} refreshApp={setRefreshData} />
+            </section>
+            <section className="modal delete-modal hidden">
+                <Delete stateListener={stateListener} refreshApp={setRefreshData} />
+            </section>
+        </section>
+    </div>
+</main>
+</body>
+</div>
+  )
+}
+
