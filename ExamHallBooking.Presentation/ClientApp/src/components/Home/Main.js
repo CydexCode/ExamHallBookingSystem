@@ -1,7 +1,6 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import Login from '../../Login Forms/Login';
-import Register from '../../Login Forms/Register';
+
 import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
 import './Home.css';
 import backgroundImage from '../../assest/Background.png'; // Import your background image

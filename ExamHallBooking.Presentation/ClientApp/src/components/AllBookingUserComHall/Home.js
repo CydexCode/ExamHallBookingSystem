@@ -6,7 +6,7 @@ import Delete from "./Delete"
 import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
-import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
+
 
 import "./AR-com-user.css"
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
