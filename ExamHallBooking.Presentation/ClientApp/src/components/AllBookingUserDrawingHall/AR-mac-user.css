@@ -1,4 +1,4 @@
-main {
+/* main {
   display: flex;
   margin: 40px;
 }
@@ -28,11 +28,11 @@ main {
   }
 
  
-.userPage {
+.table {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0px; 
+  gap: 5px; 
 }
 
 .hdr, .row {
@@ -46,7 +46,7 @@ main {
 }
 
 .column {
-  width:10px;
+  width:50px;
   flex: 1;
   padding: 3px;
   text-align: center;
@@ -145,4 +145,4 @@ main {
   display: flex;
   align-items: center; 
  
-}
+} */

@@ -20,7 +20,7 @@ export default function Delete(props){
             <div className="modal-title">Warning deleting the Appointment</div>
             <p>Are you sure you want to delete the Appointment?</p>
 
-            <div className="row justify-btw modal-action-container mt-15">
+            <div className="justify-btw modal-action-container mt-15">
                 <div className="btn" onClick={()=>closeModal("delete-modal")}>Cancel</div>
                 <div className="btn" onClick={deleteApp}>Yes</div>
             </div>

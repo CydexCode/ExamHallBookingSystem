@@ -45,7 +45,21 @@ export default function Edit(props) {
         const emailRequest = {
             toEmail: entry.lectureName,  // Assuming lectureName is the email address
             subject: "Drawing ExamHall Booking Confirmed",
-            body: `Your time slot from ${entry.time} to ${entry.endTime} is confirmed for  ${entry.year} Batch students  ${entry.subject}   ${importanceMap[data.levelOfImportance]}.`
+            body: `
+            Your time slot from ${entry.Time} to ${entry.EndTime} on ${entry.Date} is confirmed for ${entry.importanceLevel}.
+            
+            Details:
+            - Exam Hall: ${entry.ExamHall}
+            - Date: ${entry.Date}
+            - Time : ${entry.Time} - ${entry.EndTime}
+            - Batch : ${entry.Year}
+            - Subject : ${entry.Subject}
+            - Exam Type : ${entry.importanceLevel}
+            - Semester: ${entry.Semester}
+            - Supporting Academic Staff Member: ${entry.AcademicStaff}
+       
+            
+            Thank you for your attention.`
         };
 
         try {
@@ -92,13 +106,13 @@ export default function Edit(props) {
     return (
         <div className="modal-container">
             <div className="modal-title">Edit Booking</div>
-            <br></br>
+
             <div className="mt-15">
                 <label htmlFor="Description_e">Lecturer Email Address&nbsp; :</label>
                 <input id="Description_e" maxLength={50} className="mt-5" name="lectureName" defaultValue={data.lectureName} onChange={editApp}></input> <br />
             </div>
 
-            <div className="row mt-25">
+            <div className="mt-15">
                 <div>
                     <label htmlFor="Address_e"> Non Academic   &nbsp;:</label>
                     <input type="text" id="Address_e" name="academicStaff" maxLength={50} defaultValue={data.academicStaff} onChange={editApp} /><br></br>
@@ -154,12 +168,12 @@ export default function Edit(props) {
                     <input type="time" id="Time_e" name="endTime" onChange={editApp} defaultValue={data.endTime} />
                 </div>
                 <br></br>
-                <div className="ms-20 row items-center">
+                <div className="ms-20 items-center">
                     <label htmlFor="Done_e">Accept</label>
                     <input type="checkbox" id="Done_e" name="done" checked={done_} onChange={editApp} />
                 </div>
             </div>
-            <div className="row justify-btw modal-action-container mt-15">
+            <div className="justify-btw modal-action-container mt-15">
                 <div className="btn" onClick={() => closeModal("edit-modal")}>Cancel</div>
                 <div className="btn" onClick={updateApp}>Confirm</div>
             </div>
