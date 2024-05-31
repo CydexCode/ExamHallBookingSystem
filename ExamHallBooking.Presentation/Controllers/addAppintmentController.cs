@@ -49,5 +49,34 @@ namespace ExamHallBooking.Presentation.Controllers
             return View();
 
         }
+
+
+
+        public ActionResult AddAppointments()
+        {
+            string ewsUrl = "https://outlook.office365.com/EWS/Exchange.asmx";
+            string userName = "youremail@yourdomain.com";
+            string password = "youroutlookpassword";
+
+            ExchangeService service = new ExchangeService(ExchangeVersion.Exchange2013);
+            service.Url = new Uri(ewsUrl);
+            service.Credentials = new WebCredentials(userName, password);
+            service.UseDefaultCredentials = false;
+
+            Appointment appointment = new Appointment(service);
+            appointment.Subject = "Tennis Match";
+            appointment.Body = "Focus on backhand this week.";
+            appointment.Start = DateTime.Now.AddDays(2);
+            appointment.End = DateTime.Now.AddDays(2).AddHours(1);
+            appointment.Location = "Community Club";
+            appointment.RequiredAttendees.Add("dennis@domain.com");
+            appointment.ReminderMinutesBeforeStart = 60;
+
+            // Save the appointment to your calendar.
+            appointment.Save(SendInvitationsMode.SendToNone);
+
+            return View();
+        }
+
     }
 }
