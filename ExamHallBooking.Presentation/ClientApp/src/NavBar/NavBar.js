@@ -1,8 +1,8 @@
-﻿// import React from "react";
+import React from "react";
 import "./NavBar.css"; // Import the CSS file for styling (create this file)
 import { createRoot } from 'react-dom/client';
 import HomeLogo from "../assest/HomeLogo.png"; // Import HomeIcon image
-import React, {useState} from "react";
+
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -11,26 +11,47 @@ const root = createRoot(rootElement);
 
 const Navbar = ({ onMainClick, onUserClick, onAdminClick,onSignOutClick,onBackClick, onAllClick, onDrawingHallClick ,showAdminUser,showSignOutButton,showHomeBtton , showBackButton }) => {
     return (
-            <nav className="navbar">
-                <div>
-                {/* <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" /> */}
-                <ul className="navBarUl">
-                    <li onClick={onMainClick}>
-                        Home
-                    </li>
-                    <li onClick={onDrawingHallClick}>
-                        User
-                    </li>
-                    <li onClick={onAdminClick}>
-                        Admin
-                    </li>
-                </ul>
-                </div>
-                <div id="mobile">
-                    <i className="fas fa-bars"></i>
 
-                </div>
-            </nav>
+
+        <nav className="navbar">
+            {/* <img onClick={onMainClick} src={HomeLogo} alt='Home Logo' className="homeLogo" /> */}
+
+            <ul>
+            {showBackButton && (
+                <li onClick={onBackClick}>
+                    <span role="img" aria-label="Back Icon"></span> Back
+                </li>
+            )}
+            {showHomeBtton && (
+            <li onClick={onMainClick}>
+                    <span role="img" aria-label="Home Icon">🏠</span> Home
+                </li>
+                 )}
+                {showAdminUser && (
+                    <>
+                        <li onClick={onUserClick}>
+                            <span role="img" aria-label="User Icon">👤</span> User
+                        </li>
+                        <div className="admin">
+                            <li onClick={onAdminClick}>
+                                <span role="img" aria-label="Admin Icon">🔧</span> Admin
+                            </li>
+                        </div>
+                    </>
+                )}
+                 {showSignOutButton && (
+                <button className="signOutButton" onClick={onSignOutClick}>
+                    <span role="img" aria-label="Sign Out Icon"></span> Sign Out
+                </button>
+            )}
+               
+            </ul>
+        </nav>
+
+       
+        // <div>
+        // </div>
+
     );
 };
 
