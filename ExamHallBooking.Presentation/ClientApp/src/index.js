@@ -66,32 +66,38 @@ const App = () => {
 
         <Router>
             <div>
-            <div>
-                <NavBar
-                        onMainClick={handleMainClick}
-                        onAllClick={handleAllClick}
-                        onAdminClick={handleAdminClick}
-                        onDrawingHallClick={handleDrawingHallClick}
-                />
-                <Routes>
-                    <Route path="/main" element={<MainHome />} />
-                    <Route path="/admin" element={<AdminHome />} />
+
+
+
+                <div>
+
+
+
+
+                    <Routes>
+
+                        <Route path="/" element={<MainHome />} />
+                        <Route path="/admin" element={<AdminHome />} />
                         <Route path="/macAdmin" element={<MacAdminHome />} />
                         <Route path="/user" element={<UserHome />} />
                         <Route path="/userDrawingHall" element={<UserDrawingHall />} />
                         <Route path="/staffDrawingHall" element={<StaffDrawingHall />} />
-                    <Route path="/login" element={<Login />} />
+                        <Route path="/login" element={<Login />} />
                         <Route path="/staff" element={<Staff />} />
                         <Route path="/loginDrawingHall" element={<LoginDrawingHall />} />
                         <Route path="/staffLoginDrawingHall" element={<StaffLoginDrawingHall />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/adminLogin" element={<AdminLogin />} />
-                    <Route path="/allBooking" element={<AllBooking />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/adminLogin" element={<AdminLogin />} />
+                        <Route path="/allBooking" element={<AllBooking />} />
                         <Route path="/staffLogin" element={<StaffLogin />} />
                         <Route path="/allBookingUserDrawingHall" element={<AllBookingUserDrawingHall />} />
-                </Routes>
+                        <Route path="/selectHallPage" element={<SelectHallPage />} />
+                    </Routes>
+
+
+
                 </div>
-               <Footer/>
+                <Footer />
             </div>
         </Router>
     );
