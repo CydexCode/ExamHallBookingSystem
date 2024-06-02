@@ -63,6 +63,7 @@ export default function New(props) {
         <div className="modal-container">
             <div className="modal-title">New End Exam Booking</div>
             <br></br>
+            
     {/*        <div className="mt-15">
                 <label htmlFor="Hall_n" >Exam Hall  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;    :</label>
                 <select className="mt-5" id="Hall_n" name="examHall" onChange={newApp} defaultValue={0} >

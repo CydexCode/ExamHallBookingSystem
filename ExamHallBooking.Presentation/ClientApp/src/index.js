@@ -4,6 +4,7 @@ import './App.css';
 
 import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from 'react-router-dom';
 
+
 import AdminHome from './components/ComAdmin/Home.js';
 import MacAdminHome from './components/MacAdmin/Home.js';
 import UserHome from './components/UserComHall/Home.js';
@@ -14,7 +15,7 @@ import Staff from './components/StaffComHall/Home.js';
 import SelectHallPage from './components/SelectHall/SelectHallPage.js';
 
 import MainHome from './components/Home/Main';
-import NavBar from './NavBar/NavBar';
+
 import StaffLogin from './Login Forms/staffLogin';
 import Login from './Login Forms/Login';
 import LoginDrawingHall from './Login Forms/LoginDrawingHall';
@@ -26,10 +27,7 @@ import Footer from './Footer/Footer';
 
 
 
-import backgroundImage from './assest/Background.png'; // Import your background image
-import uniLogo from './assest/UniversityLogo.png';
 
-import { createRoot } from 'react-dom/client';
 
 
 const App = () => {

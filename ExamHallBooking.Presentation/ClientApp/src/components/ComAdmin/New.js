@@ -59,7 +59,7 @@ export default function New(props){
     return (
         <div className="modal-container">
         <div className="modal-title">New End Exam Booking</div>
-        <br></br>
+       
 {/*        <div className="mt-15">
             <label htmlFor="Hall_n" >Exam Hall  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;    :</label>
             <select className="mt-5" id="Hall_n" name="examHall" onChange={newApp} defaultValue={0} >
@@ -71,14 +71,14 @@ export default function New(props){
             </select>
 
         </div>*/}
-        <br></br>
+       
         <div className="mt-15">
                 <label htmlFor="LectureName_n">Enter Email Address&nbsp; :</label>
             <input type="text" id="LectureName_n" name="lectureName" onChange={newApp} maxLength={50} />
 
         </div>
 
-        <div className="row mt-25">
+        <div className="mt-15">
             <div>
                 <label htmlFor="AcademicStaff_n" >
                     Non  Academic   &nbsp;:</label>
@@ -167,7 +167,7 @@ export default function New(props){
             <input type="time" id="Time_n" name="endTime" defaultValue={formatedTimeToStr()} onChange={newApp} />
         </div>
         </div>
-            <div className="row justify-btw modal-action-container mt-15">
+            <div className="justify-btw modal-action-container mt-15">
                 <div className="btn" onClick={()=> closeModal("new-modal")}>Cancel</div>
                 <div className="btn" onClick={postApp}>Add</div>
             </div>
