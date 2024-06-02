@@ -42,6 +42,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ExamHallBooking.DataAccess\ExamHallBooking.DataAccess.csproj" />
     <ProjectReference Include="..\ExamHallBooking.Service\ExamHallBooking.Service.csproj" />
+    <ProjectReference Include="..\ExamHallBooking.xUnitTest\ExamHallBooking.Test.xUnit.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

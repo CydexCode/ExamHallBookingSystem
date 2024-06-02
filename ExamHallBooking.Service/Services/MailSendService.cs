@@ -55,6 +55,4 @@ namespace ExamHallBooking.Service.Services
             }
         }
     }
-
-
 }

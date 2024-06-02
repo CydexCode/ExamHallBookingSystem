@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamHallBooking.DataAccess"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamHallBooking.Service", "ExamHallBooking.Service\ExamHallBooking.Service.csproj", "{03E319D7-B337-4F7E-BA64-F9D456589878}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamHallBooking.xUnitTest", "ExamHallBooking.xUnitTest\ExamHallBooking.xUnitTest.csproj", "{42D06AF4-6EE7-400C-9195-6D77F7B81D3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamHallBooking.Test.xUnit", "ExamHallBooking.xUnitTest\ExamHallBooking.Test.xUnit.csproj", "{42D06AF4-6EE7-400C-9195-6D77F7B81D3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
