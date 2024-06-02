@@ -1,18 +1,15 @@
-﻿.navbar {
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #002a4f;
     padding: 20px 80px;
-
+    position: relative;
+    font-size: 20px;
     font-family: Helvetica, sans-serif;
-    /* font-size: 20px; */
-    /* z-index: 10; */
-    /* position: relative; */
-    /* width: 100%; */
 }
 
-.navBarUl {
+ul {
     display: flex;
     align-items: center;
     width: 100%;
@@ -21,18 +18,13 @@
     list-style: none;
 }
 
-.navBarUl li {
-    list-style-type: none;
-    padding: 0 200px;
-    position: relative;
+ul li {
+    margin: 0;
+    padding: 0 20px;
+    cursor: pointer;
     font-weight: 400;
     font-size: 1.3rem;
-    color: #fff;
-
-    /* cursor: pointer; */
-    /* color: #fff; */
-    /* text-align: end; */
-    /* margin-left: 70px; */
+    color: white;
 }
 
 ul li a {
