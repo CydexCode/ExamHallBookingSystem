@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import "./NavBar.css"; // Import the CSS file for styling (create this file)
 import { createRoot } from 'react-dom/client';
 import HomeLogo from "../assest/HomeLogo.png"; // Import HomeIcon image

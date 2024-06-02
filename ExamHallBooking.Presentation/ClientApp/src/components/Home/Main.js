@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
