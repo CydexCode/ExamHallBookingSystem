@@ -10,6 +10,8 @@ import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create thi
 import "./AR-mac.css";
 import { getDefault, openModal, filter, getAppointmentsDrawingHall, notifyUser } from "./Lib";
 import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
+import ConfirmSignOut from "./ConfirmSignOut"; // Import the ConfirmSignOut component
+
 
 export default function Home(props) {
 
@@ -17,6 +19,7 @@ export default function Home(props) {
 
   const [refreshData, setRefreshData] = useState(0)
   const [stateListener, setStateListener] = useState(0)
+  const [showConfirmSignOut, setShowConfirmSignOut] = useState(false);
 
   const filterApp = (e) => {
     let name_ = e.target.name;
@@ -147,8 +150,17 @@ const handleAdminClick = () => {
     window.location.href = '/adminLogin';
 };
 const handleSignOutClick = () => {
+    setShowConfirmSignOut(true);
+  };
+
+  const confirmSignOut = () => {
+    setShowConfirmSignOut(false);
     window.location.href = '/';
-};
+  };
+
+  const cancelSignOut = () => {
+    setShowConfirmSignOut(false);
+  };
 
   return (
 
@@ -266,6 +278,12 @@ const handleSignOutClick = () => {
         </section>
     </div>
 </main>
+{showConfirmSignOut && (
+          <ConfirmSignOut
+            onConfirm={confirmSignOut}
+            onCancel={cancelSignOut}
+          />
+        )}
 </body>
 </div>
   )

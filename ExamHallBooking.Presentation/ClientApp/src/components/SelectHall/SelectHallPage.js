@@ -1,10 +1,15 @@
 ﻿import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SelectHallPage.css';
-
+import { useEffect, useState } from "react"
 import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
+import ConfirmSignOut from "./ConfirmSignOut"; // Import the ConfirmSignOut component
+
 
 const ExamHallSelection = () => {
+
+    const [showConfirmSignOut, setShowConfirmSignOut] = useState(false);
+
     const navigate = useNavigate();
 
     const handleSelect = (hall) => {
@@ -29,9 +34,17 @@ const ExamHallSelection = () => {
         window.location.href = '/adminLogin';
     };
     const handleSignOutClick = () => {
-        window.location.href = '/';
-    };
+        setShowConfirmSignOut(true);
+      };
     
+      const confirmSignOut = () => {
+        setShowConfirmSignOut(false);
+        window.location.href = '/';
+      };
+    
+      const cancelSignOut = () => {
+        setShowConfirmSignOut(false);
+      };
       return (
     
         <div>
@@ -48,6 +61,7 @@ const ExamHallSelection = () => {
             showAdminUser={false} // Hide User and Admin
             showSignOutButton ={true}
         />
+
         <div className="exam-hall-selection">
             <h1 class="header">Select Exam Hall </h1>
             <div className="hall-boxes">
@@ -59,7 +73,14 @@ const ExamHallSelection = () => {
                 </div>
             </div>
         </div>
+        {showConfirmSignOut && (
+          <ConfirmSignOut
+            onConfirm={confirmSignOut}
+            onCancel={cancelSignOut}
+          />
+        )}
         </div>
+        
     );
 };
 

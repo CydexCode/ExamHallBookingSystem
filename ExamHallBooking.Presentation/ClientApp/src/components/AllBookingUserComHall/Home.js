@@ -11,6 +11,8 @@ import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
 import "./AR-com-user.css"
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
+import ConfirmSignOut from "./ConfirmSignOut"; // Import the ConfirmSignOut component
+
 import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib"
 
 export default function Home(props) {
@@ -19,6 +21,8 @@ export default function Home(props) {
 
   const [refreshData, setRefreshData] = useState(0)
   const [stateListener, setStateListener] = useState(0)
+  const [showConfirmSignOut, setShowConfirmSignOut] = useState(false);
+
 
   const filterApp = (e) => {
     let name_ = e.target.name;
@@ -165,9 +169,17 @@ export default function Home(props) {
     window.location.href = '/adminLogin';
   };
   const handleSignOutClick = () => {
+    setShowConfirmSignOut(true);
+  };
+
+  const confirmSignOut = () => {
+    setShowConfirmSignOut(false);
     window.location.href = '/';
   };
 
+  const cancelSignOut = () => {
+    setShowConfirmSignOut(false);
+  };
   return (
 
     <div>
@@ -309,6 +321,12 @@ export default function Home(props) {
           </section>
           </div>
         </main>
+        {showConfirmSignOut && (
+          <ConfirmSignOut
+            onConfirm={confirmSignOut}
+            onCancel={cancelSignOut}
+          />
+        )}
       </body>
     </div>
   )
