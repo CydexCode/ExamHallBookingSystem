@@ -146,3 +146,71 @@ main {
   align-items: center; 
  
 }
+
+/* Modal container */
+.modalSignOut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Modal content */
+.modalSignOut-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Heading */
+.modalSignOut-content h2 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+/* Paragraph */
+.modalSignOut-content p {
+  margin: 0 0 20px 0;
+  color: #666;
+  font-size: 1.1em;
+}
+
+/* Modal actions (buttons) */
+.modalSignOut-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Buttons */
+.modalSignOut-actions .btnSignOut {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.modalSignOut-actions .btnSignOut:hover {
+  background-color: #0056b3;
+}
+
+.modalSignOut-actions .btnSignOut:focus {
+  outline: none;
+}
+
+.modalSignOut-actions .btnSignOut:active {
+  background-color: #004085;
+}
