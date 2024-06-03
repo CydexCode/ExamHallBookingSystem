@@ -94,6 +94,7 @@ tr:nth-child(even) {background-color: #c8ceec;}
     flex-wrap: wrap;
     color: black; /* Added to change the font color to black */
     align-items: baseline;
+    justify-content: flex-start;
 }
 
 .filter-items .filter-item-type1 {
