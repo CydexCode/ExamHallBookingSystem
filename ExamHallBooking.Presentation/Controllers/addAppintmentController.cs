@@ -1,4 +1,4 @@
-﻿using ExamHallBooking.DataAccess.Data.Models;
+﻿/*using ExamHallBooking.DataAccess.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Exchange.WebServices.Data;
 using System.Diagnostics;
@@ -80,3 +80,4 @@ namespace ExamHallBooking.Presentation.Controllers
 
     }
 }
+*/

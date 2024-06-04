@@ -181,7 +181,7 @@ const handleSignOutClick = () => {
      <body>
 
 <div className="centered-heading-container">
-    <h1>Exam Hall Booking System - Mac Admin</h1>
+    <h1>Drawing Hall Booking - Admin</h1>
 </div>
 
 <main>

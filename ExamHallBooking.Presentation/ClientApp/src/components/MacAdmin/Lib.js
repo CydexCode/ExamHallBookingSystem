@@ -11,8 +11,8 @@ export const testData = [
 export const entry = {
     examHall: "Drawing Hall",
     lectureName: "Testmail@gmail.com",
-    numOfStudent: 5,
-    year: 1,
+    numOfStudent: 50,
+    year: 2020,
     semester: 2,
     subject: "EC1020",
     academicStaff: " ",

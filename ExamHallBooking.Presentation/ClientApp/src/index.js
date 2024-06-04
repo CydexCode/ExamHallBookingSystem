@@ -7,8 +7,7 @@ import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from 'react
 
 import AdminHome from './components/ComAdmin/Home.js';
 import MacAdminHome from './components/MacAdmin/Home.js';
-import UserHome from './components/UserComHall/Home.js';
-import UserDrawingHall from './components/UserDrawingHall/Home.js';
+
 import StaffDrawingHall from './components/StaffDrawingHall/Home.js';
 import AllBooking from './components/AllBookingUserComHall/Home.js';
 import Staff from './components/StaffComHall/Home.js';
@@ -79,8 +78,7 @@ const App = () => {
                         <Route path="/" element={<MainHome />} />
                         <Route path="/admin" element={<AdminHome />} />
                         <Route path="/macAdmin" element={<MacAdminHome />} />
-                        <Route path="/user" element={<UserHome />} />
-                        <Route path="/userDrawingHall" element={<UserDrawingHall />} />
+                
                         <Route path="/staffDrawingHall" element={<StaffDrawingHall />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/staff" element={<Staff />} />

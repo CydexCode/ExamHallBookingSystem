@@ -11,7 +11,7 @@ export const entry = {
     examHall: "Drawing Hall",
     lectureName: "Testmail@gmail.com",
     numOfStudent: 5,
-    year: 1,
+    year: 2020,
     semester: 2,
     subject:"EC1020",
     academicStaff: " ",

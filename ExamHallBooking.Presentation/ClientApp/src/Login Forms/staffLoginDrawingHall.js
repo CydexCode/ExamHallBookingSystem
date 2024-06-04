@@ -39,11 +39,14 @@ function Login() {
     const handleSignOutClick = () => {
         window.location.href = '/';
     };
+    const handleBackClick = () => {
+        window.location.href = '/allBookingUserDrawingHall';
+    };
     return (
 
         <div>
         <NavBar
-           
+            onBackClick={handleBackClick}
            onMainClick={handleMainClick}
            onUserClick={handleUserClick}
     
@@ -51,7 +54,9 @@ function Login() {
            showSignOutButton ={false}
            onSignOutClick={false}
             showAdminUser={false} // Hide User and Admin
-            showHomeBtton ={true}
+       
+            showHomeBtton ={false}
+            showBackButton ={true}
         />
 
         <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>

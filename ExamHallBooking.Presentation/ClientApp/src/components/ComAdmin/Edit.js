@@ -116,20 +116,20 @@ export default function Edit(props){
             <br></br>
             <div className="mt-15">
                 <label htmlFor="Description_e">Lecturer Email Address&nbsp; :</label> 
-                <input id="Description_e" maxLength={50} className="mt-5" name="lectureName" defaultValue={data.lectureName} onChange={editApp}></input> <br />
+                <input id="Description_e" maxLength={50} className="mt-5" name="lectureName" style={{ width: '250px' }} defaultValue={data.lectureName} onChange={editApp}></input> <br />
               
             </div>
 
             <div className="mt-15">
                 <div>
-                    <label htmlFor="Address_e"> Non Academic   &nbsp;:</label>
-                    <input type="text" id="Address_e" name="academicStaff" maxLength={50} defaultValue={data.academicStaff} onChange={editApp} /><br></br>
+                    <label htmlFor="Address_e"> Non Academic   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                    <input type="text" id="Address_e" name="academicStaff" maxLength={50} style={{ width: '250px' }} defaultValue={data.academicStaff} onChange={editApp} /><br></br>
                     <label>Staff Member</label>
                 </div>
              </div>
             <br></br>
             <div className="ms-10">
-                <label htmlFor="LevelOfImportance_e">Exam Type</label>
+                <label htmlFor="LevelOfImportance_e">Exam Type &nbsp;:</label>
                 <select name="levelOfImportance" id="LevelOfImportance_e" value={importance} onChange={editApp}>
 
 
@@ -169,9 +169,9 @@ export default function Edit(props){
 
                 </div>
             </div>     
-
+   <div>
             <div className="ms-20">
-                <div>
+             
                     <label htmlFor="Date_e">Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
                     <input type="date" id="Date_e" name="date" onChange={editApp} defaultValue={defaultDate}/>
                 </div>

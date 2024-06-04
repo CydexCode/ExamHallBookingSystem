@@ -199,7 +199,7 @@ export default function Home(props) {
 <body>
 
 <div className="centered-heading-container">
-  <h1>Drawing Hall Booking System </h1>
+  <h1>Drawing Hall Booking  </h1>
 </div>
 
 <main>
@@ -208,7 +208,7 @@ export default function Home(props) {
   {/* <div className="notifications spacer-20"></div> */}
   <section className="filter">
 
-  <Link className="btn add" to="/staffLogin">End Exam Booking</Link>
+  <Link className="btn add" to="/staffLoginDrawingHall">End Exam Booking</Link>
               <br></br>
               <br></br>
               <br></br>

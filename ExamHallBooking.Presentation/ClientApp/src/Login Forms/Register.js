@@ -81,18 +81,27 @@ function Register() {
                                     <div className="text-center2">
                                         <h1 className="h4 text-gray-900 mb-4">Create an Account!</h1>
                                     </div>
-                                    <div className="user">
+                                            <div className="user">
+                                                <div className="form-group row">
+
+                                                    <input type="text" className="form-control form-control-user"
+                                                        value={name} onChange={(e) => { setName(e.target.value) }}
+                                                        placeholder="Name" />
+
+
+                                                </div>
                                         <div className="form-group row">
                                             
                                             <input type="text" className="form-control form-control-user"
                                                 value={loginName} onChange={(e) => { setLoginName(e.target.value) }}
-                                                placeholder="Login Name" />
+                                                placeholder="Login Email" />
                                          </div>
                                        
                                         <div className="form-group row">
-                                                <input type="text" className="form-control form-control-user"
-                                                    value={name} onChange={(e) => { setName(e.target.value) }}
-                                                    placeholder="Email" />
+                                                    <input type="password" className="form-control form-control-user"
+                                                        value={password} onChange={(e) => { setPassword(e.target.value) }}
+                                                
+                                                    placeholder="Password" />
                                         </div>
                                         <div className="form-group row">
                                           
@@ -102,14 +111,7 @@ function Register() {
                                           
          
                                         </div>
-                                        <div className="form-group row">
-
-                                                <input type="password" className="form-control form-control-user"
-                                                    value={password} onChange={(e) => { setPassword(e.target.value) }}
-                                                    placeholder="password" />
-
-
-                                        </div>
+                                   
                                         <button className="btn btn-primary btn-user btn-block" onClick={AddUser}>
                                             Register Account
                                         </button>

@@ -200,7 +200,7 @@ export default function Home(props) {
 
 
           <div className="centered-heading-container">
-            <h1>Computer Department Exam Hall Booking System</h1>
+            <h1>Computer Department Exam Hall Booking</h1>
           </div>
           <main>
           <section className="filter">
@@ -228,7 +228,6 @@ export default function Home(props) {
 
             <div className="modal-title">Filters</div>
             <div className="row items-center filter-items">
-              <button className="me-15" onClick={() => window.location.reload()}>Clear Filters</button>
               <div>
                 <label htmlFor="All_f">All Requests</label> <br />
                 <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
@@ -277,6 +276,8 @@ export default function Home(props) {
                   <option value={0}>End Exam</option>
                 </select>
               </div>
+              <button className="me-15" onClick={() => window.location.reload()}>Clear Filters</button>
+
             </div>
           </section>
 

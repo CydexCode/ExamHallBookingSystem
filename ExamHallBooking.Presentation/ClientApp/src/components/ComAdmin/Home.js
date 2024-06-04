@@ -185,7 +185,7 @@ export default function Home(props) {
       <body>
 
         <div className="centered-heading-container">
-          <h1>Computer Department Exam Hall Booking System - Admin</h1>
+          <h1> Computer Department Exam Hall Booking - Admin</h1>
         </div>
 
         <main>

@@ -103,16 +103,7 @@
   }
 }
 
-.row.underline.hdr {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 0.8fr));
-  background-color: #002D62;
-  font-weight: bold;
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-  padding: 3px;
-}
+
 
 .table .row:not(.hdr):nth-child(even) {
   background-color: #C5C6D0;
@@ -133,14 +124,7 @@
   margin-top: 5px;
 }
 
-.column.importance {
-  height: 35px;
-  line-height: 27px;
-  padding: 3px;
-  display: flex;
-  align-items: center;
 
-}
 
 /* custom.css */
 /* Modal container */

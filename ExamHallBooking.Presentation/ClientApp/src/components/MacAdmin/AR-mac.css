@@ -28,12 +28,6 @@ main {
   }
 
  
-.userPage {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0px; 
-}
 
 .hdr, .row {
   display: flex;
@@ -115,9 +109,6 @@ main {
   padding: 3px;
 }
 
-.column {
-  padding: 3px;
-}
 
 .table .row:not(.hdr):nth-child(even) {
   background-color: #C5C6D0; 
@@ -139,13 +130,6 @@ main {
       margin-top: 5px; 
   }
 
-.column.importance {
-  height:35px; 
-  line-height: 27px; 
-  display: flex;
-  align-items: center; 
- 
-}
 
 /* Modal container */
 .modalSignOut {
