@@ -37,7 +37,7 @@ function Register() {
     const handleMainClick = () => {
         window.location.href = '/';
     };
-    
+
     const handleUserClick = () => {
         window.location.href = '/login';
     };
@@ -50,101 +50,103 @@ function Register() {
 
     return (
 
-        
+
         <div>
-        <NavBar
-           
-           onMainClick={handleMainClick}
-           onUserClick={handleUserClick}
-    
-           onAdminClick={handleAdminClick}
-           showSignOutButton ={false}
-           onSignOutClick={false}
-            showAdminUser={false} // Hide User and Admin
-            showHomeBtton ={true}
-        />
+            <NavBar
 
-        <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <div className="bg-gradient-primary">
+                onMainClick={handleMainClick}
+                onUserClick={handleUserClick}
 
-            <div className="container3">
-                <div><input type='hidden' value={id} onChange={(e) => { setId(e.target.value) }}></input> </div>
-                <div><input type='hidden' value={status} onChange={(e) => { setStatus(e.target.value) }}></input> </div>
+                onAdminClick={handleAdminClick}
+                showSignOutButton={false}
+                onSignOutClick={false}
+                showAdminUser={false} // Hide User and Admin
+                showHomeBtton={true}
+            />
 
-                <div className="card o-hidden border-0 shadow-lg my-5">
-                    <div className="card-body p-0">
-                        {/*  <!-- Nested Row within Card Body --> */}
-                        <div className="row2 justify-content-center">
-                            <div className="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                            <div className="col-lg-7">
-                                <div className="p-5">
-                                    <div className="text-center2">
-                                        <h1 className="h4 text-gray-900 mb-4">Create an Account!</h1>
-                                    </div>
-                                    <div className="user">
-                                        <div className="form-group row">
-                                            
-                                            <input type="text" className="form-control form-control-user"
-                                                value={loginName} onChange={(e) => { setLoginName(e.target.value) }}
-                                                placeholder="Login Name" />
-                                         </div>
-                                       
-                                        <div className="form-group row">
-                                                <input type="text" className="form-control form-control-user"
-                                                    value={name} onChange={(e) => { setName(e.target.value) }}
-                                                    placeholder="Email" />
-                                        </div>
-                                        <div className="form-group row">
-                                          
-                                                <input type="text" className="form-control form-control-user"
-                                                    value={mobile} onChange={(e) => { setMobile(e.target.value) }}
-                                                    placeholder="Mobile" />
-                                          
-         
-                                        </div>
-                                        <div className="form-group row">
+            <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>
+                <div className="bg-gradient-primary">
 
-                                                <input type="password" className="form-control form-control-user"
-                                                    value={password} onChange={(e) => { setPassword(e.target.value) }}
-                                                    placeholder="password" />
+                    <div className="container3">
+                        <div><input type='hidden' value={id} onChange={(e) => { setId(e.target.value) }}></input> </div>
+                        <div><input type='hidden' value={status} onChange={(e) => { setStatus(e.target.value) }}></input> </div>
+
+                        <div className="card o-hidden border-0 shadow-lg my-5">
+                            <div className="card-body p-0">
+                                {/*  <!-- Nested Row within Card Body --> */}
+                                <div className="row2 justify-content-center">
+                                    <div className="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                                    <div className="col-lg-7">
+                                        <div className="p-5">
+                                            <div className="text-center2">
+                                                <h1 className="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                            </div>
+                                            <div className="user">
+                                                <div className="form-group row">
+
+                                                    <input type="text" className="form-control form-control-user"
+                                                        value={name} onChange={(e) => { setName(e.target.value) }}
+                                                        placeholder="Name" />
 
 
-                                        </div>
-                                        <button className="btn btn-primary btn-user btn-block" onClick={AddUser}>
-                                            Register Account
-                                        </button>
-                                        <hr />
-                                        {/* <a href="index.html" className="btn btn-google btn-user btn-block">
+                                                </div>
+                                                <div className="form-group row">
+
+                                                    <input type="text" className="form-control form-control-user"
+                                                        value={loginName} onChange={(e) => { setLoginName(e.target.value) }}
+                                                        placeholder="Login Email" />
+                                                </div>
+
+                                                <div className="form-group row">
+                                                    <input type="password" className="form-control form-control-user"
+                                                        value={password} onChange={(e) => { setPassword(e.target.value) }}
+
+                                                        placeholder="Password" />
+                                                </div>
+                                                <div className="form-group row">
+
+                                                    <input type="text" className="form-control form-control-user"
+                                                        value={mobile} onChange={(e) => { setMobile(e.target.value) }}
+                                                        placeholder="Mobile" />
+
+
+                                                </div>
+
+                                                <button className="btn btn-primary btn-user btn-block" onClick={AddUser}>
+                                                    Register Account
+                                                </button>
+                                                <hr />
+                                                {/* <a href="index.html" className="btn btn-google btn-user btn-block">
                                             <i className="fab fa-google fa-fw"></i> Register with Google
                                         </a>
                                         <a href="index.html" className="btn btn-facebook btn-user btn-block">
                                             <i className="fab fa-facebook-f fa-fw"></i> Register with Facebook
                                         </a> */}
-                                    </div>
-                                    <hr />
-                                    <div className="text-center2" style={{ color: 'white' }}>
-    <a className="small" href="forgot-password.html">Forgot Password?</a>
-</div>
-<div className="text-center2" style={{ color: 'white' }}>
-    <a className="small2" href="login">Already have an account? Login!</a>
-</div>
+                                            </div>
+                                            <hr />
+                                            <div className="text-center2" style={{ color: 'white' }}>
+                                                <a className="small" href="forgot-password.html">Forgot Password?</a>
+                                            </div>
+                                            <div className="text-center2" style={{ color: 'white' }}>
+                                                <a className="small2" href="login">Already have an account? Login!</a>
+                                            </div>
 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
+
+                    <script src="vendor/jquery/jquery.min.js"></script>
+                    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+                    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
                 </div>
-
             </div>
-
-           
-            <script src="vendor/jquery/jquery.min.js"></script>
-            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-           
-            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-            </div>
-        </div>
         </div>
     )
 

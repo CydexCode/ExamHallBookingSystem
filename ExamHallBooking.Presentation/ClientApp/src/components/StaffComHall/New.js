@@ -56,15 +56,15 @@ export default function New(props) {
         window.location.reload();
 
         // Redirect to '/allBooking' route after post request
-   
+
     }
 
     return (
         <div className="modal-container">
             <div className="modal-title">New End Exam Booking</div>
             <br></br>
-            
-    {/*        <div className="mt-15">
+
+            {/*        <div className="mt-15">
                 <label htmlFor="Hall_n" >Exam Hall  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;    :</label>
                 <select className="mt-5" id="Hall_n" name="examHall" onChange={newApp} defaultValue={0} >
 
@@ -77,12 +77,12 @@ export default function New(props) {
             </div>*/}
             <br></br>
             <div className="mt-15">
-                <label htmlFor="LectureName_n">Enter Email Address&nbsp; :</label>
-                <input type="text" id="LectureName_n" name="lectureName" onChange={newApp} maxLength={50} />
+                <label htmlFor="LectureName_n">Lecture Email Address&nbsp; :</label>
+                <input type="text" id="LectureName_n" name="lectureName" onChange={newApp} maxLength={50} style={{ width: '250px' }} />
 
             </div>
 
-    {/*        <div className="row mt-25">
+            {/*        <div className="row mt-25">
                 <div>
                     <label htmlFor="AcademicStaff_n" >
                         Non  Academic   &nbsp;:</label>
@@ -93,10 +93,10 @@ export default function New(props) {
             <br></br>
 
             <div className="ms-10">
-                <label htmlFor="LevelOfImportance_n">Exam Type</label>
+                <label htmlFor="LevelOfImportance_n">Exam Type :</label>
                 <select name="levelOfImportance" id="LevelOfImportance_n" onChange={newApp} defaultValue={4}>
 
-                {/*    <option value={3}>Assignment</option>
+                    {/*    <option value={3}>Assignment</option>
                     <option value={2}>Quiz</option>
                     <option value={1}>Mid Exam</option>*/}
                     <option value={0}>End Exam</option>
@@ -115,7 +115,7 @@ export default function New(props) {
 
                     <div className="form-field">
                         <label for="Year_n">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Batch :</label>
-                        <select id="Year_n" name="year" onChange={newApp} defaultValue={0}>
+                        <select id="Year_n" name="year" onChange={newApp} style={{ width: '115px' }} defaultValue={0}>
 
                             <option value={2022}>2022</option>
                             <option value={2021}>2021</option>
@@ -128,7 +128,7 @@ export default function New(props) {
 
                     <div className="form-field">
                         <label for="Semester_n">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semester :</label>
-                        <select id="Semester_n" name="semester" onChange={newApp} defaultValue={0} >
+                        <select id="Semester_n" name="semester" onChange={newApp} style={{ width: '133px' }} defaultValue={0} >
                             <option value={8}>8th  Semester</option>
                             <option value={7}>7th  Semesterr</option>
                             <option value={6}>6th  Semester</option>
@@ -154,22 +154,22 @@ export default function New(props) {
 
 
 
+            <div>
+                <div className="ms-20">
 
-            <div className="ms-20">
-                <div>
-                <label htmlFor="Date_n">Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-                <input type="date" id="Date_n" name="date" defaultValue={formatedDateToStr()} onChange={newApp} />
-            </div>
-            <br></br>
-            <div className="ms-20">
-                <label htmlFor="Time_n">Start Time &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-                <input type="time" id="Time_n" name="time" defaultValue={formatedTimeToStr()} onChange={newApp} />
-            </div>
-            <br></br>
-            <div className="ms-20">
-                <label htmlFor="Time_n">End Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-                <input type="time" id="Time_n" name="endTime" defaultValue={formatedTimeToStr()} onChange={newApp} />
-            </div>
+                    <label htmlFor="Date_n">Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                    <input type="date" id="Date_n" name="date" defaultValue={formatedDateToStr()} onChange={newApp} />
+                </div>
+                <br></br>
+                <div className="ms-20">
+                    <label htmlFor="Time_n">Start Time &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                    <input type="time" id="Time_n" name="time" defaultValue={formatedTimeToStr()} onChange={newApp} />
+                </div>
+                <br></br>
+                <div className="ms-20">
+                    <label htmlFor="Time_n">End Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                    <input type="time" id="Time_n" name="endTime" defaultValue={formatedTimeToStr()} onChange={newApp} />
+                </div>
             </div>
 
             <div className="row justify-btw modal-action-container mt-15">

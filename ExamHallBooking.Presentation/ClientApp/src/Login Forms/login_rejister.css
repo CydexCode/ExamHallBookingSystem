@@ -1,16 +1,14 @@
-﻿/* body {
+﻿﻿ /* body {
     display: flex;
     background-color: white;
     justify-content: center;
     align-items: center;
 } */
 .bg-gradient-primary {
-   
     color: azure;
     text-align: center;
     background-size: cover;
     background-position: center;
- 
     top: 60px;
     left: 0;
     width: 100%;
@@ -22,34 +20,53 @@
 }
 
 
-
 .container3 {
-    width: 470px;
+    width: 90%;
+    max-width: 470px;
     background-color: #002a4f;
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
-    margin-left:750px;
-    margin-top: 135px;
-    margin-bottom: 80px;
+    margin: 20px auto;
     height: 550px;
     border-radius: 30px;
     align-items: center;
+    padding: 20px;
 }
 
-    .container h1 {
-        font-size: 36px;
-        text-align: center;
-        color: white;
-        padding-bottom: 20px;
+@media (min-width: 768px) {
+    .container3 {
+        width: 70%;
+        max-width: 470px;
+        margin-left: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
+}
+
+@media (min-width: 1024px) {
+    .container3 {
+        width: 50%;
+        max-width: 470px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 135px;
+        margin-bottom: 80px;
+    }
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+}
 
 .form-control-user {
     position: relative;
     border-radius: 4px;
-    height: 15px;
+    height: 25px;
     width: 295px;
 }
 
@@ -59,14 +76,14 @@
 }
 
 
-.text-center2{
+.text-center2 {
     margin-top: 20px;
     color: #fff;
-     }
+}
 
-        .remember-forgot a:hover {
-            text-decoration: underline;
-        }
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
 
 
 .btn-user {
@@ -90,7 +107,7 @@
         background-color: #084d6f;
     }
 
-   
+
 .h4 {
     font-size: 40px;
     color: white;
@@ -103,6 +120,6 @@
     margin-bottom: 80px;
 }
 
-.user.form-group2{
-    align-items:start;
+.user.form-group2 {
+    align-items: start;
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { closeModal, entry, updateAppointment } from "./Lib"
 
-export default function Edit(props){
+export default function Edit(props) {
 
     const [done_, setDone_] = useState(false)
     const [deleted_, setDeleted_] = useState(false)
@@ -15,25 +15,25 @@ export default function Edit(props){
         0: "End Exam"
     };
 
-    const editApp =(e)=> {
+    const editApp = (e) => {
         const name_ = e.target.name
         let v_ = e.target.value
 
-        if(name_ === "done"){
+        if (name_ === "done") {
             v_ = e.target.checked
             setDone_(v_)
         }
 
-        if(name_ === "deleted"){
+        if (name_ === "deleted") {
             v_ = e.target.checked
             setDeleted_(v_)
         }
 
-        if(name_ === "date"){
+        if (name_ === "date") {
             v_ = new Date(v_)
         }
 
-        if(name_ === "levelOfImportance"){
+        if (name_ === "levelOfImportance") {
             v_ = Number(v_)
             setImportance(v_)
         }
@@ -43,7 +43,7 @@ export default function Edit(props){
 
     const sendEmail = async () => {
         const emailRequest = {
-            toEmail: entry.lectureName,  
+            toEmail: entry.lectureName,
             subject: "Computer Department ExamHall Booking Confirmed",
             body: `
             Your time slot from ${entry.Time} to ${entry.EndTime} on ${entry.Date} is confirmed for ${entry.importanceLevel}.
@@ -60,8 +60,8 @@ export default function Edit(props){
        
             
             Thank you for your attention.`
-                };
-            
+        };
+
         try {
             const response = await fetch("/SendMail", {
                 method: "POST",
@@ -96,9 +96,9 @@ export default function Edit(props){
     };
 
 
-    const defaultDate = typeof(entry.date) === "string" ? entry.date.split("T")[0] : ""
+    const defaultDate = typeof (entry.date) === "string" ? entry.date.split("T")[0] : ""
 
-    useEffect(()=>{
+    useEffect(() => {
         setDone_(entry.done)
         setDeleted_(entry.deleted)
         setImportance(entry.levelOfImportance)
@@ -107,29 +107,29 @@ export default function Edit(props){
     return (
         <div className="modal-container">
             <div className="modal-title">Edit Booking</div>
-           
-         {/*   <div className="mt-15">
+
+            {/*   <div className="mt-15">
                 <label htmlFor="Title_e">Exam Hall  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;    :</label> 
                 <input type="text" className="mt-5" id="Title_e" maxLength={50} name="examHall" defaultValue={data.examHall} onChange={editApp}/>
                
             </div>*/}
             <br></br>
             <div className="mt-15">
-                <label htmlFor="Description_e">Lecturer Email Address&nbsp; :</label> 
-                <input id="Description_e" maxLength={50} className="mt-5" name="lectureName" defaultValue={data.lectureName} onChange={editApp}></input> <br />
-              
+                <label htmlFor="Description_e">Lecturer Email Address&nbsp; :</label>
+                <input id="Description_e" maxLength={50} className="mt-5" name="lectureName" style={{ width: '250px' }} defaultValue={data.lectureName} onChange={editApp}></input> <br />
+
             </div>
 
             <div className="mt-15">
                 <div>
-                    <label htmlFor="Address_e"> Non Academic   &nbsp;:</label>
-                    <input type="text" id="Address_e" name="academicStaff" maxLength={50} defaultValue={data.academicStaff} onChange={editApp} /><br></br>
+                    <label htmlFor="Address_e"> Non Academic   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                    <input type="text" id="Address_e" name="academicStaff" maxLength={50} style={{ width: '250px' }} defaultValue={data.academicStaff} onChange={editApp} /><br></br>
                     <label>Staff Member</label>
                 </div>
-             </div>
+            </div>
             <br></br>
             <div className="ms-10">
-                <label htmlFor="LevelOfImportance_e">Exam Type</label>
+                <label htmlFor="LevelOfImportance_e">Exam Type &nbsp;:</label>
                 <select name="levelOfImportance" id="LevelOfImportance_e" value={importance} onChange={editApp}>
 
 
@@ -143,37 +143,37 @@ export default function Edit(props){
             <br></br>
             <div className="form-container">
                 <div className="form-row">
-                    <div className="form-field">    
-                  <label htmlFor="Title_e">Number Of Student :</label>
-                    <input type="text" className="mt-5" id="Title_e" maxLength="2" name="numOfStudent" defaultValue={data.numOfStudent} onChange={editApp} />
+                    <div className="form-field">
+                        <label htmlFor="Title_e">Number Of Student :</label>
+                        <input type="text" className="mt-5" id="Title_e" maxLength="2" name="numOfStudent" defaultValue={data.numOfStudent} onChange={editApp} />
 
-                </div>
-        
+                    </div>
+
                     <div className="form-field">
                         <label htmlFor="Title_e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Batch :</label> <br />
-                    <input type="text" className="mt-5" id="Title_e"  name="year" defaultValue={data.year} onChange={editApp} />
+                        <input type="text" className="mt-5" id="Title_e" name="year" defaultValue={data.year} onChange={editApp} />
 
-                </div>
-              
+                    </div>
+
                     <div className="form-field">
                         <label htmlFor="Title_e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semester :</label> <br />
-                    <input type="text" className="mt-5" id="Title_e"  name="semester" defaultValue={data.semester} onChange={editApp} />
+                        <input type="text" className="mt-5" id="Title_e" name="semester" defaultValue={data.semester} onChange={editApp} />
 
-                </div>
-                <br></br>
+                    </div>
+                    <br></br>
                     <div className="form-field">
                         <label htmlFor="Title_e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subject :</label> <br />
-                    <input type="text" className="mt-5" id="Title_e" maxLength={6} name="subject" defaultValue={data.subject} onChange={editApp} />
+                        <input type="text" className="mt-5" id="Title_e" maxLength={6} name="subject" defaultValue={data.subject} onChange={editApp} />
+
+                    </div>
 
                 </div>
+            </div>
+            <div>
+                <div className="ms-20">
 
-                </div>
-            </div>     
-
-            <div className="ms-20">
-                <div>
                     <label htmlFor="Date_e">Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-                    <input type="date" id="Date_e" name="date" onChange={editApp} defaultValue={defaultDate}/>
+                    <input type="date" id="Date_e" name="date" onChange={editApp} defaultValue={defaultDate} />
                 </div>
                 <br></br>
                 <div className="ms-20">
@@ -188,9 +188,9 @@ export default function Edit(props){
                 <br></br>
                 <div className="ms-20  items-center">
                     <label htmlFor="Done_e">accept</label>
-                    <input type="checkbox" id="Done_e"  name="done" checked={done_} onChange={editApp}/>
+                    <input type="checkbox" id="Done_e" name="done" checked={done_} onChange={editApp} />
                 </div>
-{/*
+                {/*
                 <div className="ms-20 row items-center">
                     <label htmlFor="Deleted_e">Reject</label>
                     <input type="checkbox" id="Deleted_e" name="deleted" checked={deleted_} onChange={editApp}/>
@@ -198,7 +198,7 @@ export default function Edit(props){
             </div>
 
             <div className="justify-btw modal-action-container mt-15">
-                <div className="btn" onClick={()=> closeModal("edit-modal")}>Cancel</div>
+                <div className="btn" onClick={() => closeModal("edit-modal")}>Cancel</div>
                 <div className="btn" onClick={updateApp}>Confirm</div>
             </div>
         </div>

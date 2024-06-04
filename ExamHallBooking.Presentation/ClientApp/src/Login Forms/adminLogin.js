@@ -33,7 +33,7 @@ function Login() {
     const handleMainClick = () => {
         window.location.href = '/';
     };
-    
+
     const handleUserClick = () => {
         window.location.href = '/login';
     };
@@ -47,29 +47,29 @@ function Login() {
     return (
 
         <div>
-        <NavBar
-           
-           onMainClick={handleMainClick}
-           onUserClick={handleUserClick}
-    
-           onAdminClick={handleAdminClick}
-           showSignOutButton ={false}
-           onSignOutClick={false}
-            showAdminUser={false} // Hide User and Admin
-            showHomeBtton ={true}
-        />
+            <NavBar
 
-        
-        <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
-        <div className="bg-gradient-primary">
-            <div className="container2">
-                <div className="row justify-content-center">
-                    <div className="col-xl-10 col-lg-12 col-md-9">
-                        <div className="card o-hidden border-0 shadow-lg my-5">
-                            <div className="card-body p-0">
-                                <div className="row">
-                                    <div className="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                              
+                onMainClick={handleMainClick}
+                onUserClick={handleUserClick}
+
+                onAdminClick={handleAdminClick}
+                showSignOutButton={false}
+                onSignOutClick={false}
+                showAdminUser={false} // Hide User and Admin
+                showHomeBtton={true}
+            />
+
+
+            <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
+            <div className="bg-gradient-primary">
+                <div className="container2">
+                    <div className="row justify-content-center">
+                        <div className="col-xl-10 col-lg-12 col-md-9">
+                            <div className="card o-hidden border-0 shadow-lg my-5">
+                                <div className="card-body p-0">
+                                    <div className="row">
+                                        <div className="col-lg-6 d-none d-lg-block bg-login-image"></div>
+
                                         <div className="p-5">
                                             <div className="text-center">
                                                 <h1 className="h2 ">Admin Login</h1>
@@ -93,16 +93,16 @@ function Login() {
                                             </div>
                                             <hr />
 
-                                    
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                
+                </div>
             </div>
-            </div>
-        </div>
 
         </div>
     )
