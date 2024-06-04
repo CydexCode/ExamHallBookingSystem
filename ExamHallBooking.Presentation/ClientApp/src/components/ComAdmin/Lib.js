@@ -12,8 +12,8 @@ export const testData = [
 export const entry = {
     examHall: "Com Hall",
     lectureName: "Testmail@gmail.com",
-    numOfStudent: 5,
-    year: 1,
+    numOfStudent: 50,
+    year: 2020,
     semester: 2,
     subject: "EC1020",
     academicStaff: " ",
@@ -44,10 +44,10 @@ export const activeId = {
 
 const url = "api/appointment"
 
-export async function getDefault(){
+export async function getDefault() {
     const res = await fetch(url)
 
-    if(!res.ok && res.status !== 200){
+    if (!res.ok && res.status !== 200) {
         console.log("It sucked at getting default data: ", res)
         notifyUser("Something went wrong, please refresh the page.")
         return []
@@ -57,8 +57,8 @@ export async function getDefault(){
     return result
 }
 
-export async function getAppointments(filter_){
-    const res = await fetch(url + "/filters",{
+export async function getAppointments(filter_) {
+    const res = await fetch(url + "/filters", {
         method: "POST",
         body: JSON.stringify(filter_),
         headers: {
@@ -66,7 +66,7 @@ export async function getAppointments(filter_){
         }
     })
 
-    if(!res.ok){
+    if (!res.ok) {
         console.log("It sucked at gettings appointments with filters: ", res)
         notifyUser("Something went wrong, please clear filters and try again.")
         return []
@@ -75,8 +75,8 @@ export async function getAppointments(filter_){
     return await res.json()
 }
 
-export async function postAppointment(newApp){
-    const res = await fetch(url,{
+export async function postAppointment(newApp) {
+    const res = await fetch(url, {
         method: "POST",
         body: JSON.stringify(newApp),
         headers: {
@@ -84,17 +84,17 @@ export async function postAppointment(newApp){
         }
     })
 
-    if(!res.ok){
+    if (!res.ok) {
         console.log("It sucked at creating new appointment: ", res)
         notifyUser("We could not create your appointment, please try again.")
-        return {msg: res}
+        return { msg: res }
     }
 
     return await res.json()
 }
 
-export async function updateAppointment(updateApp){
-    const res = await fetch(url + "/" + updateApp.id,{
+export async function updateAppointment(updateApp) {
+    const res = await fetch(url + "/" + updateApp.id, {
         method: "PUT",
         body: JSON.stringify(updateApp),
         headers: {
@@ -102,24 +102,24 @@ export async function updateAppointment(updateApp){
         }
     })
 
-    if(!res.ok){
+    if (!res.ok) {
         console.log("It sucked at updating appointment: ", res)
         notifyUser("We could not update your appointment, please try again.")
-        return {msg: res}
+        return { msg: res }
     }
 
     return res
 }
 
-export async function deleteAppointment(id){
+export async function deleteAppointment(id) {
     const res = await fetch(url + "/" + id, {
         method: "DELETE"
     })
 
-    if(!res.ok){
+    if (!res.ok) {
         console.log("It sucked at deleting appointment: ", res)
         notifyUser("Something went wrong, please refresh the page.")
-        return {msg: res}
+        return { msg: res }
     }
 
     return res
@@ -141,30 +141,30 @@ export async function deleteAppointmentP(id) {
 }
 
 
-export function notifyUser(msg){
+export function notifyUser(msg) {
     const notificationEl = document.querySelector(".notifications")
     notificationEl.innerHTML = msg ? msg : ""
-    if(msg)
-    setTimeout(() => {
-        notificationEl.innerHTML = ""
-    }, 12000);
+    if (msg)
+        setTimeout(() => {
+            notificationEl.innerHTML = ""
+        }, 12000);
 }
 
-export function openModal(modal){
-    const modal_ = document.querySelector("."+modal)
-    if(modal_){
+export function openModal(modal) {
+    const modal_ = document.querySelector("." + modal)
+    if (modal_) {
         modal_.classList.remove("hidden")
     }
 }
 
-export function closeModal(modal){
-    const modal_ = document.querySelector("."+modal)
-    if(modal_){
+export function closeModal(modal) {
+    const modal_ = document.querySelector("." + modal)
+    if (modal_) {
         modal_.classList.add("hidden")
     }
 }
 
-export function formatedDateToStr(d){
+export function formatedDateToStr(d) {
     const nd = d ? new Date(d) : new Date()
     const month_ = nd.getMonth() + 1;
     const monthStr = month_ > 9 ? month_ : 0 + "" + month_;
@@ -173,7 +173,7 @@ export function formatedDateToStr(d){
 }
 
 export function formatedTimeToStr(d) {
-    const nd = d ?  new Date(d) : new Date();
+    const nd = d ? new Date(d) : new Date();
     const hr_ = nd.getHours() < 9 ? 0 + '' + nd.getHours() : nd.getHours()
     const min_ = nd.getMinutes() < 9 ? 0 + '' + nd.getMinutes() : nd.getMinutes()
     return hr_ + ':' + min_
