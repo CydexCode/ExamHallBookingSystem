@@ -69,6 +69,7 @@ h1 {
     cursor: pointer;
     padding: 5px 8px;
     background: #007fff;
+    font-size: 12px;
 }
 .btn2.delete{
     width: 50px;
@@ -81,6 +82,7 @@ h1 {
     cursor: pointer;
     padding: 5px 8px;
     background: #007fff;
+    font-size: 12px;
 }
 .btn2.deleteP {
     width: 50px;
@@ -116,9 +118,11 @@ h1 {
 }
 
 .filter-items .btn {
-    height: 20px;
+    height: 25px;
     width: 80px;
     text-decoration: none;
+    margin: 10px;
+    text-align: center;
 }
 
 .column {
@@ -130,69 +134,7 @@ h1 {
 .userPage {
 }
 
-.column.id {
-    width: 5%;
-    margin: 0px;
-   
-}
 
-.column.examHall {
-    width: 6%;
-}
-
-.column.lectureName {
-    width: 15%;
-}
-
-
-.column.numOfStudent {
-    width: 5%;
-}
-
-.column.year {
-    width: 2%;
-}
-
-.column.semester {
-    width: 5%;
-}
-
-.column.subject {
-    width: 8%;
-}
-
-.column.importance {
-    width: 8%;
-}
-
-.column.date {
-    width: 130px;
-}
-
-.column.endTime {
-    width: 40px;
-}
-.column.time {
-    width: 40px;
-}
-
-.column.academicStaff {
-    width: 15%;
-}
-
-.column.edit {
-    width: 50px;
-}
-
-.column.delete {
-    width: 50px;
-    color: red;
-}
-
-.column.deleteP {
-    width: 50px;
-    color: red;
-}
 
 .underline {
     border-bottom: 2px solid rgb(203, 197, 197);
@@ -363,6 +305,7 @@ input[type="checkbox"] {
     border-radius: 10px;
     padding: 6px;
     max-width: 79vw;
+    
 }
 
 .modal-title {
@@ -373,6 +316,15 @@ input[type="checkbox"] {
     color: #1c05B3;
     margin-top: 10px;
     margin-bottom: 50px;
+   
+
+}
+
+
+.modal-p {
+    
+    text-align: center;
+    justify-content: center;
 }
 
 
@@ -405,7 +357,7 @@ input[type="checkbox"] {
     z-index: 1; /* Ensure it's on top of other elements */
     background-color: white; /* Background color to ensure visibility */
 
-    margin-left: 340px;
+    margin-left: 35px;
 }
 .ms-30 {
     position: absolute;
