@@ -3,7 +3,7 @@
 .exam-hall-selection {
     text-align: center;
     padding: 20px;
-    background-image: url('D:\sem 6 SE Project\devide hall 1 and 2\ExamHallBooking.Presentation\ClientApp\src\assest\Background1.png');
+    background-image: url('../../assest/Background1.png');
     background-size: cover;
     background-position: center;
     min-height: 90vh;
