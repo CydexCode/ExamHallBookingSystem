@@ -92,7 +92,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    color: black; /* Added to change the font color to black */
+    color: black; /* Added to change the font color to blackjbib */
     align-items: flex-start;
 }
 
