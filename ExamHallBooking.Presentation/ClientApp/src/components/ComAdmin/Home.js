@@ -182,113 +182,118 @@ export default function Home(props) {
         showAdminUser={false} // Hide User and Admin
         showSignOutButton={true}
       />
-      <body>
+     
 
         <div className="centered-heading-container">
           <h1> Computer Department Exam Hall Booking - Admin</h1>
         </div>
-
+     
         <main>
 
 
-          {/* <div className="notifications spacer-20"></div> */}
-          <section className="filter">
-            <div className="add-btn row items-center content-center">
-              <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
-            </div>
-            <div className="modal-title">Filters</div>
-            <div className="row items-center filter-items">
-              <div className="checkbox">
-                <div className="c1">
-                  <label htmlFor="All_f">All </label>
-                  <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
-                </div>
-                <div className="c1">
-                  <label htmlFor="Done_f">Accepted</label>
-                  <input type="checkbox" id="Done_f" name="Done" onChange={filterApp} />
-                </div>
-                <div className="c1">
-                  <label htmlFor="Deleted_f">Rejected</label>
-                  <input type="checkbox" id="Deleted_f" name="Deleted" onChange={filterApp} />
-                </div>                        </div>
-
-              <div>
-                <label htmlFor="period">Period</label> <br />
-                <select name="period" id="period" defaultValue={"4"} onChange={filterApp}>
-                  <option value="5" disabled>Period</option>
-                  <option value="4">Default</option>
-                  <option value="1">Today</option>
-                  <option value="2">This week</option>
-                  <option value="3">Last week</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="SpecifiedDate">Specified Date</label> <br />
-                <input type="date" id="SpecifiedDate" name="SpecifiedDate" onChange={filterApp} />
-              </div>
-              <div>
-                <label htmlFor="SpecifiedTime">Specified Time</label> <br />
-                <input type="time" id="SpecifiedTime" name="SpecifiedTime" onChange={filterApp} />
-              </div>
-              <div>
-                <label htmlFor="LevelOfImportance_f">Exam Type</label> <br />
-                <select name="LevelOfImportance" id="LevelOfImportance_f" defaultValue={8} onChange={filterApp}>
-                  <option value={8} disabled>Exam Type</option>
-                  <option value={9}>Reset</option>
-                  <option value={3}>Assignment</option>
-                  <option value={2}>Quiz</option>
-                  <option value={1}>Mid Exam</option>
-                  <option value={0}>End Exam</option>
-                </select>
-              </div>
-              <button className="me-15" onClick={() => window.location.reload()}>Clear Filters</button>
-            </div>
-          </section>
+       {/* <div className="notifications spacer-20"></div> */}
+       <section className="filter2">
+  <div className="row items-center filter2-items">
+    <div className="add-btn row items2-center content2-center">
+      <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
+    </div>
+    <div className="modal2-title">Filters</div>
+    <div className="checkbox">
+      <div className="c2">
+        <label htmlFor="All_f">All</label>
+        <input type="checkbox" id="All_f" name="All" onChange={filterApp} />
+      </div>
+      <div className="c2">
+        <label htmlFor="Done_f">Accepted</label>
+        <input type="checkbox" id="Done_f" name="Done" onChange={filterApp} />
+      </div>
+      <div className="c2">
+        <label htmlFor="Deleted_f">Rejected</label>
+        <input type="checkbox" id="Deleted_f" name="Deleted" onChange={filterApp} />
+      </div>
+    </div>
+    <div className="c2">
+      <label htmlFor="period">Period</label>
+      <select name="period" id="period" defaultValue={"4"} onChange={filterApp}>
+        <option value="5" disabled>Period</option>
+        <option value="4">Default</option>
+        <option value="1">Today</option>
+        <option value="2">This week</option>
+        <option value="3">Last week</option>
+      </select>
+    </div>
+    <div className="c2">
+      <label htmlFor="SpecifiedDate">Specified Date</label>
+      <input type="date" id="SpecifiedDate" name="SpecifiedDate" onChange={filterApp} />
+    </div>
+    <div className="c2">
+      <label htmlFor="SpecifiedTime">Specified Time</label>
+      <input type="time" id="SpecifiedTime" name="SpecifiedTime" onChange={filterApp} />
+    </div>
+    <div className="c2">
+      <label htmlFor="LevelOfImportance_f">Exam Type</label>
+      <select name="LevelOfImportance" id="LevelOfImportance_f" defaultValue={8} onChange={filterApp}>
+        <option value={8} disabled>Exam Type</option>
+        <option value={9}>Reset</option>
+        <option value={3}>Assignment</option>
+        <option value={2}>Quiz</option>
+        <option value={1}>Mid Exam</option>
+        <option value={0}>End Exam</option>
+      </select>
+    </div>
+    <button className="me-15" onClick={() => window.location.reload()}>Clear Filters</button>
+  </div>
+</section>
 
           <div className="userPage">
-            <div className="row underline hdr">
-              <div className="column id">Booking No</div>
-              <div className="column examHall">Exam Hall</div>
-              <div className="column lectureName">Lecture Name</div>
-              <div className="column numOfStudent">Number Of Students</div>
-              <div className="column year">Year</div>
-              <div className="column semester">Semester</div>
-              <div className="column subject">Subject</div>
-              <div className="column importance">Exam Type</div>
-              <div className="column date">Date</div>
-              <div className="column time">Start Time</div>
-              <div className="column endTime">End Time</div>
-              <div className="column academicStaff">Non Academic Staff</div>
-              <div className="column endTime">Edit</div>
-              <div className="column endTime">Delete</div>
-            </div>
-
-            {
-              dataList.length === 0 ?
-                <div className="row mt-15 waiting"><div className="loading"></div></div> :
-                dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
-            }
-
-            <section>
-              <section className="modal new-modal hidden">
-                <New refreshApp={setRefreshData} />
-              </section>
+          <table>
+            <thead>
+              <tr>
+                <th>Booking No</th>
+                <th>Exam Hall</th>
+                <th>Lecturer Email Address</th>
+                <th>Number Of Student</th>
+                <th>Batch</th>
+                <th>Semester</th>
+                <th>Subject</th>
+                <th>Exam Type</th>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Academic Staff Member</th>
+                <th> -----------       </th>
+                <th>  -----------      </th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                dataList.length === 0 ?
+                  <tr><td colSpan="12" className="waiting"><div className="loading"></div></td></tr> :
+                  dataList.map(item => <Appointment item={item} key={item.id} stateListener={setStateListener} />)
+              }
+            </tbody>
+          </table>
+          <section>
+            <section className="modal new-modal hidden">
+              <New refreshApp={setRefreshData} />
+            </section>
+            <div className="block">
               <section className="modal edit-modal hidden">
                 <Edit stateListener={stateListener} refreshApp={setRefreshData} />
               </section>
               <section className="modal delete-modal hidden">
                 <Delete stateListener={stateListener} refreshApp={setRefreshData} />
               </section>
-            </section>
-          </div>
-        </main>
-        {showConfirmSignOut && (
-          <ConfirmSignOut
-            onConfirm={confirmSignOut}
-            onCancel={cancelSignOut}
-          />
-        )}
-      </body>
+            </div>
+          </section>
+        </div>
+      </main>
+      {showConfirmSignOut && (
+        <ConfirmSignOut
+          onConfirm={confirmSignOut}
+          onCancel={cancelSignOut}
+        />
+      )}
     </div>
   )
 }

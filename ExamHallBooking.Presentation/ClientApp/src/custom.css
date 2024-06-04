@@ -69,6 +69,7 @@ h1 {
     cursor: pointer;
     padding: 5px 8px;
     background: #007fff;
+    font-size: 12px;
 }
 .btn2.delete{
     width: 50px;
@@ -81,6 +82,7 @@ h1 {
     cursor: pointer;
     padding: 5px 8px;
     background: #007fff;
+    font-size: 12px;
 }
 .btn2.deleteP {
     width: 50px;
