@@ -197,6 +197,7 @@ export default function Home(props) {
                         <div className="add-btn row items2-center content2-center">
                             <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
                         </div>
+                        
                         <div className="modal2-title">Filters</div>
                         <div className="checkbox">
                             <div className="c2">
