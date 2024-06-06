@@ -5,12 +5,12 @@ import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
 
-import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
+import "../../NavBar/NavBar.css"; 
 
 import "./AR-mac.css";
 import { getDefault, openModal, filter, getAppointmentsDrawingHall, notifyUser } from "./Lib";
-import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
-import ConfirmSignOut from "./ConfirmSignOut"; // Import the ConfirmSignOut component
+import NavBar from "../../NavBar/NavBar.js"; 
+import ConfirmSignOut from "./ConfirmSignOut"; 
 
 
 export default function Home(props) {
