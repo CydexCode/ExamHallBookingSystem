@@ -6,7 +6,7 @@ main {
     font-family: Arial, sans-serif;
     justify-content: flex-start;
     margin-top: -20px;
-    overflow-y: auto; /* Ensure the main container can scroll vertically */
+    overflow-y: auto; 
     height: 100vh; /* Use full viewport height */
   }
   
@@ -130,12 +130,12 @@ main {
     }
   }
   
-  /* Table adjustments for smaller screens */
+
   .userPage {
     width: 100%;
     margin: 20px auto;
     overflow-x: auto; /* Ensure horizontal scrolling */
-    height: calc(100vh - 200px); /* Adjust based on your layout */
+    height: calc(100vh - 200px); 
     display: flex;
     max-height: 600px;
     max-width: 100%;
