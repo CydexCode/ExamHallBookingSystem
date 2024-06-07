@@ -5,12 +5,12 @@ import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
 import { useNavigate } from 'react-router-dom';
-import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
+import "../../NavBar/NavBar.css"; 
 import "../../custom.css";
 import "./AR-com.css"
 import { getDefault, openModal, filter, getAppointments, notifyUser } from "./Lib";
-import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
-import ConfirmSignOut from "./ConfirmSignOut"; // Import the ConfirmSignOut component
+import NavBar from "../../NavBar/NavBar.js"; 
+import ConfirmSignOut from "./ConfirmSignOut"; 
 
 
 
@@ -197,6 +197,7 @@ export default function Home(props) {
                         <div className="add-btn row items2-center content2-center">
                             <div className="btn add" onClick={() => openModal("new-modal")}>Add a Booking</div>
                         </div>
+                        
                         <div className="modal2-title">Filters</div>
                         <div className="checkbox">
                             <div className="c2">

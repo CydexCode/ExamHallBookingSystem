@@ -1,223 +1,262 @@
-﻿main {
+﻿
+main {
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 0;
     font-family: Arial, sans-serif;
     justify-content: flex-start;
     margin-top: -20px;
-}
-
-.centered-heading-container {
+    overflow-y: auto; 
+    height: 100vh; 
+  }
+  
+  .centered-heading-container {
     text-align: center;
     margin-top: 40px;
-}
-
-.filter2 {
+    margin-bottom: 50px;
+  }
+  
+  .filter2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 200px;
+    margin: 0 20px;
     margin-top: 80px;
-}
-
-    .filter2 .content2-center {
-        margin-left: -100px;
-    }
-
-    .filter2 .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 90px;
-    }
-
-.filter2-items {
+  }
+  
+  .filter2 .content2-center {
+    margin-left: 10px;
+  }
+  
+  .filter2 .row {
     display: flex;
-    gap: 10px;
-}
-
-.c2 {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .c2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.checkbox {
+  }
+  
+  .checkbox {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-}
-
-.add-btn {
+    flex-direction: row;
+  }
+  
+  .add-btn {
     margin-right: auto;
-}
-
-.modal2-title {
+  }
+  
+  .modal2-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
     flex: 1;
-}
-
-button.me-15 {
+    margin-left: 20px;
+    color: #002a4f;
+  }
+  
+  button.me-15 {
     margin-left: 15px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
+  }
+  
+  @media (max-width: 1200px) {
     .filter2 {
-        margin: 0px 100px;
+      margin: 50 20px;
     }
-}
-
-@media (max-width: 992px) {
+  }
+  
+  @media (max-width: 992px) {
     .filter2 {
-        margin: 0px 50px;
+      margin: 50 20px;
     }
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .filter2 {
-        flex-direction: column;
-        align-items: stretch;
-        margin: 0px 20px;
+      flex-direction: column;
+      align-items: stretch;
+      margin: 20 50px;
     }
-
-        .filter2 .row {
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .filter2 .content2-center {
-            margin-left: 0;
-        }
-
+  
+    .filter2 .row {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .filter2 .content2-center {
+      margin-left: 0;
+    }
+  
     .checkbox {
-        flex-direction: column;
-        gap: 10px;
+      flex-direction: column;
+      gap: 10px;
     }
-
+  
     .add-btn {
-        margin: 0 auto 20px;
+      margin: auto;
     }
-
+  
     .modal2-title {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
-
+  
     button.me-15 {
-        margin-left: 0;
-        margin-top: 20px;
+      margin-left: 0;
+      margin-top: 20px;
     }
-}
-
-@media (max-width: 576px) {
+  }
+  
+  @media (max-width: 576px) {
     .filter2 {
-        margin: 0px 10px;
+      margin: 0 100px;
     }
-
-        .filter2 .row {
-            gap: 10px;
-        }
-
+  
+    .filter2 .row {
+      gap: 10px;
+    }
+  
     .checkbox {
-        gap: 5px;
+      gap: 0;
     }
-
+  
     button.me-15 {
-        margin-top: 10px;
+      margin-top: 10px;
     }
-}
+  }
+  
 
-
-.userPage {
+  .userPage {
     width: 100%;
     margin: 20px auto;
-    overflow-x: auto;
-    overflow-y: auto;
-    height: 20%;
+    overflow-x: auto; 
+    height: calc(100vh - 200px); 
     display: flex;
     max-height: 600px;
     max-width: 100%;
-    margin: 20px;
-}
-
-table {
+  }
+  
+  table {
     width: 100%;
     border-collapse: collapse;
-    
-    overflow-y: auto;
     margin: 30px;
-}
-
-th, td {
+    overflow-x: auto; /* Ensure horizontal scrolling */
+  }
+  
+  th, td {
     padding: 10px;
     text-align: center;
     border: 1px solid #ccc;
-}
-
-thead {
+    width: 150px; 
+    min-width: 100px; 
+  }
+  
+  thead {
     background-color: #002a4f;
     font-weight: bold;
     color: white;
-}
-
-.bc-red2 {
+  }
+  
+  .bc-red2 {
     background-color: #f8d7da;
-}
-
-.bc-green2 {
+  }
+  
+  .bc-green2 {
     background-color: #d4edda;
-}
-
-.bc-green {
+  }
+  
+  .bc-green {
     background-color: #c3e6cb;
-}
-
-.bc-gold {
+  }
+  
+  .bc-gold {
     background-color: #ffeeba;
-}
-
-.bc-red {
+  }
+  
+  .bc-red {
     background-color: #f5c6cb;
-}
-
-.bc-blue {
+  }
+  
+  .bc-blue {
     background-color: #d1ecf1;
-}
+  }
+  
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .filter-items {
-        flex-direction: column;
+      flex-direction: row;
     }
-
-        .filter-items div {
-            min-width: 100%;
-        }
-
-    table, thead, tbody, th, td, tr {
-        display: block;
+  
+    .filter-items div {
+      min-width: 100%;
     }
-
-        thead tr {
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
-        }
-
-    tr {
-        border: 1px solid #ccc;
+  
+    table {
+      width: 100%; 
+      min-width: 100%; 
     }
-
-    td {
-        border: none;
-        position: relative;
-        padding-left: 50%;
+  }
+  
+  @media (max-width: 576px) {
+    .filter2 {
+      flex-direction: row;
+      align-items: stretch;
+      margin: 0 10px;
     }
-
-        td:before {
-            content: attr(data-label);
-            position: absolute;
-            left: 0;
-            width: 50%;
-            padding-left: 15px;
-            font-weight: bold;
-            white-space: nowrap;
-        }
-}
+  
+    .filter2 .row {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .filter2 .content2-center {
+      margin-left: 0;
+    }
+  
+    .checkbox {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .add-btn {
+      margin: auto;
+    }
+  
+    .modal2-title {
+      margin-bottom: 10px;
+    }
+  
+    button.me-15 {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  
+    .userPage {
+      width: 100%;
+      margin: 10px auto;
+      overflow-x: auto; /* Ensure horizontal scrolling */
+      height: calc(100vh - 150px); 
+      display: flex;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px;
+      min-width: 1200px;
+    }
+  
+    th, td {
+      padding: 5px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+  }
+  
