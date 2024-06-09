@@ -29,7 +29,7 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 ## Technologies Used
 - **Backend:** .NET Core 8
 - **Frontend:** ReactJS
-- **Database:** SQL Server
+- **Database:** SQL Server (Azure)
 
 
 ## Jira Board
