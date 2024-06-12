@@ -24,7 +24,8 @@ import AllBookingUserDrawingHall from './components/AllBookingUserDrawingHall/Ho
 import StaffLoginDrawingHall from './Login Forms/staffLoginDrawingHall';
 import Footer from './Footer/Footer';
 
-
+import ProtectedRoute from './Login Forms/ProtectedRoute';
+import { AuthProvider } from './Login Forms/AuthContext';
 
 
 
@@ -63,40 +64,57 @@ const App = () => {
     return (
 
 
-        <Router>
-            <div>
+     
+        
+
+                    <AuthProvider>
+                        <Router>
+
+                    <div>
 
 
 
-                <div>
+                        <div>
+                            <Routes>
+                                <Route path="/adminLogin" element={<AdminLogin />} />
+                                <Route path="/admin" element={
+                                    <ProtectedRoute>
+                                        <AdminHome />
+                                    </ProtectedRoute>
+                                } />
+                                <Route path="/macAdmin" element={
+                                    <ProtectedRoute>
+                                        <MacAdminHome />
+                                    </ProtectedRoute>
+                                } />
+                                {/* Add other routes as needed */}
 
+                                <Route path="/" element={<MainHome />} />
+                                {/*  <Route path="/admin" element={<AdminHome />} />
+                        <Route path="/macAdmin" element={<MacAdminHome />} />*/}
 
+                                <Route path="/staffDrawingHall" element={<StaffDrawingHall />} />
+                                <Route path="/login" element={<Login />} />
+                                <Route path="/staff" element={<Staff />} />
+                                <Route path="/staffLoginDrawingHall" element={<StaffLoginDrawingHall />} />
+                                <Route path="/register" element={<Register />} />
+                                {/*   <Route path="/adminLogin" element={<AdminLogin />} />*/}
+                                <Route path="/allBooking" element={<AllBooking />} />
+                                <Route path="/staffLogin" element={<StaffLogin />} />
+                                <Route path="/allBookingUserDrawingHall" element={<AllBookingUserDrawingHall />} />
+                                <Route path="/selectHallPage" element={<SelectHallPage />} />
 
-
-                    <Routes>
-
-                        <Route path="/" element={<MainHome />} />
-                        <Route path="/admin" element={<AdminHome />} />
-                        <Route path="/macAdmin" element={<MacAdminHome />} />
-                  
-                        <Route path="/staffDrawingHall" element={<StaffDrawingHall />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/staff" element={<Staff />} />
-                        <Route path="/staffLoginDrawingHall" element={<StaffLoginDrawingHall />} />
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/adminLogin" element={<AdminLogin />} />
-                        <Route path="/allBooking" element={<AllBooking />} />
-                        <Route path="/staffLogin" element={<StaffLogin />} />
-                        <Route path="/allBookingUserDrawingHall" element={<AllBookingUserDrawingHall />} />
-                        <Route path="/selectHallPage" element={<SelectHallPage />} />
-                    </Routes>
-
-
-
+                        </Routes>
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
-            </div>
-        </Router>
+
+
+                        </Router>
+                    </AuthProvider>
+
+             
+        
     );
 };
 
