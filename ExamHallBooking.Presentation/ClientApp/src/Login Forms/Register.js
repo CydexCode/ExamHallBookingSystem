@@ -18,6 +18,11 @@ function Register() {
 
     const navigate = useNavigate();
     function AddUser() {
+        if (!validateForm()) {
+            alert("Invalid input field detected");
+            return;
+        }
+        
         let items = { id, loginName, name, mobile, password, status }
         console.warn(items);
         fetch('https://localhost:44418/api/Users/AddUsers',
@@ -49,6 +54,15 @@ function Register() {
     };
     const handleSignOutClick = () => {
         window.location.href = '/';
+    };
+
+    const validateForm = () => {
+        let valid = true;
+        Object.values(errors).forEach(
+            // if we have an error string, set valid to false
+            (val) => val.length > 0 && (valid = false)
+        );
+        return valid;
     };
 
     const Tooltip = ({ message }) => {

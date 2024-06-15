@@ -9,6 +9,10 @@ function Login() {
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
     function GetLoginDetails() {
+        if (!validateForm()) {
+            alert("Invalid input field detected");
+            return;
+        }
         // Check if loginName and password are not empty
         if (loginName.trim() === '' || password.trim() === '') {
             // Show an error message or handle empty inputs appropriately
@@ -51,6 +55,15 @@ function Login() {
     };
     const handleSignOutClick = () => {
         window.location.href = '/';
+    };
+
+    const validateForm = () => {
+        let valid = true;
+        Object.values(errors).forEach(
+            // if we have an error string, set valid to false
+            (val) => val.length > 0 && (valid = false)
+        );
+        return valid;
     };
 
     const Tooltip = ({ message }) => {
