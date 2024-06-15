@@ -114,6 +114,21 @@ function Register() {
         setErrors(prev => ({ ...prev, password: validatePassword(e.target.value) }));
     }
     
+    const validateMobileNumber = (value) => {
+        const mobileRegex = /^0\d{9}$/;
+        if (!value) {
+            return 'Mobile number is required.';
+        } else if (!mobileRegex.test(value)) {
+            return 'Invalid mobile number. ';
+        }
+        return '';
+    };
+
+    const handleMobileNumberChange = (e) => {
+        setMobile(e.target.value);
+        setErrors(prev => ({ ...prev, mobile: validateMobileNumber(e.target.value) }));
+    }
+    
 
     return (
 
@@ -175,12 +190,12 @@ function Register() {
                                                     </div>
                                                 </div>
                                                 <div className="form-group row">
-
+                                                    <div className="input-container">
                                                     <input type="text" className="form-control form-control-user"
-                                                        value={mobile} onChange={(e) => { setMobile(e.target.value) }}
+                                                        value={mobile} onChange={(e) => { handleMobileNumberChange(e) }}
                                                         placeholder="Mobile" />
-
-
+                                                        {errors.mobile && <Tooltip message={errors.mobile} />}
+                                                    </div>
                                                 </div>
 
                                                 <button className="btn btn-primary btn-user btn-block" onClick={AddUser}>
