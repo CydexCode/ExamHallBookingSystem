@@ -7,11 +7,23 @@ function Login() {
     const [loginName, setLoginName] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    function validateEmail(email) {
+        // Regular expression for basic email validation
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+
     function GetLoginDetails() {
         // Check if loginName and password are not empty
         if (loginName.trim() === '' || password.trim() === '') {
             // Show an error message or handle empty inputs appropriately
-            console.error('Login name and password are required.');
+       
+            alert("Login name and password are required.");
+            return;
+        }
+        if (!validateEmail(loginName)) {
+            alert("Please enter a valid email address.");
             return;
         }
 
@@ -95,14 +107,14 @@ function Login() {
                                                     </div>
                                                     <div className="user">
                                                         <div className="form-group">
-                                                            <input type="text" className="form-control form-control-user"
+                                                            <input type="email" className="form-control form-control-user"
                                                                 value={loginName} onChange={(e) => { setLoginName(e.target.value) }}
-                                                                placeholder="Email" />
+                                                                placeholder="Email" required />
                                                         </div>
                                                         <div className="form-group">
                                                             <input type="password" className="form-control form-control-user"
                                                                 value={password} onChange={(e) => { setPassword(e.target.value) }}
-                                                                placeholder="Password" />
+                                                                placeholder="Password" required/>
                                                         </div>
                                                         <div className="form-group2">
                                                             <div className="custom-control custom-checkbox small">

@@ -8,10 +8,28 @@ function Login() {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
+    function validateEmail(email) {
+        // Regular expression for basic email validation
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+
     function GetLoginDetails() {
+
+        // Check if loginName and password are not empty
+        if (loginName.trim() === '' || password.trim() === '') {
+            // Show an error message or handle empty inputs appropriately
+
+            alert("Login name and password are required.");
+            return;
+        }
+        if (!validateEmail(loginName)) {
+            alert("Please enter a valid email address.");
+        }
         // Define admin credentials
         const adminCredentials = [
-            { loginName: 'staff', password: 'staff123', route: '/staff' },
+            { loginName: 'staff@gmail.com', password: 'staff123', route: '/staff' },
 
         ];
 
@@ -74,7 +92,7 @@ function Login() {
                                                     </div>
                                                     <div className="user">
                                                         <div className="form-group">
-                                                            <input type="text" className="form-control form-control-user"
+                                                            <input type="email" className="form-control form-control-user"
                                                                 value={loginName} onChange={(e) => { setLoginName(e.target.value) }}
                                                                 placeholder="Email" />
                                                         </div>
