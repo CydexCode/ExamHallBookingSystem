@@ -13,6 +13,9 @@ function Register() {
     const [mobile, setMobile] = useState('');
     const [password, setPassword] = useState('');
     const [status, setStatus] = useState('');
+
+    const [errors, setErrors] = useState({});
+
     const navigate = useNavigate();
     function AddUser() {
         let items = { id, loginName, name, mobile, password, status }
@@ -47,6 +50,29 @@ function Register() {
     const handleSignOutClick = () => {
         window.location.href = '/';
     };
+
+    const Tooltip = ({ message }) => {
+        return (
+            <div className="tooltip">
+                {message}
+            </div>
+        );
+    };
+
+    const validateLoginName = (value) => {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!value) {
+            return 'Email is required.';
+        } else if (!emailRegex.test(value)) {
+            return 'Invalid email address.';
+        }
+        return '';
+    }
+
+    const handleLoginNameChange = (e) => {
+        setLoginName(e.target.value);
+        setErrors(prev => ({ ...prev, loginName: validateLoginName(e.target.value) }));
+    }
 
     return (
 
@@ -88,15 +114,15 @@ function Register() {
                                                         value={name} onChange={(e) => { setName(e.target.value) }}
                                                         placeholder="Name" />
 
-
                                                 </div>
                                                 <div className="form-group row">
-
-                                                    <input type="text" className="form-control form-control-user"
-                                                        value={loginName} onChange={(e) => { setLoginName(e.target.value) }}
-                                                        placeholder="Login Email" />
+                                                    <div className="input-container">  
+                                                        <input type="text" className="form-control form-control-user"
+                                                            value={loginName} onChange={(e) => { handleLoginNameChange(e) }}
+                                                            placeholder="Login Email" />
+                                                        {errors.loginName && <Tooltip message={errors.loginName} />}
+                                                     </div>
                                                 </div>
-
                                                 <div className="form-group row">
                                                     <input type="password" className="form-control form-control-user"
                                                         value={password} onChange={(e) => { setPassword(e.target.value) }}
