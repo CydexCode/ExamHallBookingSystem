@@ -6,6 +6,7 @@ import NavBar from "../NavBar/NavBar.js"; // Make sure the path is correct
 function Login() {
     const [loginName, setLoginName] = useState('');
     const [password, setPassword] = useState('');
+    const [errors, setErrors] = useState({});
     const navigate = useNavigate();
     function GetLoginDetails() {
         // Check if loginName and password are not empty
@@ -52,6 +53,57 @@ function Login() {
         window.location.href = '/';
     };
 
+    const Tooltip = ({ message }) => {
+        return (
+            <div className="tooltip">
+                {message}
+            </div>
+        );
+    };
+
+    const validateLoginName = (value) => {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!value) {
+            return 'Email is required.';
+        } else if (!emailRegex.test(value)) {
+            return 'Invalid email address.';
+        }
+        return '';
+    }
+
+    const handleLoginNameChange = (e) => {
+        setLoginName(e.target.value);
+        setErrors(prev => ({ ...prev, loginName: validateLoginName(e.target.value) }));
+    }
+
+    const validatePassword = (value) => {
+        const minLength = 8;
+        const hasUpperCase = /[A-Z]/.test(value);
+        const hasLowerCase = /[a-z]/.test(value);
+        const hasDigit = /\d/.test(value);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
+    
+        if (!value) {
+            return 'Password is required.';
+        } else if (value.length < minLength) {
+            return `Password must be at least ${minLength} characters long.`;
+        } else if (!hasUpperCase) {
+            return 'Password must contain at least one uppercase letter.';
+        } else if (!hasLowerCase) {
+            return 'Password must contain at least one lowercase letter.';
+        } else if (!hasDigit) {
+            return 'Password must contain at least one digit.';
+        } else if (!hasSpecialChar) {
+            return 'Password must contain at least one special character.';
+        }
+        return '';
+    };
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+        setErrors(prev => ({ ...prev, password: validatePassword(e.target.value) }));
+    }
+
     return (
 
         <div>
@@ -95,14 +147,20 @@ function Login() {
                                                     </div>
                                                     <div className="user">
                                                         <div className="form-group">
-                                                            <input type="text" className="form-control form-control-user"
-                                                                value={loginName} onChange={(e) => { setLoginName(e.target.value) }}
+                                                            <div className="input-container"> 
+                                                                <input type="text" className="form-control form-control-user"
+                                                                value={loginName} onChange={(e) => { handleLoginNameChange(e) }}
                                                                 placeholder="Email" />
+                                                                {errors.loginName && <Tooltip message={errors.loginName} />}
+                                                            </div>
                                                         </div>
-                                                        <div className="form-group">
-                                                            <input type="password" className="form-control form-control-user"
-                                                                value={password} onChange={(e) => { setPassword(e.target.value) }}
-                                                                placeholder="Password" />
+                                                        <div className="form-group row">
+                                                            <div className="input-container">
+                                                                <input type="password" className="form-control form-control-user"
+                                                                    value={password} onChange={(e) => { handlePasswordChange(e) }}
+                                                                    placeholder="Password" />
+                                                                {errors.password && <Tooltip message={errors.password} />}
+                                                            </div>
                                                         </div>
                                                         <div className="form-group2">
                                                             <div className="custom-control custom-checkbox small">
