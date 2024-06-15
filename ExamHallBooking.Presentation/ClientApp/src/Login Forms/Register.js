@@ -86,6 +86,35 @@ function Register() {
         setErrors(prev => ({ ...prev, name: validateName(e.target.value) }));
     }
 
+    const validatePassword = (value) => {
+        const minLength = 8;
+        const hasUpperCase = /[A-Z]/.test(value);
+        const hasLowerCase = /[a-z]/.test(value);
+        const hasDigit = /\d/.test(value);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
+    
+        if (!value) {
+            return 'Password is required.';
+        } else if (value.length < minLength) {
+            return `Password must be at least ${minLength} characters long.`;
+        } else if (!hasUpperCase) {
+            return 'Password must contain at least one uppercase letter.';
+        } else if (!hasLowerCase) {
+            return 'Password must contain at least one lowercase letter.';
+        } else if (!hasDigit) {
+            return 'Password must contain at least one digit.';
+        } else if (!hasSpecialChar) {
+            return 'Password must contain at least one special character.';
+        }
+        return '';
+    };
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+        setErrors(prev => ({ ...prev, password: validatePassword(e.target.value) }));
+    }
+    
+
     return (
 
 
@@ -138,10 +167,12 @@ function Register() {
                                                      </div>
                                                 </div>
                                                 <div className="form-group row">
-                                                    <input type="password" className="form-control form-control-user"
-                                                        value={password} onChange={(e) => { setPassword(e.target.value) }}
-
+                                                    <div className="input-container">
+                                                        <input type="password" className="form-control form-control-user"
+                                                        value={password} onChange={(e) => { handlePasswordChange(e) }}
                                                         placeholder="Password" />
+                                                        {errors.password && <Tooltip message={errors.password} />}
+                                                    </div>
                                                 </div>
                                                 <div className="form-group row">
 
