@@ -74,6 +74,18 @@ function Register() {
         setErrors(prev => ({ ...prev, loginName: validateLoginName(e.target.value) }));
     }
 
+    const validateName = (value) => {
+        if (!value) {
+            return 'Name is required.';
+        } 
+        return '';
+    }
+
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+        setErrors(prev => ({ ...prev, name: validateName(e.target.value) }));
+    }
+
     return (
 
 
@@ -109,11 +121,13 @@ function Register() {
                                             </div>
                                             <div className="user">
                                                 <div className="form-group row">
-
-                                                    <input type="text" className="form-control form-control-user"
-                                                        value={name} onChange={(e) => { setName(e.target.value) }}
-                                                        placeholder="Name" />
-
+                                                    <div className="input-container"> 
+                                                        <input type="text" className="form-control form-control-user"
+                                                            value={name} onChange={(e) => { 
+                                                                handleNameChange(e) }}
+                                                            placeholder="Name" />
+                                                        {errors.name && <Tooltip message={errors.name} />}
+                                                    </div>
                                                 </div>
                                                 <div className="form-group row">
                                                     <div className="input-container">  
