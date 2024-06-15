@@ -91,6 +91,7 @@ function Register() {
                 onSignOutClick={false}
                 showAdminUser={false} // Hide User and Admin
                 showHomeBtton={true}
+                showCalBtton={false}
             />
 
             <div className="homepage" style={{ backgroundImage: `url(${backgroundImage})` }}>

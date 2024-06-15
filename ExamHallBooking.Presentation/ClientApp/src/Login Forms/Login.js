@@ -74,7 +74,7 @@ function Login() {
 
                 onMainClick={handleMainClick}
                 onUserClick={handleUserClick}
-
+                showCalBtton={false}
                 onAdminClick={handleAdminClick}
                 showSignOutButton={false}
                 onSignOutClick={false}

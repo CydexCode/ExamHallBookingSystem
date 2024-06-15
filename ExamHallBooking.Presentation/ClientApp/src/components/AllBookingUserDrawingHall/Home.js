@@ -178,7 +178,9 @@ export default function Home(props) {
     const cancelSignOut = () => {
         setShowConfirmSignOut(false);
     };
-
+    const handleCalClick = () => {
+        window.location.href = '/calender';
+    };
     return (
 
         <div>
@@ -186,10 +188,10 @@ export default function Home(props) {
 
                 onBackClick={handleBackClick}
                 showBackButton={true}
-
+                onCalClick={handleCalClick}
                 onMainClick={handleMainClick}
                 onUserClick={handleUserClick}
-
+                showCalBtton={true}
                 onAdminClick={handleAdminClick}
                 onSignOutClick={handleSignOutClick}
                 showAdminUser={false} // Hide User and Admin

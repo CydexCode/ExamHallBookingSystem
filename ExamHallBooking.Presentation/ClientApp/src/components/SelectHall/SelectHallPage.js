@@ -45,6 +45,10 @@ const ExamHallSelection = () => {
       const cancelSignOut = () => {
         setShowConfirmSignOut(false);
       };
+  
+    const handleCalClick = () => {
+        window.location.href = '/calender';
+    };
       return (
     
         <div>
@@ -52,7 +56,7 @@ const ExamHallSelection = () => {
            
            onBackClick={handleBackClick}
            showBackButton={false}
-           
+           onCalClick={handleCalClick}
            onMainClick={handleMainClick}
            onUserClick={handleUserClick}
     

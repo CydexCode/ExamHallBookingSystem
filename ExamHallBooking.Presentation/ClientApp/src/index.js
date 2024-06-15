@@ -24,6 +24,8 @@ import AllBookingUserDrawingHall from './components/AllBookingUserDrawingHall/Ho
 import StaffLoginDrawingHall from './Login Forms/staffLoginDrawingHall';
 import Footer from './Footer/Footer';
 
+import Calender from './components/Calender/calender.js';
+
 
 
 
@@ -89,6 +91,8 @@ const App = () => {
                         <Route path="/staffLogin" element={<StaffLogin />} />
                         <Route path="/allBookingUserDrawingHall" element={<AllBookingUserDrawingHall />} />
                         <Route path="/selectHallPage" element={<SelectHallPage />} />
+
+                        <Route path="/calender" element={<Calender />} />
                     </Routes>
 
 

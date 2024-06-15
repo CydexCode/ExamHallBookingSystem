@@ -75,6 +75,7 @@ function Login() {
                 onSignOutClick={false}
                 showAdminUser={false} // Hide User and Admin
                 showHomeBtton={true}
+                showCalBtton={false}
             />
 
 
