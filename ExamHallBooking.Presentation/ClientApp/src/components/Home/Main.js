@@ -19,7 +19,7 @@ const HomePage = ({ onMainClick, onUserClick, onAdminClick, onAllClick, onDrawin
         window.location.href = '/';
     };
     const handleCalClick = () => {
-        window.location.href = '/calender';
+        window.location.href = '/calendar';
     };
     const handleMainClick = () => {
         window.location.href = '/';

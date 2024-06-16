@@ -106,7 +106,7 @@ export default function Home(props) {
         window.location.href = '/';
     };
     const handleCalClick = () => {
-        window.location.href = '/calender';
+        window.location.href = '/calendar';
     };
 
     return (

@@ -47,7 +47,7 @@ const ExamHallSelection = () => {
       };
   
     const handleCalClick = () => {
-        window.location.href = '/calender';
+        window.location.href = '/calendar';
     };
       return (
     

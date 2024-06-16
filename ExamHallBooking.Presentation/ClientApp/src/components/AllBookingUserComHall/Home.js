@@ -179,7 +179,7 @@ export default function Home(props) {
         setShowConfirmSignOut(false);
     };
     const handleCalClick = () => {
-        window.location.href = '/calender';
+        window.location.href = '/calendar';
     };
     return (
 

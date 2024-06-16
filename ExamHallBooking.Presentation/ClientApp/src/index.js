@@ -24,7 +24,7 @@ import AllBookingUserDrawingHall from './components/AllBookingUserDrawingHall/Ho
 import StaffLoginDrawingHall from './Login Forms/staffLoginDrawingHall';
 import Footer from './Footer/Footer';
 
-import Calender from './components/Calender/calender.js';
+import Calendar from './components/Calendar/calendar.js';
 
 
 
@@ -80,7 +80,7 @@ const App = () => {
                         <Route path="/" element={<MainHome />} />
                         <Route path="/admin" element={<AdminHome />} />
                         <Route path="/macAdmin" element={<MacAdminHome />} />
-                  
+
                         <Route path="/staffDrawingHall" element={<StaffDrawingHall />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/staff" element={<Staff />} />
@@ -92,7 +92,7 @@ const App = () => {
                         <Route path="/allBookingUserDrawingHall" element={<AllBookingUserDrawingHall />} />
                         <Route path="/selectHallPage" element={<SelectHallPage />} />
 
-                        <Route path="/calender" element={<Calender />} />
+                        <Route path="/calendar" element={<Calendar />} />
                     </Routes>
 
 

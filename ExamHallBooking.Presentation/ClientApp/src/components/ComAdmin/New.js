@@ -54,6 +54,7 @@ export default function New(props) {
 
         closeModal("new-modal")
         window.location.reload();
+        window.location.reload();
     }
 
     return (
