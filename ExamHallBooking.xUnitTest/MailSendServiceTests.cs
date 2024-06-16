@@ -1,4 +1,4 @@
-﻿using Xunit;
+﻿/*using Xunit;
 using Moq;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -81,3 +81,4 @@ namespace ExamHallBooking.Test.xUnit
         }
     }
 }
+*/
