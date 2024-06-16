@@ -18,6 +18,7 @@ export default function Delete(props){
     }, [props.stateListener])
 
     return (
+        <div closeName="reject">
         <div className="modal-container">
             <div className="modal-title">Warning Reject the Appointment</div>
             <p>Are you sure you want to Reject the Appointment?</p>
@@ -26,6 +27,7 @@ export default function Delete(props){
                 <div className="btn" onClick={()=>closeModal("delete-modal")}>Cancel</div>
                 <div className="btn" onClick={deleteApp}>Yes</div>
             </div>
+        </div>
         </div>
     )
 }

@@ -170,7 +170,7 @@ main {
   }
   
   .bc-green {
-    background-color: #c3e6cb;
+    background-color: #b377bb;
   }
   
   .bc-gold {
@@ -178,7 +178,7 @@ main {
   }
   
   .bc-red {
-    background-color: #f5c6cb;
+    background-color: #caa978;
   }
   
   .bc-blue {
@@ -258,3 +258,8 @@ main {
     }
   }
   
+
+  .reject{
+    justify-content: center;
+    align-items: center;
+  }

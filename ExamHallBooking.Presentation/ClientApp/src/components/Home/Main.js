@@ -18,7 +18,9 @@ const HomePage = ({ onMainClick, onUserClick, onAdminClick, onAllClick, onDrawin
     const handleBackClick = () => {
         window.location.href = '/';
     };
-
+    const handleCalClick = () => {
+        window.location.href = '/calendar';
+    };
     const handleMainClick = () => {
         window.location.href = '/';
     };
@@ -38,11 +40,12 @@ const HomePage = ({ onMainClick, onUserClick, onAdminClick, onAllClick, onDrawin
         <div>
             <NavBar
 
+                onCalClick={handleCalClick}
                 onBackClick={handleBackClick}
                 showBackButton={false}
                 onMainClick={handleMainClick}
                 onUserClick={handleUserClick}
-
+                showCalBtton={true}
                 onAdminClick={handleAdminClick}
                 onSignOutClick={handleSignOutClick}
                 showAdminUser={true} // Default show User and Admin

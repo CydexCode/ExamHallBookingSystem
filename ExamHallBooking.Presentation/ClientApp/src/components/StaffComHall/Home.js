@@ -103,11 +103,14 @@ export default function Home(props) {
     const handleSignOutClick = () => {
         window.location.href = '/';
     };
-
+    const handleCalClick = () => {
+        window.location.href = '/calendar';
+    };
     return (
 
         <div>
             <NavBar
+                 onCalClick={handleCalClick}
 
                 onBackClick={handleBackClick}
                 showBackButton={true}
