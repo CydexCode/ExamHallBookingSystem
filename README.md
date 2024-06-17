@@ -1,41 +1,34 @@
 # University ExamHall Booking System
 
-<p align="center">
-  <img src="Home.jpeg" width="500" height="320" />
-</p>
+![image](https://github.com/CydexCode/ExamHallBookingSystem/assets/112784979/f7f37770-d7c2-4247-8a00-648ed839fec6)
 
-## Description
+### Description
 The Exam Hall Booking System streamlines the process of reserving exam halls within educational institutions. It caters to lecturers, academic staff, administration, and students, offering a user-friendly interface for booking halls like the Drawing Office Hall and Computer Department Exam Hall. This system enhances scheduling for various exam types while ensuring administrative oversight.
 
-## ER Diagram
+[Step by step User Guide for Exam Hall Booking System](https://github.com/CydexCode/ExamHallBookingSystem/wiki/User-Guide-for-Exam-Hall-Booking-System)
+
+
+### Technology Stack:
+
+- **Languages** : HTML, CSS, JavaScript, C#
+- **Tools** : VS Code, Visual Studio, MS SQL Server Management Studio, Jira, Postman, GitHub, Figma, Adobe Photoshop, draw.io
+- **Frameworks** : .NET Core Web API, Bootstrap
+- **Library** : React.js
+- **Database** :  MySQL (Azure Server)
+
+### ER Diagram
 <p align="center">
   <img src="./img/ER Diagram.jpeg" width="500" height="320" />
 </p>
 
 
-## Functional Requirements
-- **User Accounts:** Lecturer and Administrative accounts for system access.
-- **User Authentication:** Secure login for lecturers and administrators.
-- **Exam Hall Management:** Availability checking, booking requests, scheduling, and reservation modifications.
-- **Admin User Management:** Adding and managing administrative accounts.
-- **Activity Logging:** Comprehensive logs for administrative actions.
-- **Session Management:** Secure sign-out and inactivity timeout.
-- **Access Control:** Role-based access for different user roles.
 
-## Non Functional Requirements
-- Performance , Security , Usability , Reliability , Maintainability
+[More about this Exam Hall Booking System](https://github.com/CydexCode/ExamHallBookingSystem/wiki)
 
-
-## Technologies Used
-- **Backend:** .NET Core 8
-- **Frontend:** ReactJS
-- **Database:** SQL Server (Azure)
-
-
-## Jira Board
+### Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
-## Team members
+### Team members
 
 #### 👨‍💼 Project Manager :   [MANILKA B.P.K.](https://github.com/Kishara0)
 
@@ -43,7 +36,7 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 
 #### 🎨 Designers : [PERERA S.D.M.](https://github.com/ManashviCode) ,  [JAYASINGHE P.A.](https://github.com/ParamiJayasinghe)
 
-#### 👨‍💻 Senior Software Engineers  :  [SWARNAKUMARA L.Y.S.B. (Tech Lead)](https://github.com/cydexcode) ,  [JAYAWARDHANA D.D.V.M.](https://github.com/ManurangaJay)
+#### 👨‍💻 Senior Software Engineers  :  [SWARNAKUMARA L.Y.S.B.](https://github.com/cydexcode) (Tech Lead) ,  [JAYAWARDHANA D.D.V.M.](https://github.com/ManurangaJay)
 
 #### 👨‍💻 Software Engineers  :  [SANDUPAMA M.V.D.G.](https://github.com/GithminiSandupama) ,  [SENEVIRATHNE S.M.M.I.](https://github.com/manoda98) , - [JEEWANTHI U.B.T.](https://github.com/ThanujaJeewanthi)
 
