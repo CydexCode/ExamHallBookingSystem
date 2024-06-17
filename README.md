@@ -1,6 +1,6 @@
 # University ExamHall Booking System
 
-![image](https://github.com/CydexCode/ExamHallBookingSystem/assets/112784979/f7f37770-d7c2-4247-8a00-648ed839fec6)
+<img src="./img/Home.jpeg" />
 
 ### Description
 The Exam Hall Booking System streamlines the process of reserving exam halls within educational institutions. It caters to lecturers, academic staff, administration, and students, offering a user-friendly interface for booking halls like the Drawing Office Hall and Computer Department Exam Hall. This system enhances scheduling for various exam types while ensuring administrative oversight.
