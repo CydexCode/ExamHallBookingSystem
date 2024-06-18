@@ -25,6 +25,8 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 
 [More about this Exam Hall Booking System](https://github.com/CydexCode/ExamHallBookingSystem/wiki)
 
+[Test cases](https://github.com/CydexCode/ExamHallBookingSystem/wiki/Test-Case)
+
 ### Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
