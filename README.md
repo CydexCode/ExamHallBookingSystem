@@ -7,6 +7,9 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 
 [Step by step User Guide for Exam Hall Booking System](https://github.com/CydexCode/ExamHallBookingSystem/wiki/User-Guide-for-Exam-Hall-Booking-System)
 
+### Key Features: 
+User Accounts and Authentication, User Profile Management, Exam Hall Management, Administrative User Management, Activity Logging, Session Management, Access Control and Permissions, Outlook Mail Notifications and Calendar Updates
+
 
 ### Technology Stack:
 
