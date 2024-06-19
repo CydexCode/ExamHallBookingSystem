@@ -16,6 +16,8 @@ User Accounts and Authentication, User Profile Management, Exam Hall Management,
 
 [ER , Use Case , Activity, Sequence Diagrams](https://github.com/CydexCode/ExamHallBookingSystem/wiki/ER-,-Use-Case-,-Activity,-Sequence-Diagrams)
 
+[Postman API Testing](https://github.com/CydexCode/ExamHallBookingSystem/wiki/Postman-API-Testing)
+
 [Test cases](https://github.com/CydexCode/ExamHallBookingSystem/wiki/Test-Case)
 
 ### Technology Stack:
