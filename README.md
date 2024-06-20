@@ -30,6 +30,8 @@ User Accounts and Authentication, User Profile Management, Exam Hall Management,
 - **Library** : React.js
 - **Database** :  MySQL (Azure Server)
 
+[How to setup this project]([https://github.com/CydexCode/ExamHallBookingSystem/wiki/Test-Case](https://medium.com/@cydexcode/exam-hall-booking-system-net-core-web-api-react-sql-server-dd93b9e80273)
+  
 ### Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
