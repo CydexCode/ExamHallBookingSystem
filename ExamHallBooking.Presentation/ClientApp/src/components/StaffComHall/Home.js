@@ -139,7 +139,7 @@ export default function Home(props) {
 
 
                 <div className="add-btn row items-center content-center staff">
-                    <div className="btn add" onClick={() => openModal("new-modal")}>End Exam Booking</div>
+                    <div className="btn-add" onClick={() => openModal("new-modal")}>End Exam Booking</div>
                 </div>
 
 
