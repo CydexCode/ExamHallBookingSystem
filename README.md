@@ -10,6 +10,14 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 ### Key Features: 
 User Accounts and Authentication, User Profile Management, Exam Hall Management, Administrative User Management, Activity Logging, Session Management, Access Control and Permissions, Outlook Mail Notifications and Calendar Updates
 
+### Technology Stack:
+
+- **Languages** : HTML, CSS, JavaScript, C#
+- **Tools** : VS Code, Visual Studio, MS SQL Server Management Studio, Jira, Postman, GitHub, Figma, Adobe Photoshop, draw.io
+- **Frameworks** : .NET Core Web API, Bootstrap
+- **Library** : React.js
+- **Database** :  MySQL (Azure Server)
+
 ### Documentation:
 
 [Requirement Analysis](https://github.com/CydexCode/ExamHallBookingSystem/wiki/Requirement-Analysis)
@@ -23,14 +31,6 @@ User Accounts and Authentication, User Profile Management, Exam Hall Management,
 [Test cases](https://github.com/CydexCode/ExamHallBookingSystem/wiki/Test-Case)
 
 [More about this Exam Hall Booking System](https://github.com/CydexCode/ExamHallBookingSystem/wiki)
-
-### Technology Stack:
-
-- **Languages** : HTML, CSS, JavaScript, C#
-- **Tools** : VS Code, Visual Studio, MS SQL Server Management Studio, Jira, Postman, GitHub, Figma, Adobe Photoshop, draw.io
-- **Frameworks** : .NET Core Web API, Bootstrap
-- **Library** : React.js
-- **Database** :  MySQL (Azure Server)
 
 ### Setup Guide::
 
