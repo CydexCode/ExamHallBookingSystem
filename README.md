@@ -32,7 +32,7 @@ User Accounts and Authentication, User Profile Management, Exam Hall Management,
 
 [More about this Exam Hall Booking System](https://github.com/CydexCode/ExamHallBookingSystem/wiki)
 
-### Setup Guide::
+### Setup Guide:
 
 [How to setup this project](https://medium.com/@cydexcode/exam-hall-booking-system-net-core-web-api-react-sql-server-dd93b9e80273)
   
