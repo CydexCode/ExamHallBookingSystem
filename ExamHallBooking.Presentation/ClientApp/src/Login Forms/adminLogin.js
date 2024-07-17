@@ -32,8 +32,8 @@ function Login() {
 
         // Define admin credentials
         const adminCredentials = [
-            { loginName: 'aradmin@gmail.com', password: 'arAdmin123', route: '/admin' },
-            { loginName: 'macadmin@gmail.com', password: 'macAdmin123', route: '/macAdmin' }
+            { loginName: 'aradmin@eng.jfn.ac.lk', password: 'arAdmin123', route: '/admin' },
+            { loginName: 'macadmin@eng.jfn.ac.lk', password: 'macAdmin123', route: '/macAdmin' }
         ];
 
         // Check if entered credentials match any admin credentials
