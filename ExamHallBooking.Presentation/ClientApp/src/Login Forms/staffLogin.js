@@ -29,7 +29,7 @@ function Login() {
         }
         // Define admin credentials
         const adminCredentials = [
-            { loginName: 'staff@gmail.com', password: 'staff123', route: '/staff' },
+            { loginName: 'staff@eng.jfn.ac.lk', password: 'staff123', route: '/staff' },
 
         ];
 
