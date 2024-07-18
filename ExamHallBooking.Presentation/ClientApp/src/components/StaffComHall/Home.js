@@ -5,6 +5,7 @@ import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
 import NavBar from "../../NavBar/NavBar.js"; // Make sure the path is correct
+import './Home.css';
 
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
@@ -103,11 +104,14 @@ export default function Home(props) {
     const handleSignOutClick = () => {
         window.location.href = '/';
     };
-
+    const handleCalClick = () => {
+        window.location.href = '/calendar';
+    };
     return (
 
         <div>
             <NavBar
+                 onCalClick={handleCalClick}
 
                 onBackClick={handleBackClick}
                 showBackButton={true}
@@ -135,7 +139,7 @@ export default function Home(props) {
 
 
                 <div className="add-btn row items-center content-center staff">
-                    <div className="btn add" onClick={() => openModal("new-modal")}>End Exam Booking</div>
+                    <div className="btn-add" onClick={() => openModal("new-modal")}>End Exam Booking</div>
                 </div>
 
 

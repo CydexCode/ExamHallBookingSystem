@@ -8,6 +8,13 @@ function Login() {
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
+    function validateEmail(email) {
+        // Regular expression for basic email validation
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+
     function GetLoginDetails() {
         if (!validateForm()) {
             alert("Invalid input field detected");
@@ -16,7 +23,12 @@ function Login() {
         // Check if loginName and password are not empty
         if (loginName.trim() === '' || password.trim() === '') {
             // Show an error message or handle empty inputs appropriately
-            console.error('Login name and password are required.');
+       
+            alert("Login name and password are required.");
+            return;
+        }
+        if (!validateEmail(loginName)) {
+            alert("Please enter a valid email address.");
             return;
         }
 
@@ -127,7 +139,7 @@ function Login() {
 
                 onMainClick={handleMainClick}
                 onUserClick={handleUserClick}
-
+                showCalBtton={false}
                 onAdminClick={handleAdminClick}
                 showSignOutButton={false}
                 onSignOutClick={false}
@@ -160,6 +172,7 @@ function Login() {
                                                     </div>
                                                     <div className="user">
                                                         <div className="form-group">
+
                                                             <div className="input-container"> 
                                                                 <input type="text" className="form-control form-control-user"
                                                                 value={loginName} onChange={(e) => { handleLoginNameChange(e) }}
@@ -174,6 +187,7 @@ function Login() {
                                                                     placeholder="Password" />
                                                                 {errors.password && <Tooltip message={errors.password} />}
                                                             </div>
+
                                                         </div>
                                                         <div className="form-group2">
                                                             <div className="custom-control custom-checkbox small">

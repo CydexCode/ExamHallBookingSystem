@@ -9,13 +9,31 @@ function Login() {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
+    function validateEmail(email) {
+        // Regular expression for basic email validation
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+
     function GetLoginDetails(event) {
+
+        // Check if loginName and password are not empty
+        if (loginName.trim() === '' || password.trim() === '') {
+            // Show an error message or handle empty inputs appropriately
+
+            alert("Login name and password are required.");
+            return;
+        }
+        if (!validateEmail(loginName)) {
+            alert("Please enter a valid email address.");
+        }
         event.preventDefault(); // Prevent default form submission behavior
 
         // Define admin credentials
         const adminCredentials = [
-            { loginName: 'ar admin', password: 'arAdmin123', route: '/admin' },
-            { loginName: 'mac admin', password: 'macAdmin123', route: '/macAdmin' }
+            { loginName: 'aradmin@eng.jfn.ac.lk', password: 'arAdmin123', route: '/admin' },
+            { loginName: 'macadmin@eng.jfn.ac.lk', password: 'macAdmin123', route: '/macAdmin' }
         ];
 
         // Check if entered credentials match any admin credentials
@@ -57,6 +75,7 @@ function Login() {
                 onSignOutClick={false}
                 showAdminUser={false} // Hide User and Admin
                 showHomeBtton={true}
+                showCalBtton={false}
             />
 
 
@@ -76,7 +95,7 @@ function Login() {
                                             </div>
                                             <div className="user">
                                                 <div className="form-group">
-                                                    <input type="text" className="form-control form-control-user"
+                                                    <input type="email" className="form-control form-control-user"
                                                         value={loginName} onChange={(e) => { setLoginName(e.target.value) }}
                                                         placeholder="Email" />
                                                 </div>

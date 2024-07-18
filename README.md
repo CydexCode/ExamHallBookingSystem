@@ -1,41 +1,45 @@
 # University ExamHall Booking System
 
-<p align="center">
-  <img src="Home.jpeg" width="500" height="320" />
-</p>
+<img src="./img/Home.jpeg" />
 
-## Description
+### Introduction:
 The Exam Hall Booking System streamlines the process of reserving exam halls within educational institutions. It caters to lecturers, academic staff, administration, and students, offering a user-friendly interface for booking halls like the Drawing Office Hall and Computer Department Exam Hall. This system enhances scheduling for various exam types while ensuring administrative oversight.
 
-## ER Diagram
-<p align="center">
-  <img src="./img/ER Diagram.jpeg" width="500" height="320" />
-</p>
+[Step by step User Guide for Exam Hall Booking System](https://github.com/CydexCode/ExamHallBookingSystem/wiki/User-Guide-for-Exam-Hall-Booking-System)
 
+### Key Features: 
+User Accounts and Authentication, User Profile Management, Exam Hall Management, Administrative User Management, Activity Logging, Session Management, Access Control and Permissions, Outlook Mail Notifications and Calendar Updates
 
-## Functional Requirements
-- **User Accounts:** Lecturer and Administrative accounts for system access.
-- **User Authentication:** Secure login for lecturers and administrators.
-- **Exam Hall Management:** Availability checking, booking requests, scheduling, and reservation modifications.
-- **Admin User Management:** Adding and managing administrative accounts.
-- **Activity Logging:** Comprehensive logs for administrative actions.
-- **Session Management:** Secure sign-out and inactivity timeout.
-- **Access Control:** Role-based access for different user roles.
+### Technology Stack:
 
-## Non Functional Requirements
-- Performance , Security , Usability , Reliability , Maintainability
+- **Languages** : HTML, CSS, JavaScript, C#
+- **Tools** : VS Code, Visual Studio, MS SQL Server Management Studio, Jira, Postman, GitHub, Figma, Adobe Photoshop, draw.io
+- **Frameworks** : .NET Core Web API, Bootstrap
+- **Library** : React.js
+- **Database** :  MySQL (Azure Server)
 
+### Documentation:
 
-## Technologies Used
-- **Backend:** .NET Core 8
-- **Frontend:** ReactJS
-- **Database:** SQL Server (Azure)
+[Requirement Analysis](https://github.com/CydexCode/ExamHallBookingSystem/wiki/Requirement-Analysis)
 
+[ER , Use Case , Activity, Sequence Diagrams](https://github.com/CydexCode/ExamHallBookingSystem/wiki/ER-,-Use-Case-,-Activity,-Sequence-Diagrams)
 
-## Jira Board
+[Project Architecture](https://github.com/CydexCode/ExamHallBookingSystem/wiki/Project-Architecture)
+
+[Postman API Testing](https://github.com/CydexCode/ExamHallBookingSystem/wiki/Postman-API-Testing)
+
+[Test cases](https://github.com/CydexCode/ExamHallBookingSystem/wiki/Test-Case)
+
+[More about this Exam Hall Booking System](https://github.com/CydexCode/ExamHallBookingSystem/wiki)
+
+### Setup Guide:
+
+[How to setup this project](https://medium.com/@cydexcode/exam-hall-booking-system-net-core-web-api-react-sql-server-dd93b9e80273)
+  
+### Jira Board
 [Exam Hall Booking System Jira Board](https://univercitypoject.atlassian.net/jira/software/projects/KAN/boards/1)
 
-## Team members
+### Team members
 
 #### 👨‍💼 Project Manager :   [MANILKA B.P.K.](https://github.com/Kishara0)
 
@@ -43,7 +47,7 @@ The Exam Hall Booking System streamlines the process of reserving exam halls wit
 
 #### 🎨 Designers : [PERERA S.D.M.](https://github.com/ManashviCode) ,  [JAYASINGHE P.A.](https://github.com/ParamiJayasinghe)
 
-#### 👨‍💻 Senior Software Engineers  :  [SWARNAKUMARA L.Y.S.B. (Tech Lead)](https://github.com/cydexcode) ,  [JAYAWARDHANA D.D.V.M.](https://github.com/ManurangaJay)
+#### 👨‍💻 Senior Software Engineers  :  [SWARNAKUMARA L.Y.S.B.](https://github.com/cydexcode) (Tech Lead) ,  [JAYAWARDHANA D.D.V.M.](https://github.com/ManurangaJay)
 
 #### 👨‍💻 Software Engineers  :  [SANDUPAMA M.V.D.G.](https://github.com/GithminiSandupama) ,  [SENEVIRATHNE S.M.M.I.](https://github.com/manoda98) , - [JEEWANTHI U.B.T.](https://github.com/ThanujaJeewanthi)
 

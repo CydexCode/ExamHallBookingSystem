@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamHallBooking.DataAccess.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240609091219_Initial3")]
-    partial class Initial3
+    [Migration("20240717072802_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

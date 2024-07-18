@@ -1,0 +1,29 @@
+.home-page{
+    background-image: url('../../assest/Background1.png');
+    background-size:cover ;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin-top: -220px;
+    padding: 0;
+    display: flex;
+}
+
+.btn-add{
+    background-color:   #01213f;
+    color:  white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 3px solid white;
+
+    font-weight:bold;
+    margin-left: 600px;
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+.btn-add:hover{
+    background-color: rgba(23, 43, 53, 0.79)
+    
+
+}

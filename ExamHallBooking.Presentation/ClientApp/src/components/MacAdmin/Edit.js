@@ -46,20 +46,22 @@ export default function Edit(props) {
             toEmail: entry.lectureName,  // Assuming lectureName is the email address
             subject: "Drawing ExamHall Booking Confirmed",
             body: `
-            Your time slot from ${entry.Time} to ${entry.EndTime} on ${entry.Date} is confirmed for ${entry.importanceLevel}.
-            
-            Details:
-            - Exam Hall: ${entry.ExamHall}
-            - Date: ${entry.Date}
-            - Time : ${entry.Time} - ${entry.EndTime}
-            - Batch : ${entry.Year}
-            - Subject : ${entry.Subject}
-            - Exam Type : ${entry.importanceLevel}
-            - Semester: ${entry.Semester}
-            - Supporting Academic Staff Member: ${entry.AcademicStaff}
-       
-            
-            Thank you for your attention.`
+            Your time slot from ${entry.time} to ${entry.endTime} on ${entry.date.split("T")[0]} is confirmed for ${importanceMap[data.levelOfImportance]}.
+            <br>
+               <br>
+            Details:   <br>
+            - Exam Hall: ${entry.examHall}    <br>
+            - Date: ${entry.date.split("T")[0]}    <br>
+            - Time: ${entry.time} - ${entry.endTime}    <br>
+            - Batch: ${entry.year}    <br>
+            - Subject: ${entry.subject}    <br>
+            - Exam Type: ${importanceMap[data.levelOfImportance]}    <br>
+            - Semester: ${entry.semester}    <br>
+            - Supporting Academic Staff Member: ${entry.academicStaff}     
+               <br>
+                  <br>
+            Thank you for your attention.
+        `
         };
 
         try {
@@ -91,6 +93,7 @@ export default function Edit(props) {
             .catch(e => console.log("Could not update the appointment: ", e));
 
         closeModal("edit-modal");
+        window.location.reload();
         window.location.reload();
     };
 

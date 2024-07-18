@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    
+    z-index: 2000;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 87vh; /* Full height */
+    padding: 0; /* Remove padding */
+    margin: 20px;
+   outline: none;
+}
+
+.calendar-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    
+}
+
+.react-calendar {
+    width: 100%;
+    height: 100%;
+    max-width: none; /* Remove max-width restriction */
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+
+.date-box {
+    height: 122px; 
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.react-calendar__tile {
+    height: 150px; /* Adjust tile height to fit content */
+    font-weight: 600;
+    font-size: 12px;
+    overflow-y: auto;
+    outline: 2px solid #17191a; /* Example outline style */
+}
+
+/* Add outline to calendar dates */
+.outlined-date {
+    outline: 2px solid #17191a; /* Example outline style */
+    z-index: 2000;
+}
+
+.react-calendar__tile .tile-content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.appointment-box1 {
+    background-color: aqua;
+    padding: 0px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.appointment-box2 {
+    background-color:chartreuse;
+    padding: 0px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: black;
+}
