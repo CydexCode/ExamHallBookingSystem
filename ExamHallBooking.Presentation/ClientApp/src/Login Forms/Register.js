@@ -11,7 +11,9 @@ function Register() {
     const [mobile, setMobile] = useState('');
     const [password, setPassword] = useState('');
     const [status, setStatus] = useState('');
+
     const [errors, setErrors] = useState({});
+
     const navigate = useNavigate();
 
     function validateEmail(email) {
@@ -21,6 +23,7 @@ function Register() {
     }
 
     function AddUser() {
+
         let formErrors = {};
 
         // Check if name, loginName, password, and mobile are not empty
@@ -47,6 +50,7 @@ function Register() {
         }
 
         let items = { id, loginName, name, mobile, password, status };
+
         console.warn(items);
 
         fetch('https://localhost:44418/api/Users/AddUsers', {
@@ -81,6 +85,94 @@ function Register() {
         window.location.href = '/';
     };
 
+    const validateForm = () => {
+        let valid = true;
+        Object.values(errors).forEach(
+            // if we have an error string, set valid to false
+            (val) => val.length > 0 && (valid = false)
+        );
+        return valid;
+    };
+
+    const Tooltip = ({ message }) => {
+        return (
+            <div className="tooltip">
+                {message}
+            </div>
+        );
+    };
+
+    const validateLoginName = (value) => {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!value) {
+            return 'Email is required.';
+        } else if (!emailRegex.test(value)) {
+            return 'Invalid email address.';
+        }
+        return '';
+    }
+
+    const handleLoginNameChange = (e) => {
+        setLoginName(e.target.value);
+        setErrors(prev => ({ ...prev, loginName: validateLoginName(e.target.value) }));
+    }
+
+    const validateName = (value) => {
+        if (!value) {
+            return 'Name is required.';
+        } 
+        return '';
+    }
+
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+        setErrors(prev => ({ ...prev, name: validateName(e.target.value) }));
+    }
+
+    const validatePassword = (value) => {
+        const minLength = 8;
+        const hasUpperCase = /[A-Z]/.test(value);
+        const hasLowerCase = /[a-z]/.test(value);
+        const hasDigit = /\d/.test(value);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
+    
+        if (!value) {
+            return 'Password is required.';
+        } else if (value.length < minLength) {
+            return `Password must be at least ${minLength} characters long.`;
+        } else if (!hasUpperCase) {
+            return 'Password must contain at least one uppercase letter.';
+        } else if (!hasLowerCase) {
+            return 'Password must contain at least one lowercase letter.';
+        } else if (!hasDigit) {
+            return 'Password must contain at least one digit.';
+        } else if (!hasSpecialChar) {
+            return 'Password must contain at least one special character.';
+        }
+        return '';
+    };
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+        setErrors(prev => ({ ...prev, password: validatePassword(e.target.value) }));
+    }
+    
+    const validateMobileNumber = (value) => {
+        const mobileRegex = /^0\d{9}$/;
+        if (!value) {
+            return 'Mobile number is required.';
+        } else if (!mobileRegex.test(value)) {
+            return 'Invalid mobile number. ';
+        }
+        return '';
+    };
+
+    const handleMobileNumberChange = (e) => {
+        setMobile(e.target.value);
+        setErrors(prev => ({ ...prev, mobile: validateMobileNumber(e.target.value) }));
+    }
+    
+
     return (
         <div>
             <NavBar
@@ -111,28 +203,39 @@ function Register() {
                                             </div>
                                             <div className="user">
                                                 <div className="form-group row">
+
+                                                    <div className="input-container"> 
+                                                        <input type="text" className="form-control form-control-user"
+                                                            value={name} onChange={(e) => { 
+                                                                handleNameChange(e) }}
+                                                            placeholder="Name" />
+                                                        {errors.name && <Tooltip message={errors.name} />}
+                                                    </div>
+                                                </div>
+                                                <div className="form-group row">
+                                                    <div className="input-container">  
+                                                        <input type="text" className="form-control form-control-user"
+                                                            value={loginName} onChange={(e) => { handleLoginNameChange(e) }}
+                                                            placeholder="Login Email" />
+                                                        {errors.loginName && <Tooltip message={errors.loginName} />}
+                                                     </div>
+                                                </div>
+                                                <div className="form-group row">
+                                                    <div className="input-container">
+                                                        <input type="password" className="form-control form-control-user"
+                                                        value={password} onChange={(e) => { handlePasswordChange(e) }}
+                                                        placeholder="Password" />
+                                                        {errors.password && <Tooltip message={errors.password} />}
+                                                    </div>
+                                                </div>
+                                                <div className="form-group row">
+                                                    <div className="input-container">
                                                     <input type="text" className="form-control form-control-user"
-                                                        value={name} onChange={(e) => { setName(e.target.value) }}
-                                                        placeholder="Name" required />
-                                                   
-                                                </div>
-                                                <div className="form-group row">
-                                                    <input type="email" className="form-control form-control-user"
-                                                        value={loginName} onChange={(e) => { setLoginName(e.target.value) }}
-                                                        placeholder="Login Email" required />
-                                                    
-                                                </div>
-                                                <div className="form-group row">
-                                                    <input type="password" className="form-control form-control-user"
-                                                        value={password} onChange={(e) => { setPassword(e.target.value) }}
-                                                        placeholder="Password" required />
-                                                   
-                                                </div>
-                                                <div className="form-group row">
-                                                    <input type="number" className="form-control form-control-user"
-                                                        value={mobile} onChange={(e) => { setMobile(e.target.value) }}
-                                                        placeholder="Mobile" required />
-                                                   
+                                                        value={mobile} onChange={(e) => { handleMobileNumberChange(e) }}
+                                                        placeholder="Mobile" />
+                                                        {errors.mobile && <Tooltip message={errors.mobile} />}
+                                                    </div>
+
                                                 </div>
 
                                                 <button className="btn btn-primary btn-user btn-block" onClick={AddUser}>
