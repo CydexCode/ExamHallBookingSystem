@@ -10,6 +10,11 @@ export default function New(props) {
         const name_ = e.target.name
         let v_ = e.target.value
 
+        if (name_ === "numOfStudent" && v_ > 100) {
+            alert("The number of students cannot exceed 150.");
+            return;
+        }
+
         if (name_ === "examHall") {
             setTitleLength(v_.length)
         }
@@ -55,6 +60,14 @@ export default function New(props) {
         closeModal("new-modal")
         window.location.reload();
     }
+
+    const getCurrentDate = () => {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = (today.getMonth() + 1).toString().padStart(2, "0");
+        const day = today.getDate().toString().padStart(2, "0");
+        return `${year}-${month}-${day}`;
+    };
 
     return (
         <div className="modal-container">
@@ -107,7 +120,7 @@ export default function New(props) {
                 <div className="form-row">
                     <div className="form-field">
                         <label for="Num_of_Student">No Of Students :</label>
-                        <input type="text" /*className="mt-5"*/ id="Num_of_Student" maxLength="2" name="numOfStudent" onChange={newApp} />
+                        <input type="number" /*className="mt-5"*/ id="Num_of_Student" placeholder="<150"  max="150" name="numOfStudent" onChange={newApp} />
                     </div>
 
                     <div className="form-field">
@@ -154,7 +167,7 @@ export default function New(props) {
                 <div className="ms-20">
 
                     <label htmlFor="Date_n">Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-                    <input type="date" id="Date_n" name="date" defaultValue={formatedDateToStr()} onChange={newApp} />
+                    <input type="date" id="Date_n" name="date" min={getCurrentDate()} defaultValue={formatedDateToStr()} onChange={newApp} />
                 </div>
                 <br></br>
                 <div className="ms-20">
