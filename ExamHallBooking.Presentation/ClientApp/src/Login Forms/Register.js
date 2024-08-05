@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login_rejister.css'; // Import the CSS file
 import backgroundImage from '../assest/Background1.png'; // Import your background image
