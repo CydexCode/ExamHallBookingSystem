@@ -4,6 +4,7 @@ import Delete from "./Delete"
 import Edit from "./Edit"
 import New from "./New"
 import Appointment from "./Appointment"
+import './Home.css';
 
 import "../../NavBar/NavBar.css"; // Import the CSS file for styling (create this file)
 import "../../custom.css";
@@ -111,7 +112,7 @@ export default function Home(props) {
 
     return (
 
-        <div>
+        <div className="home-page">
             <NavBar
                  onCalClick={handleCalClick}
 
@@ -143,8 +144,8 @@ export default function Home(props) {
                 <br></br>  <br></br>  <br></br>  <br></br>
 
 
-                <div className="add-btn row items-center content-center">
-                    <div className="btn add" onClick={() => openModal("new-modal")}>End Exam Booking</div>
+                <div className="add-btn row items-center content-center ">
+                    <div className="btn-add" onClick={() => openModal("new-modal")}>End Exam Booking</div>
                 </div>
 
 

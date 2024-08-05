@@ -4,20 +4,7 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    
-}
-
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-.container-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+   
 }
 
 .btn-add {
@@ -27,11 +14,18 @@ body, html {
     border-radius: 15px;
     border: 3px solid white;
     font-weight: bold;
+    margin-left: 600px;
     font-size: 20px;
-    cursor:pointer;
+    margin-bottom: 100px;
 }
 
     .btn-add:hover {
         background-color: rgba(23, 43, 53, 0.79);
-        cursor: pointer;
     }
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+

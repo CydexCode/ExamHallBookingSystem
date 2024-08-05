@@ -109,7 +109,7 @@ export default function Home(props) {
     };
     return (
 
-        <div>
+        <div className="home-page">
             <NavBar
                  onCalClick={handleCalClick}
 
@@ -138,7 +138,7 @@ export default function Home(props) {
                 <br></br>  <br></br>  <br></br>
 
 
-                <div className="add-btn row items-center content-center staff">
+                <div className="add-btn row items-center content-center staff  ">
                     <div className="btn-add" onClick={() => openModal("new-modal")}>End Exam Booking</div>
                 </div>
 
